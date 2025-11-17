@@ -40,4 +40,4 @@ assets/inc/sendemail.php
 # Compressed files
 *.zip
 *.tar.gz
-*.rar
+*.rar*.backup
