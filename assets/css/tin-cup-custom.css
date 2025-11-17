@@ -142,6 +142,23 @@ a:hover {
     mix-blend-mode: normal !important;
 }
 
+/* Preloader - Use Tin Cup Challenge logo */
+.preloader__image {
+    background-image: url(../images/brand/tin-cup-logo.svg) !important;
+    background-size: 200px auto !important;
+}
+
+/* Remove sticky navigation on scroll */
+.stricky-header {
+    display: none !important;
+}
+
+/* Remove custom cursor effect */
+.custom-cursor__cursor,
+.custom-cursor__cursor-two {
+    display: none !important;
+}
+
 /* Fix image sizing for circular images */
 .about-three__img img {
     width: 100%;
