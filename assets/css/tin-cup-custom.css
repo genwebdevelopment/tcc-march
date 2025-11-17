@@ -1,19 +1,35 @@
 /*
  * Tin Cup Challenge Custom Styles
- * Color Scheme: Purple, Blue, Yellow, Green
- * Based on Tin Cup Challenge brand identity
+ * Color Scheme: Based on Community Foundation of Teton Valley brand
+ * Source: https://cftetonvalley.org/
  */
 
 :root {
-    --tin-cup-purple: #7B5FB0;
-    --tin-cup-purple-dark: #5D4788;
-    --tin-cup-blue: #2B80C0;
-    --tin-cup-blue-dark: #1F5F8F;
-    --tin-cup-yellow: #F7C93E;
-    --tin-cup-yellow-dark: #E0B534;
-    --tin-cup-green: #4A9D5F;
-    --tin-cup-green-dark: #3A7D4C;
-    --tin-cup-red: #E74C3C;
+    /* Purple - Primary Brand Color */
+    --cftv-purple: #773979;
+    --cftv-purple-dark: #5a2a5c;
+
+    /* Blue - Secondary Brand Color */
+    --cftv-blue: #0069b9;
+    --cftv-blue-dark: #015c8b;
+    --cftv-blue-light: #B1D9FC;
+
+    /* Burgundy/Red - Accent Color */
+    --cftv-burgundy: #86192C;
+    --cftv-burgundy-medium: #AC2B37;
+    --cftv-red: #E23F5C;
+
+    /* Yellow - Tertiary Accent */
+    --cftv-yellow: #FFD233;
+    --cftv-gold: #febd59;
+
+    /* Navy - Supporting Color */
+    --cftv-navy: #192a3d;
+
+    /* Neutrals */
+    --cftv-gray-light: #e1e8ed;
+    --cftv-gray-lighter: #f2f5f7;
+    --cftv-cream: #F8F5EC;
 }
 
 /* Primary Button Colors - Purple as primary */
@@ -22,8 +38,8 @@
 .events-two__btn,
 .about-three__btn,
 .footer-widget__btn a {
-    background-color: var(--tin-cup-purple) !important;
-    border-color: var(--tin-cup-purple) !important;
+    background-color: var(--cftv-purple) !important;
+    border-color: var(--cftv-purple) !important;
 }
 
 .thm-btn:hover,
@@ -31,88 +47,88 @@
 .events-two__btn:hover,
 .about-three__btn:hover,
 .footer-widget__btn a:hover {
-    background-color: var(--tin-cup-purple-dark) !important;
-    border-color: var(--tin-cup-purple-dark) !important;
+    background-color: var(--cftv-purple-dark) !important;
+    border-color: var(--cftv-purple-dark) !important;
 }
 
 /* Secondary accent colors - Blue */
 .section-title__tagline {
-    color: var(--tin-cup-blue) !important;
+    color: var(--cftv-blue) !important;
 }
 
 .main-menu__volunteers-text span {
-    color: var(--tin-cup-purple) !important;
+    color: var(--cftv-burgundy) !important;
 }
 
 /* Feature cards - Different colors for each type */
 .feature-three__single:nth-child(1) .feature-three__btn a {
-    background-color: var(--tin-cup-purple) !important;
+    background-color: var(--cftv-purple) !important;
 }
 
 .feature-three__single:nth-child(2) .feature-three__btn a {
-    background-color: var(--tin-cup-blue) !important;
+    background-color: var(--cftv-blue) !important;
 }
 
 .feature-three__single:nth-child(3) .feature-three__btn a {
-    background-color: var(--tin-cup-green) !important;
+    background-color: var(--cftv-burgundy) !important;
 }
 
 .feature-three__single:nth-child(1) .feature-three__btn a:hover {
-    background-color: var(--tin-cup-purple-dark) !important;
+    background-color: var(--cftv-purple-dark) !important;
 }
 
 .feature-three__single:nth-child(2) .feature-three__btn a:hover {
-    background-color: var(--tin-cup-blue-dark) !important;
+    background-color: var(--cftv-blue-dark) !important;
 }
 
 .feature-three__single:nth-child(3) .feature-three__btn a:hover {
-    background-color: var(--tin-cup-green-dark) !important;
+    background-color: var(--cftv-burgundy-medium) !important;
 }
 
 /* Event date badges */
 .events-two__date {
-    background-color: var(--tin-cup-yellow) !important;
+    background-color: var(--cftv-yellow) !important;
     color: #333 !important;
 }
 
 /* Icon backgrounds */
 .main-menu__volunteers-icon,
 .events-two__meta li i {
-    color: var(--tin-cup-blue) !important;
+    color: var(--cftv-blue) !important;
 }
 
 /* Links */
 a:hover {
-    color: var(--tin-cup-purple) !important;
+    color: var(--cftv-purple) !important;
 }
 
 /* Footer adjustments */
 .site-footer {
-    background-color: #2C3E50 !important;
+    background-color: var(--cftv-navy) !important;
 }
 
 .footer-widget__title {
-    color: var(--tin-cup-yellow) !important;
+    color: var(--cftv-yellow) !important;
 }
 
 /* Odometer counter */
 .odometer {
-    color: var(--tin-cup-purple) !important;
+    color: var(--cftv-purple) !important;
 }
 
 /* Events section links */
 .events-two__read-more a:hover {
-    color: var(--tin-cup-purple) !important;
+    color: var(--cftv-purple) !important;
 }
 
 .events-two__read-more a .icon-right-arrow {
-    background-color: var(--tin-cup-yellow) !important;
+    background-color: var(--cftv-yellow) !important;
     color: #333 !important;
 }
 
 /* Social icons */
 .main-menu__right-top-social a:hover,
 .site-footer__social a:hover {
-    background-color: var(--tin-cup-blue) !important;
+    background-color: var(--cftv-blue) !important;
     color: #fff !important;
 }
