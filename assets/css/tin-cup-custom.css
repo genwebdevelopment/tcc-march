@@ -163,3 +163,146 @@ a:hover {
     object-fit: cover;
     object-position: center;
 }
+
+/* ========================================
+   Feature Three - Organic Blob Shape Design
+   ======================================== */
+
+/* Move entire section up to overlap with section above */
+.feature-three {
+    margin-top: -80px !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Card container */
+.feature-three__single {
+    padding: 20px;
+    overflow: visible;
+}
+
+/* Blob wrapper - contains both image and overlay */
+.feature-three__blob-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Blob image styling */
+.feature-three__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* Organic blob shape */
+    border-radius: 45% 55% 52% 48% / 48% 45% 55% 52%;
+
+    /* Subtle rotation */
+    transform: rotate(-3deg);
+
+    /* Shadow for depth */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+    /* Border frame */
+    border: 8px solid rgba(255, 255, 255, 0.9);
+
+    /* Smooth transitions */
+    transition: all 0.4s ease;
+}
+
+/* Unique blob shape for each card */
+.feature-three__single:nth-child(1) .feature-three__img {
+    border-radius: 48% 52% 55% 45% / 45% 52% 48% 55%;
+    transform: rotate(-2deg);
+}
+
+.feature-three__single:nth-child(2) .feature-three__img {
+    border-radius: 52% 48% 45% 55% / 55% 48% 52% 45%;
+    transform: rotate(2deg);
+}
+
+.feature-three__single:nth-child(3) .feature-three__img {
+    border-radius: 45% 55% 48% 52% / 52% 45% 55% 48%;
+    transform: rotate(-3deg);
+}
+
+/* Hover effect on blobs */
+.feature-three__single:hover .feature-three__img {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15),
+        0 25px 60px rgba(0, 0, 0, 0.12);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
+/* Content overlay - sits on top of blob */
+.feature-three__content-overlay {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Title styling */
+.feature-three__title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke: 0;
+}
+
+/* Button link styling */
+.feature-three__btn-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--cftv-purple);
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-three__btn-link:hover {
+    background-color: var(--cftv-purple-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* Different button colors for variety */
+.feature-three__single:nth-child(2) .feature-three__btn-link {
+    background-color: var(--cftv-blue);
+}
+
+.feature-three__single:nth-child(2) .feature-three__btn-link:hover {
+    background-color: var(--cftv-blue-dark);
+}
+
+.feature-three__single:nth-child(3) .feature-three__btn-link {
+    background-color: var(--cftv-burgundy);
+}
+
+.feature-three__single:nth-child(3) .feature-three__btn-link:hover {
+    background-color: var(--cftv-burgundy-medium);
+}
