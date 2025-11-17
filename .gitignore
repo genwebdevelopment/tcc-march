@@ -1,0 +1,43 @@
+# Oxpens theme source (not needed in repository)
+/oxpins-theme
+
+# IDE and Editor files
+tin-cup-design.code-workspace
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Node modules (if using npm/yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build files (if using build tools)
+dist/
+build/
+.cache/
+
+# Environment files (if using)
+.env
+.env.local
+.env.*.local
+
+# PHP configuration (contains sensitive data)
+assets/inc/sendemail.php
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
