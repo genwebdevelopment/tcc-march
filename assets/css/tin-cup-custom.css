@@ -159,45 +159,73 @@ a:hover {
     display: none !important;
 }
 
-/* Make logo 30% larger (220px * 1.30 = 286px) */
+/* Make logo box wider and push navigation to the right */
 .main-menu__left {
-    width: auto !important;
-    min-width: 286px !important;
+    width: 185px !important;
+    min-width: 185px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.main-menu__logo {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
 }
 
 .main-menu__logo img {
-    max-width: 286px !important;
-    min-width: 180px !important;
     width: 100% !important;
+    height: auto !important;
+    max-width: 172px !important;
+    object-fit: contain !important;
 }
 
 /* Mobile responsive logo sizing */
 @media (max-width: 991px) {
     .main-menu__left {
-        min-width: 200px !important;
+        width: 136px !important;
+        min-width: 136px !important;
     }
 
     .main-menu__logo img {
-        max-width: 200px !important;
-        min-width: 160px !important;
+        max-width: 123px !important;
     }
 }
 
 @media (max-width: 575px) {
     .main-menu__left {
-        min-width: 160px !important;
+        width: 111px !important;
+        min-width: 111px !important;
     }
 
     .main-menu__logo img {
-        max-width: 180px !important;
-        min-width: 140px !important;
+        max-width: 99px !important;
     }
 }
 
 /* Make Donation - Add burgundy background to left side */
-.make-donation__inner {
+.make-donation {
     background: linear-gradient(to right, var(--cftv-burgundy) 0%, var(--cftv-burgundy) 33.33%, transparent 33.33%);
-    padding: 40px 0;
+    padding: 0;
+}
+
+/* Make content same height as photo */
+.make-donation .row {
+    align-items: stretch;
+}
+
+.make-donation__left,
+.make-donation__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.make-donation__content {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 /* Fix image sizing for circular images */
