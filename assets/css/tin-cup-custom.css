@@ -159,6 +159,47 @@ a:hover {
     display: none !important;
 }
 
+/* Make logo 30% larger (220px * 1.30 = 286px) */
+.main-menu__left {
+    width: auto !important;
+    min-width: 286px !important;
+}
+
+.main-menu__logo img {
+    max-width: 286px !important;
+    min-width: 180px !important;
+    width: 100% !important;
+}
+
+/* Mobile responsive logo sizing */
+@media (max-width: 991px) {
+    .main-menu__left {
+        min-width: 200px !important;
+    }
+
+    .main-menu__logo img {
+        max-width: 200px !important;
+        min-width: 160px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-menu__left {
+        min-width: 160px !important;
+    }
+
+    .main-menu__logo img {
+        max-width: 180px !important;
+        min-width: 140px !important;
+    }
+}
+
+/* Make Donation - Add burgundy background to left side */
+.make-donation__inner {
+    background: linear-gradient(to right, var(--cftv-burgundy) 0%, var(--cftv-burgundy) 33.33%, transparent 33.33%);
+    padding: 40px 0;
+}
+
 /* Fix image sizing for circular images */
 .about-three__img img {
     width: 100%;
