@@ -16,7 +16,7 @@
     --cftv-gold: #febe58;
     --cftv-purple-light: #5a2a5c;
     --cftv-teal: #5E847F;
-    --cftv-blue-light: #b1d8fc;
+    --cftv-blue-light: #e3eaef;
 
     /* Legacy/Deprecated - kept for compatibility */
     --cftv-blue-dark: #015c8b;
@@ -89,10 +89,13 @@ p {
     width: 100% !important;
     display: flex !important;
     align-items: stretch !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
 .events-two__single-event .events-two__img {
-    height: auto !important;
+    height: 420px !important;
     display: flex !important;
     align-items: stretch !important;
 }
@@ -108,6 +111,7 @@ p {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+    min-height: 420px !important;
 }
 
 .events-two__single-event .events-two__title {
@@ -283,6 +287,17 @@ a:hover {
 }
 
 /* Main Navigation Links */
+.main-menu__list {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 45px !important;
+}
+
+.main-menu__list li {
+    flex: 0 0 auto !important;
+}
+
 .main-menu__list li a {
     color: #ffffff !important;
     font-size: 1.25em !important;
@@ -379,10 +394,9 @@ a:hover {
     }
 }
 
-/* Event Countdown - Purple background on left side */
+/* Event Countdown - Light cream background extending upward */
 .event-countdown {
-    background: linear-gradient(to right, var(--cftv-purple) 0%, var(--cftv-purple) 33.33%, transparent 33.33%);
-    padding: 0;
+    background-color: var(--cftv-cream); 
 }
 
 /* Make content same height as photo */
@@ -410,6 +424,11 @@ a:hover {
     display: block;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+/* Purple background for countdown content area */
+.make-donation__right {
+    background-color: var(--cftv-purple);
 }
 
 .make-donation__content {
@@ -489,19 +508,51 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Fix image sizing for circular images */
+/* About Three Section - Rounded rectangle images */
+.about-three__img-box {
+    border-radius: 20px !important;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+.about-three__img {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
 .about-three__img img {
     width: 100%;
     height: 450px;
     object-fit: cover;
     object-position: center;
+    border-radius: 20px !important;
+}
+
+.about-three__img-two {
+    position: absolute !important;
+    bottom: -60px !important;
+    right: -40px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25) !important;
+    z-index: 2 !important;
+    width: 300px !important;
 }
 
 .about-three__img-two img {
-    width: 300px;
-    height: 300px;
+    width: 300px !important;
+    height: 280px !important;
     object-fit: cover;
     object-position: center;
+    border-radius: 20px !important;
+}
+
+/* Remove circular border decoration */
+.about-three__border {
+    display: none !important;
 }
 
 .make-donation__img img {
@@ -517,6 +568,13 @@ a:hover {
     background-color: var(--cftv-cream) !important;
 }
 
+/* Round bottom left corner of green background box */
+.events-two__right-bg-box {
+    border-bottom-left-radius: 20px !important;
+    overflow: hidden !important;
+    height: 578px !important;
+}
+
 /* ========================================
    Feature Three - Portrait Rounded Rectangle Cards
    ======================================== */
@@ -527,7 +585,7 @@ a:hover {
     position: relative;
     z-index: 10;
     padding: 60px 0;
-    background: linear-gradient(to bottom, #d0dbe8 0%, #8199b3 100%);
+    background-color: var(--cftv-cream);
 }
 
 /* Card container */
@@ -691,37 +749,22 @@ a:hover {
     display: none !important;
 }
 
-/* Different button colors for each card */
-.feature-three__card:nth-child(1) .feature-three__btn {
-    background-color: var(--cftv-purple);
+/* All buttons use burgundy */
+.feature-three__card .feature-three__btn {
+    background-color: var(--cftv-burgundy);
 }
 
-.feature-three__card:nth-child(1) .feature-three__btn:hover {
-    background-color: var(--cftv-purple-dark);
+.feature-three__card .feature-three__btn:hover {
+    background-color: var(--cftv-burgundy-medium);
 }
 
+/* Different title colors for each card */
 .feature-three__card:nth-child(1) .feature-three__title {
     color: var(--cftv-purple);
 }
 
-.feature-three__card:nth-child(2) .feature-three__btn {
-    background-color: var(--cftv-blue);
-}
-
-.feature-three__card:nth-child(2) .feature-three__btn:hover {
-    background-color: var(--cftv-blue-dark);
-}
-
 .feature-three__card:nth-child(2) .feature-three__title {
     color: var(--cftv-blue);
-}
-
-.feature-three__card:nth-child(3) .feature-three__btn {
-    background-color: var(--cftv-burgundy);
-}
-
-.feature-three__card:nth-child(3) .feature-three__btn:hover {
-    background-color: var(--cftv-burgundy-medium);
 }
 
 .feature-three__card:nth-child(3) .feature-three__title {
