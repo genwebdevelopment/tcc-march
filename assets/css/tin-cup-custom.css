@@ -6,7 +6,7 @@
 
 :root {
     /* Primary Dark Colors */
-    --cftv-purple: #3a133c;
+    --cftv-purple: #005282;
     --cftv-purple-dark: #5a2a5c;
     --cftv-burgundy: #851a2c;
     --cftv-navy: #192a3d;
@@ -50,6 +50,7 @@ p {
     background-color: var(--cftv-purple) !important;
     border-color: var(--cftv-purple) !important;
     color: #ffffff !important;
+    border-radius: 18px !important;
 }
 
 .thm-btn:hover,
@@ -57,9 +58,14 @@ p {
 .events-two__btn:hover,
 .about-three__btn:hover,
 .footer-widget__btn a:hover {
-    background-color: var(--cftv-purple-dark) !important;
-    border-color: var(--cftv-purple-dark) !important;
-    color: #ffffff !important;
+    background-color: var(--cftv-gold) !important;
+    border-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+}
+
+/* Override the :before pseudo-element for hero buttons on hover */
+.main-slider-three__btn:before {
+    background-color: var(--cftv-gold) !important;
 }
 
 /* Secondary accent colors - Blue */
@@ -82,6 +88,23 @@ p {
 .events-two__list--single {
     display: flex;
     justify-content: center;
+}
+
+/* Remove hover zoom effect on event images */
+.events-two__img img {
+    transition: none !important;
+}
+
+.events-two__list > li:hover .events-two__img img {
+    transform: scale(1) !important;
+}
+
+.events-two__img:after {
+    display: none !important;
+}
+
+.events-two__list > li:hover .events-two__img:after {
+    display: none !important;
 }
 
 .events-two__single-event {
@@ -217,6 +240,43 @@ a:hover {
 /* Hero slider images - full color instead of black and white */
 .image-layer-three {
     mix-blend-mode: normal !important;
+}
+
+/* Remove full-image overlays to keep photos bright */
+.image-layer-three:before {
+    display: none !important;
+}
+
+.main-slider-three-color {
+    display: none !important;
+}
+
+/* Add dark background behind text content only */
+.main-slider-three__content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Change animation to fade-in only (no sliding) so text stays within overlay box */
+.main-slider-three__sub-title,
+.main-slider-three__title,
+.main-slider-three__btn-box {
+    transform: translateY(0) !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1500ms ease !important;
+}
+
+.main-slider-three .swiper-slide-active .main-slider-three__sub-title,
+.main-slider-three .swiper-slide-active .main-slider-three__title,
+.main-slider-three .swiper-slide-active .main-slider-three__btn-box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) !important;
 }
 
 /* Preloader - Use Tin Cup Challenge logo */
@@ -502,9 +562,9 @@ a:hover {
 }
 
 .event-countdown__btn:hover {
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
-    color: var(--cftv-purple) !important;
+    background-color: var(--cftv-navy) !important;
+    border-color: var(--cftv-navy) !important;
+    color: var(--cftv-gold) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -570,8 +630,9 @@ a:hover {
     background-color: var(--cftv-cream) !important;
 }
 
-/* Round bottom left corner of green background box */
+/* Update background box color and styling */
 .events-two__right-bg-box {
+    background-color: var(--cftv-teal) !important;
     border-bottom-left-radius: 20px !important;
     overflow: hidden !important;
     height: 515px !important;
@@ -653,9 +714,9 @@ a:hover {
 .feature-three__gradient--purple {
     background: linear-gradient(
         to bottom,
-        rgba(58, 19, 60, 0) 0%,
-        rgba(58, 19, 60, 0.5) 50%,
-        rgba(58, 19, 60, 0.95) 100%
+        rgba(0, 82, 130, 0) 0%,
+        rgba(0, 82, 130, 0.5) 50%,
+        rgba(0, 82, 130, 0.95) 100%
     );
 }
 
@@ -709,7 +770,7 @@ a:hover {
     line-height: 1.6;
     color: #666;
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Oswald', sans-serif;
     flex: 1;
 }
 
@@ -722,7 +783,7 @@ a:hover {
     color: #ffffff !important;
     background-color: var(--cftv-purple);
     padding: 14px 28px;
-    border-radius: 8px;
+    border-radius: 18px;
     text-decoration: none !important;
     text-align: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -822,9 +883,9 @@ a:hover {
     position: relative;
 }
 
-/* Content box with dark purple background */
+/* Content box with blue to teal background */
 .event-day-invitation__content {
-    background: linear-gradient(135deg, #3a133c 0%, #5a2a5c 100%);
+    background: linear-gradient(135deg, #005282 0%, #5E847F 100%);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -854,7 +915,7 @@ a:hover {
     line-height: 1.6;
     color: #ffffff;
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Event details list */
@@ -871,7 +932,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .event-day-invitation__list li i {
@@ -953,7 +1014,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(58, 19, 60, 0.95), rgba(58, 19, 60, 0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 82, 130, 0.95), rgba(0, 82, 130, 0.7), transparent);
     color: #ffffff;
     padding: 30px 20px 20px;
     font-size: 18px;
@@ -1013,7 +1074,7 @@ a:hover {
     background-color: var(--cftv-purple-dark) !important;
     border-color: var(--cftv-purple-dark) !important;
     transform: translateY(-3px) !important;
-    box-shadow: 0 8px 25px rgba(58, 19, 60, 0.3) !important;
+    box-shadow: 0 8px 25px rgba(0, 82, 130, 0.3) !important;
 }
 
 .event-day-invitation__btn--secondary {
