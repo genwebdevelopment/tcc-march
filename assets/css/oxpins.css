@@ -7676,7 +7676,7 @@ body.locked .page-wrapper {
 
 .events-two__date {
   position: absolute;
-  bottom: 44px;
+  bottom: 39px;
   right: -25px;
   background-color: var(--oxpins-primary);
   padding: 7px 20px;
