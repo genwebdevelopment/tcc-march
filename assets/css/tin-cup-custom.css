@@ -41,31 +41,23 @@ p {
     color: var(--cftv-text-dark);
 }
 
-/* Primary Button Colors - Purple as primary */
-.thm-btn,
-.main-slider-three__btn,
-.events-two__btn,
-.about-three__btn,
-.footer-widget__btn a {
+/* Primary Button - Global Style */
+.thm-btn {
     background-color: var(--cftv-purple) !important;
     border-color: var(--cftv-purple) !important;
     color: #ffffff !important;
     border-radius: 18px !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.thm-btn:hover,
-.main-slider-three__btn:hover,
-.events-two__btn:hover,
-.about-three__btn:hover,
-.footer-widget__btn a:hover {
+.thm-btn:before {
     background-color: var(--cftv-gold) !important;
-    border-color: var(--cftv-gold) !important;
+}
+
+.thm-btn:hover {
     color: var(--cftv-navy) !important;
-}
-
-/* Override the :before pseudo-element for hero buttons on hover */
-.main-slider-three__btn:before {
-    background-color: var(--cftv-gold) !important;
 }
 
 /* Secondary accent colors - Blue */
@@ -240,16 +232,20 @@ a:hover {
 }
 
 /* Social icons */
-.main-menu__right-top-social a:hover,
-.site-footer__social a:hover {
+.main-menu__right-top-social a:hover {
     background-color: var(--cftv-blue) !important;
     color: #fff !important;
 }
 
-/* Footer social icons - yellow background */
+/* Footer social icons - yellow background, white hover */
 .site-footer__social a {
     background-color: var(--cftv-gold) !important;
     color: var(--cftv-navy) !important;
+}
+
+.site-footer__social a:hover {
+    background-color: #ffffff !important;
+    color: var(--cftv-blue) !important;
 }
 
 /* Footer Support a Nonprofit button - yellow style */
