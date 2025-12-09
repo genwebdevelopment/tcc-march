@@ -30,6 +30,7 @@ yarn.lock
 dist/
 build/
 .cache/
+_site/
 
 # Environment files (if using)
 .env
