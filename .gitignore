@@ -1,7 +1,7 @@
 # Oxpins theme source (not needed in repository)
-/oxpins-theme
+#/oxpins-theme
 
-/original-site
+#/original-site
 
 # IDE and Editor files
 tin-cup-design.code-workspace
