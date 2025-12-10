@@ -1168,3 +1168,36 @@ a:hover {
         height: 250px;
     }
 }
+
+/* ========================================
+   Main Slider - Custom Styling with Curved Edge
+   ======================================== */
+
+/* Teal background for slider section */
+.main-slider {
+    background-color: var(--cftv-teal) !important;
+}
+
+/* Add curved left edge to slider images using border radius */
+.main-slider .image-layer {
+    border-bottom-left-radius: 28%;
+}
+
+/* Hide decorative shape graphics */
+.main-slider-shape-1,
+.main-slider-shape-2 {
+    display: none !important;
+}
+
+/* Responsive adjustments for curved edge */
+@media (max-width: 991px) {
+    .main-slider .image-layer {
+        border-bottom-left-radius: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-slider .image-layer {
+        border-bottom-left-radius: 20%;
+    }
+}
