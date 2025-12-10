@@ -1238,9 +1238,57 @@ a:hover {
     background-color: var(--cftv-cream);
 }
 
-/* Causes One Cards */
+/* Causes One Cards - Equal Height */
+#nonprofits-grid {
+    row-gap: 30px;
+}
+
+.nonprofit-card-item {
+    display: flex;
+    margin-bottom: 0;
+}
+
 .causes-one__single {
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.causes-one__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.causes-one__title {
+    min-height: 56px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.causes-one__title a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.causes-one__text {
+    min-height: 48px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.causes-one__progress {
+    margin-top: auto;
 }
 
 /* Nonprofit Category Filter */
