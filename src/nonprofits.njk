@@ -1,0 +1,1051 @@
+---
+layout: base.njk
+title: Nonprofits
+description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Challenge. Browse organizations and make a donation today.
+---
+
+<!--Page Header Start-->
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(/assets/images/tin-cup/nonprofit-parade.jpg);">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="/">Home</a></li>
+                <li><span>/</span></li>
+                <li class="active">Nonprofits</li>
+            </ul>
+            <h2>Nonprofits</h2>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<!--Donation Start-->
+<section class="donation">
+    <div class="container">
+
+        <!--Category Filter Start-->
+        <div class="nonprofit-filter" id="nonprofit-filter">
+            <div class="nonprofit-filter__wrapper">
+                <button class="nonprofit-filter__btn active" data-category="all" data-category-id="0">
+                    All
+                </button>
+                <button class="nonprofit-filter__btn" data-category="education" data-category-id="1">
+                    Education
+                </button>
+                <button class="nonprofit-filter__btn" data-category="medical" data-category-id="2">
+                    Medical
+                </button>
+                <button class="nonprofit-filter__btn" data-category="food" data-category-id="3">
+                    Food
+                </button>
+                <button class="nonprofit-filter__btn" data-category="environment" data-category-id="4">
+                    Environment
+                </button>
+                <button class="nonprofit-filter__btn" data-category="youth" data-category-id="5">
+                    Youth
+                </button>
+                <button class="nonprofit-filter__btn" data-category="community" data-category-id="6">
+                    Community
+                </button>
+                <button class="nonprofit-filter__btn" data-category="arts" data-category-id="7">
+                    Arts & Culture
+                </button>
+            </div>
+            <!-- Loading indicator for AJAX calls -->
+            <div class="nonprofit-filter__loading" id="filter-loading" style="display: none;">
+                <div class="spinner"></div>
+                <span>Loading...</span>
+            </div>
+        </div>
+        <!--Category Filter End-->
+
+        <!-- No Results Message -->
+        <div class="nonprofit-no-results" id="no-results" style="display: none;">
+            <div class="nonprofit-no-results__content">
+                <i class="fas fa-search"></i>
+                <h3>No nonprofits found</h3>
+                <p>No nonprofits match the selected category. Please try a different filter.</p>
+            </div>
+        </div>
+
+        <div class="row" id="nonprofits-grid">
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="100ms" data-category="education" data-nonprofit-id="1">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-1.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Education</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
+                                children get good life</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="200ms" data-category="medical" data-nonprofit-id="2">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-2.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Medical</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
+                                fact that a reader</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="300ms" data-category="food" data-nonprofit-id="3">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-3.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Food</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
+                                of passages</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="400ms" data-category="environment" data-nonprofit-id="4">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-4.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Environment</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
+                                porta tempor ac</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="500ms" data-category="youth" data-nonprofit-id="5">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-5.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Youth</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
+                                vitae risus congue</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="600ms" data-category="community" data-nonprofit-id="6">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-6.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Community</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
+                                porta luctus</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="100ms" data-category="arts" data-nonprofit-id="7">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-1.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Arts & Culture</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
+                                children get good life</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="200ms" data-category="education" data-nonprofit-id="8">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-2.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Education</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
+                                fact that a reader</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!-- Additional nonprofits (hidden initially) -->
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="300ms" data-category="medical" data-nonprofit-id="9">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-3.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Medical</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
+                                of passages</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="food" data-nonprofit-id="10">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-4.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Food</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
+                                porta tempor ac</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="environment" data-nonprofit-id="11">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-5.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Environment</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
+                                vitae risus congue</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="youth" data-nonprofit-id="12">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-6.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Youth</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
+                                porta luctus</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="100ms" data-category="community" data-nonprofit-id="13">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-1.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Community</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
+                                children get good life</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="200ms" data-category="arts" data-nonprofit-id="14">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-2.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Arts & Culture</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
+                                fact that a reader</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="300ms" data-category="education" data-nonprofit-id="15">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-3.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Education</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
+                                of passages</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="medical" data-nonprofit-id="16">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-4.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Medical</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
+                                porta tempor ac</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="food" data-nonprofit-id="17">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-5.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Food</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
+                                vitae risus congue</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+
+            <!--Causes One Single Start-->
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="environment" data-nonprofit-id="18">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="/assets/images/resources/causes-1-6.jpg" alt="">
+                        <div class="causes-one__cat">
+                            <p>Environment</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
+                                porta luctus</a>
+                        </h3>
+                        <p class="causes-one__text">There are many of lorem, but majori have
+                            suffered alteration in some form.</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="36%">
+                                    <div class="count-text">36%</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>$25,270</span> Raised</p>
+                                <p><span>$30,000</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Causes One Single End-->
+        </div>
+
+        <!-- View More / View Less Button -->
+        <div class="nonprofits-show-more text-center" id="show-more-wrapper">
+            <button id="toggle-nonprofits" class="thm-btn nonprofits-show-more__btn">
+                <span class="btn-text">View More</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<!--Donation End-->
+
+<!--CTA Section Start-->
+
+<!--CTA Section End-->
+
+{% block scripts %}
+<script>
+/**
+ * Nonprofit Filter Module
+ * Handles category filtering with support for future AJAX integration
+ *
+ * FUTURE AJAX INTEGRATION:
+ * - Set NonprofitFilter.useAjax = true to enable AJAX mode
+ * - Configure NonprofitFilter.ajaxUrl with your API endpoint
+ * - The fetchNonprofits() method will make AJAX calls instead of client-side filtering
+ */
+const NonprofitFilter = {
+    // Configuration - Change these for AJAX mode
+    useAjax: false,  // Set to true when ready to use AJAX
+    ajaxUrl: '/api/nonprofits',  // Your API endpoint
+
+    // State
+    currentCategory: 'all',
+    isExpanded: false,
+    initialVisibleCount: 8,
+
+    // DOM Elements
+    elements: {
+        grid: null,
+        filterButtons: null,
+        toggleBtn: null,
+        btnText: null,
+        btnIcon: null,
+        loading: null,
+        noResults: null,
+        showMoreWrapper: null
+    },
+
+    /**
+     * Initialize the filter module
+     */
+    init: function() {
+        // Cache DOM elements
+        this.elements.grid = document.getElementById('nonprofits-grid');
+        this.elements.filterButtons = document.querySelectorAll('.nonprofit-filter__btn');
+        this.elements.toggleBtn = document.getElementById('toggle-nonprofits');
+        this.elements.btnText = this.elements.toggleBtn?.querySelector('.btn-text');
+        this.elements.btnIcon = this.elements.toggleBtn?.querySelector('i');
+        this.elements.loading = document.getElementById('filter-loading');
+        this.elements.noResults = document.getElementById('no-results');
+        this.elements.showMoreWrapper = document.getElementById('show-more-wrapper');
+
+        // Bind events
+        this.bindEvents();
+
+        // Store original hidden state for "all" category
+        this.storeOriginalState();
+    },
+
+    /**
+     * Store the original hidden state of cards
+     */
+    storeOriginalState: function() {
+        const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
+        cards.forEach((card, index) => {
+            card.dataset.originalHidden = index >= this.initialVisibleCount ? 'true' : 'false';
+        });
+    },
+
+    /**
+     * Bind click events to filter buttons and toggle button
+     */
+    bindEvents: function() {
+        const self = this;
+
+        // Filter button clicks
+        this.elements.filterButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const category = this.dataset.category;
+                const categoryId = this.dataset.categoryId;
+                self.filterByCategory(category, categoryId);
+
+                // Update active state
+                self.elements.filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Toggle button click
+        if (this.elements.toggleBtn) {
+            this.elements.toggleBtn.addEventListener('click', function() {
+                self.toggleExpand();
+            });
+        }
+    },
+
+    /**
+     * Filter nonprofits by category
+     * @param {string} category - Category slug
+     * @param {string} categoryId - Category ID for AJAX calls
+     */
+    filterByCategory: function(category, categoryId) {
+        this.currentCategory = category;
+
+        if (this.useAjax) {
+            // AJAX MODE: Fetch from server
+            this.fetchNonprofits(category, categoryId);
+        } else {
+            // CLIENT-SIDE MODE: Filter existing cards
+            this.filterCardsClientSide(category);
+        }
+    },
+
+    /**
+     * Client-side filtering of nonprofit cards
+     * @param {string} category - Category to filter by
+     */
+    filterCardsClientSide: function(category) {
+        const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
+        let visibleCount = 0;
+        let totalMatching = 0;
+
+        cards.forEach((card, index) => {
+            const cardCategory = card.dataset.category;
+            const isMatch = category === 'all' || cardCategory === category;
+
+            if (isMatch) {
+                totalMatching++;
+
+                if (category === 'all') {
+                    // For "all", respect original hidden state unless expanded
+                    if (card.dataset.originalHidden === 'true' && !this.isExpanded) {
+                        card.style.display = 'none';
+                        card.classList.add('nonprofit-hidden');
+                        card.classList.remove('nonprofit-visible');
+                    } else {
+                        card.style.display = '';
+                        card.classList.remove('nonprofit-hidden');
+                        card.classList.add('nonprofit-visible');
+                        visibleCount++;
+                    }
+                } else {
+                    // For specific category, show all matching
+                    card.style.display = '';
+                    card.classList.remove('nonprofit-hidden');
+                    card.classList.add('nonprofit-visible');
+                    visibleCount++;
+                }
+            } else {
+                card.style.display = 'none';
+                card.classList.add('nonprofit-hidden');
+                card.classList.remove('nonprofit-visible');
+            }
+        });
+
+        // Show/hide no results message
+        this.elements.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        this.elements.grid.style.display = visibleCount === 0 ? 'none' : '';
+
+        // Show/hide "View More" button based on category
+        if (category === 'all') {
+            const hiddenInAll = Array.from(cards).filter(c => c.dataset.originalHidden === 'true').length;
+            this.elements.showMoreWrapper.style.display = hiddenInAll > 0 ? '' : 'none';
+        } else {
+            // Hide "View More" when filtering by specific category
+            this.elements.showMoreWrapper.style.display = 'none';
+        }
+
+        // Re-initialize WOW animations
+        if (typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
+    },
+
+    /**
+     * AJAX: Fetch nonprofits from server
+     * @param {string} category - Category slug
+     * @param {string} categoryId - Category ID
+     */
+    fetchNonprofits: function(category, categoryId) {
+        const self = this;
+
+        // Show loading
+        this.showLoading(true);
+        this.elements.grid.style.opacity = '0.5';
+
+        // Build request URL
+        const url = category === 'all'
+            ? this.ajaxUrl
+            : `${this.ajaxUrl}?category=${categoryId}`;
+
+        // Make AJAX request
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            self.renderNonprofits(data.nonprofits || data);
+            self.showLoading(false);
+            self.elements.grid.style.opacity = '1';
+        })
+        .catch(error => {
+            console.error('Error fetching nonprofits:', error);
+            self.showLoading(false);
+            self.elements.grid.style.opacity = '1';
+            // Fallback to client-side filtering on error
+            self.filterCardsClientSide(category);
+        });
+    },
+
+    /**
+     * Render nonprofits from AJAX response
+     * @param {Array} nonprofits - Array of nonprofit objects
+     */
+    renderNonprofits: function(nonprofits) {
+        if (!nonprofits || nonprofits.length === 0) {
+            this.elements.grid.innerHTML = '';
+            this.elements.noResults.style.display = 'block';
+            this.elements.grid.style.display = 'none';
+            this.elements.showMoreWrapper.style.display = 'none';
+            return;
+        }
+
+        this.elements.noResults.style.display = 'none';
+        this.elements.grid.style.display = '';
+        this.elements.showMoreWrapper.style.display = 'none'; // Hide when using AJAX
+
+        // Generate HTML for each nonprofit
+        const html = nonprofits.map((np, index) => this.generateCardHTML(np, index)).join('');
+        this.elements.grid.innerHTML = html;
+
+        // Re-initialize WOW animations
+        if (typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
+    },
+
+    /**
+     * Generate HTML for a single nonprofit card
+     * @param {Object} nonprofit - Nonprofit data object
+     * @param {number} index - Index for animation delay
+     * @returns {string} HTML string
+     */
+    generateCardHTML: function(nonprofit, index) {
+        const delay = ((index % 6) + 1) * 100;
+        const percent = nonprofit.percent || '0%';
+        const raised = nonprofit.raised || '$0';
+        const goal = nonprofit.goal || '$0';
+
+        return `
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item"
+                 data-wow-delay="${delay}ms"
+                 data-category="${nonprofit.category_slug || ''}"
+                 data-nonprofit-id="${nonprofit.id || ''}">
+                <div class="causes-one__single">
+                    <div class="causes-one__img">
+                        <img src="${nonprofit.image || '/assets/images/resources/causes-1-1.jpg'}" alt="${nonprofit.title || ''}">
+                        <div class="causes-one__cat">
+                            <p>${nonprofit.category || ''}</p>
+                        </div>
+                    </div>
+                    <div class="causes-one__content">
+                        <h3 class="causes-one__title">
+                            <a href="${nonprofit.url || '#'}">${nonprofit.title || ''}</a>
+                        </h3>
+                        <p class="causes-one__text">${nonprofit.description || ''}</p>
+                        <div class="causes-one__progress">
+                            <div class="causes-one__progress-shape"
+                                style="background-image: url(/assets/images/shapes/causes-one-progress-shape-1.png);">
+                            </div>
+                            <div class="bar">
+                                <div class="bar-inner count-bar" data-percent="${percent}">
+                                    <div class="count-text">${percent}</div>
+                                </div>
+                            </div>
+                            <div class="causes-one__goals">
+                                <p><span>${raised}</span> Raised</p>
+                                <p><span>${goal}</span> Goal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    },
+
+    /**
+     * Toggle expand/collapse for "View More" functionality
+     */
+    toggleExpand: function() {
+        this.isExpanded = !this.isExpanded;
+
+        if (this.currentCategory === 'all') {
+            const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
+
+            cards.forEach(card => {
+                if (card.dataset.originalHidden === 'true') {
+                    if (this.isExpanded) {
+                        card.style.display = '';
+                        card.classList.remove('nonprofit-hidden');
+                        card.classList.add('nonprofit-visible');
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.add('nonprofit-hidden');
+                        card.classList.remove('nonprofit-visible');
+                    }
+                }
+            });
+        }
+
+        // Update button text and icon
+        if (this.isExpanded) {
+            this.elements.btnText.textContent = 'View Less';
+            this.elements.btnIcon.classList.remove('fa-chevron-down');
+            this.elements.btnIcon.classList.add('fa-chevron-up');
+        } else {
+            this.elements.btnText.textContent = 'View More';
+            this.elements.btnIcon.classList.remove('fa-chevron-up');
+            this.elements.btnIcon.classList.add('fa-chevron-down');
+
+            // Scroll back to grid
+            document.getElementById('nonprofits-grid').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Re-initialize WOW animations
+        if (this.isExpanded && typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
+    },
+
+    /**
+     * Show/hide loading indicator
+     * @param {boolean} show - Whether to show loading
+     */
+    showLoading: function(show) {
+        if (this.elements.loading) {
+            this.elements.loading.style.display = show ? 'flex' : 'none';
+        }
+    }
+};
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    NonprofitFilter.init();
+});
+</script>
+{% endblock %}

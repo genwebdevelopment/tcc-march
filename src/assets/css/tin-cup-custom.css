@@ -1168,3 +1168,218 @@ a:hover {
         height: 250px;
     }
 }
+
+/* ========================================
+   Nonprofits Page Styles
+   ======================================== */
+
+/* Nonprofits Section */
+.nonprofits-section {
+    padding: 80px 0;
+    background-color: var(--cftv-cream);
+}
+
+/* Hidden nonprofits */
+.nonprofit-hidden {
+    display: none !important;
+}
+
+.nonprofit-visible {
+    display: block !important;
+}
+
+/* Nonprofit card button box */
+.causes-one__btn-box {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.causes-one__btn {
+    display: inline-block;
+    padding: 12px 30px !important;
+    font-size: 15px !important;
+    font-weight: 600;
+}
+
+/* Show More Button */
+.nonprofits-show-more {
+    margin-top: 50px;
+}
+
+.nonprofits-show-more__btn {
+    padding: 18px 50px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background-color: var(--cftv-gold) !important;
+    border-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+}
+
+.nonprofits-show-more__btn:before {
+    background-color: var(--cftv-purple) !important;
+}
+
+.nonprofits-show-more__btn:hover {
+    color: #ffffff !important;
+}
+
+.nonprofits-show-more__btn i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Donation section on nonprofits page */
+.donation {
+    padding: 80px 0;
+    background-color: var(--cftv-cream);
+}
+
+/* Causes One Cards */
+.causes-one__single {
+    margin-bottom: 30px;
+}
+
+/* Nonprofit Category Filter */
+.nonprofit-filter {
+    margin-bottom: 40px;
+}
+
+.nonprofit-filter__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nonprofit-filter__btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cftv-navy);
+    background-color: #fff;
+    border: 2px solid var(--cftv-gold);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nonprofit-filter__btn:hover {
+    background-color: var(--cftv-gold);
+    border-color: var(--cftv-gold);
+    color: var(--cftv-navy);
+}
+
+.nonprofit-filter__btn.active {
+    background-color: var(--cftv-gold);
+    border-color: var(--cftv-gold);
+    color: var(--cftv-navy);
+}
+
+.nonprofit-filter__btn.active:hover {
+    background-color: var(--cftv-purple);
+    border-color: var(--cftv-purple);
+    color: #fff;
+}
+
+/* Filter Loading Indicator */
+.nonprofit-filter__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    color: var(--oxpins-gray);
+}
+
+.nonprofit-filter__loading .spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e5e5e5;
+    border-top-color: var(--cftv-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* No Results Message */
+.nonprofit-no-results {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.nonprofit-no-results__content i {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.nonprofit-no-results__content h3 {
+    font-size: 24px;
+    color: var(--oxpins-black);
+    margin-bottom: 10px;
+}
+
+.nonprofit-no-results__content p {
+    color: var(--oxpins-gray);
+    font-size: 16px;
+}
+
+/* Responsive adjustments for nonprofits page */
+@media (max-width: 991px) {
+    .nonprofits-section {
+        padding: 60px 0;
+    }
+
+    .nonprofits-show-more {
+        margin-top: 40px;
+    }
+
+    .donation {
+        padding: 60px 0;
+    }
+
+    .nonprofit-filter__btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nonprofits-section {
+        padding: 40px 0;
+    }
+
+    .nonprofits-show-more__btn {
+        padding: 15px 40px !important;
+        font-size: 16px !important;
+    }
+
+    .donation {
+        padding: 40px 0;
+    }
+
+    .nonprofit-filter {
+        margin-bottom: 30px;
+    }
+
+    .nonprofit-filter__wrapper {
+        gap: 8px;
+    }
+
+    .nonprofit-filter__btn {
+        padding: 8px 14px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+}
