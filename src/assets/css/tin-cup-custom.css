@@ -1173,14 +1173,115 @@ a:hover {
    Main Slider - Custom Styling with Curved Edge
    ======================================== */
 
-/* Teal background for slider section */
+/* Burgundy background for slider section */
 .main-slider {
-    background-color: var(--cftv-teal) !important;
+    background-color: #851a2c !important;
 }
 
 /* Add curved left edge to slider images using border radius */
+/* Keep image static at 51.5% width, no animation, full color */
 .main-slider .image-layer {
     border-bottom-left-radius: 28%;
+    width: 51.5% !important;
+    right: 0 !important;
+    left: auto !important;
+    mix-blend-mode: normal !important;
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+}
+
+/* Disable image animation on active slide */
+.main-slider .swiper-slide-active .image-layer {
+    transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+}
+
+/* Move text content 50px to the left */
+.main-slider__content {
+    margin-left: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Single hero slide container */
+.main-slider-single {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure container has proper z-index */
+.main-slider-single .container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Custom hero container with wider max-width */
+.hero-container {
+    max-width: 1400px !important;
+}
+
+/* Keyframe animation for fade in and slide up */
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* Animate text elements on page load */
+.main-slider__sub-title {
+    color: #ffffff !important;
+    position: relative !important;
+    z-index: 10 !important;
+    animation: fadeInUp 1s ease-out 0.3s forwards !important;
+    -webkit-animation: fadeInUp 1s ease-out 0.3s forwards !important;
+}
+
+.main-slider__title {
+    color: #ffffff !important;
+    position: relative !important;
+    z-index: 10 !important;
+    animation: fadeInUp 1s ease-out 0.6s forwards !important;
+    -webkit-animation: fadeInUp 1s ease-out 0.6s forwards !important;
+}
+
+/* Animate button */
+.main-slider__btn-box {
+    animation: fadeInUp 1s ease-out 0.9s forwards !important;
+    -webkit-animation: fadeInUp 1s ease-out 0.9s forwards !important;
+}
+
+/* Ensure elements become visible after animation */
+.main-slider-single .main-slider__sub-title,
+.main-slider-single .main-slider__title,
+.main-slider-single .main-slider__btn-box {
+    animation-fill-mode: forwards !important;
+    -webkit-animation-fill-mode: forwards !important;
 }
 
 /* Hide decorative shape graphics */
@@ -1193,6 +1294,15 @@ a:hover {
 @media (max-width: 991px) {
     .main-slider .image-layer {
         border-bottom-left-radius: 25%;
+        width: 48% !important;
+    }
+
+    .main-slider__content {
+        margin-left: -30px;
+    }
+
+    .main-slider-single {
+        min-height: 600px;
     }
 }
 
@@ -1429,6 +1539,16 @@ a:hover {
 @media (max-width: 767px) {
     .main-slider .image-layer {
         border-bottom-left-radius: 20%;
+        width: 100% !important;
+        right: 0 !important;
+    }
+
+    .main-slider__content {
+        margin-left: 0;
+    }
+
+    .main-slider-single {
+        min-height: 500px;
     }
 }
 
