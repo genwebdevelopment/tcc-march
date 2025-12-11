@@ -1831,3 +1831,546 @@ a:hover {
         border-radius: 20px;
     }
 
+/* ========================================
+   Donation/Nonprofit Details Page - Custom Styling
+   ======================================== */
+
+/* Background color for donation details section */
+/* .donation-details {
+    background-color: var(--cftv-cream);
+} */
+
+/* Category tag color - Gold with Navy text */
+.donation-details__date {
+    background-color: var(--cftv-gold) !important;
+}
+
+.donation-details__date p {
+    color: var(--cftv-navy) !important;
+}
+
+/* Categories section */
+.donation-details__categories {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.donation-details__categories-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cftv-navy);
+    margin-right: 5px;
+}
+
+.donation-details__category-tag {
+    padding: 6px 18px;
+    background-color: var(--cftv-navy);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Donate box - Gold background */
+.donation-details__donate {
+    background-color: var(--cftv-gold) !important;
+}
+
+.donation-details__donate-list .icon {
+    background-color: rgba(25, 42, 61, 0.15) !important;
+}
+
+.donation-details__donate-list .icon span {
+    color: var(--cftv-navy) !important;
+}
+
+.donation-details__donate-list .text span,
+.donation-details__donate-list .text p {
+    color: var(--cftv-navy) !important;
+}
+
+/* Quote text in donate box */
+.donation-details__quote {
+    flex: 1;
+}
+
+.donation-details__quote p {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--cftv-navy);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Sidebar Organizer Donate Section */
+.donation-details__organizer-donate {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.donation-details__organizer-donate-inner {
+    background-color: var(--cftv-gold);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.donation-details__organizer-donate-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.donation-details__organizer-donate-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.donation-details__organizer-donate-list .icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(25, 42, 61, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donation-details__organizer-donate-list .icon span {
+    font-size: 18px;
+    color: var(--cftv-navy);
+}
+
+.donation-details__organizer-donate-list .text span {
+    font-size: 12px;
+    color: var(--cftv-navy);
+    display: block;
+}
+
+.donation-details__organizer-donate-list .text p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cftv-navy);
+    margin: 0;
+}
+
+.donation-details__organizer-donate-btn {
+    text-align: center;
+}
+
+.donation-details__organizer-donate-btn .thm-btn {
+    background-color: var(--cftv-navy) !important;
+    border-color: var(--cftv-navy) !important;
+    padding: 12px 30px !important;
+    width: 100%;
+}
+
+.donation-details__organizer-donate-btn .thm-btn:hover {
+    background-color: var(--cftv-blue) !important;
+    border-color: var(--cftv-blue) !important;
+}
+
+/* Donate button in box */
+.donation-details__donate-btn .thm-btn {
+    background-color: var(--cftv-navy) !important;
+    border-color: var(--cftv-navy) !important;
+}
+
+.donation-details__donate-btn .thm-btn:hover {
+    background-color: var(--cftv-blue) !important;
+    border-color: var(--cftv-blue) !important;
+}
+
+/* Summary list check icons */
+.donation-details__summary-list .icon {
+    background-color: var(--cftv-gold) !important;
+}
+
+.donation-details__summary-list .icon span {
+    color: var(--cftv-navy) !important;
+}
+
+/* Video/Media Section */
+.donation-details__media {
+    margin-top: 40px;
+}
+
+.donation-details__media-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cftv-navy);
+    margin-bottom: 25px;
+}
+
+.donation-details__video-wrap {
+    position: relative;
+}
+
+.donation-details__video-img {
+    position: relative;
+    border-radius: var(--oxpins-bdr-radius);
+    overflow: hidden;
+}
+
+.donation-details__video-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.donation-details__video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: var(--cftv-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cftv-navy);
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.donation-details__video-btn:hover {
+    background-color: var(--cftv-navy);
+    color: #fff;
+}
+
+/* Sidebar organizer styling */
+.donation-details__organizer-list .icon {
+    background-color: var(--cftv-gold) !important;
+}
+
+.donation-details__organizer-list .icon span {
+    color: var(--cftv-navy) !important;
+}
+
+/* Nonprofit Details Info Box */
+.donation-details__np-info {
+    position: relative;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.07);
+    border-radius: var(--oxpins-bdr-radius);
+    padding: 50px 40px 45px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.donation-details__np-info .sidebar-shape-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 0;
+}
+
+.donation-details__np-info-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cftv-navy);
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.donation-details__np-info-list {
+    position: relative;
+    z-index: 1;
+}
+
+.donation-details__np-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.donation-details__np-info-list li:last-child {
+    border-bottom: none;
+}
+
+.donation-details__np-info-list .icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--cftv-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.donation-details__np-info-list .icon span {
+    font-size: 16px;
+    color: #fff;
+}
+
+.donation-details__np-info-list .text {
+    flex: 1;
+}
+
+.donation-details__np-info-list .text span {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.donation-details__np-info-list .text p {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+}
+
+.donation-details__np-info-list .text a {
+    color: var(--cftv-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.donation-details__np-info-list .text a:hover {
+    color: var(--cftv-navy);
+}
+
+.donation-details__np-logo {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.donation-details__np-logo img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Share social icons - Gold background */
+.donation-details__sidebar-shaare-cause-social a {
+    background-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+}
+
+.donation-details__sidebar-shaare-cause-social a:hover {
+    background-color: var(--cftv-navy) !important;
+    color: #fff !important;
+}
+
+/* Sidebar Donate Box (Raised, Goal, Donate Button) */
+.donation-details__sidebar-donate {
+    position: relative;
+    display: block;
+    background-color: var(--oxpins-extra);
+    border-radius: var(--oxpins-bdr-radius);
+    padding: 40px 30px 35px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.donation-details__sidebar-donate .sidebar-shape-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 0;
+}
+
+.donation-details__sidebar-donate-list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.donation-details__sidebar-donate-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.donation-details__sidebar-donate-list .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donation-details__sidebar-donate-list .icon span {
+    font-size: 50px;
+    color: var(--oxpins-base);
+}
+
+.donation-details__sidebar-donate-list .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-details__sidebar-donate-list .text span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--oxpins-gray);
+}
+
+.donation-details__sidebar-donate-list .text p {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--oxpins-black);
+    margin: 0;
+}
+
+.donation-details__sidebar-donate-btn {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.donation-details__sidebar-donate-btn .thm-btn {
+    background-color: var(--cftv-gold) !important;
+    border-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+    padding: 15px 50px !important;
+    font-weight: 700;
+}
+
+.donation-details__sidebar-donate-btn .thm-btn:hover {
+    background-color: var(--cftv-navy) !important;
+    border-color: var(--cftv-navy) !important;
+    color: #fff !important;
+}
+
+/* Sidebar Nonprofit Details Box */
+.sidebar__nonprofit-details {
+    position: relative;
+    display: block;
+    background-color: var(--oxpins-extra);
+    border-radius: var(--oxpins-bdr-radius);
+    padding: 46px 30px 35px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.sidebar__nonprofit-details .sidebar-shape-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 0;
+}
+
+.sidebar__nonprofit-details .sidebar__title {
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+.sidebar__nonprofit-details-list {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.sidebar__nonprofit-details-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar__nonprofit-details-list li:hover {
+    background-color: var(--oxpins-white);
+}
+
+.sidebar__nonprofit-details-list li + li {
+    margin-top: 5px;
+}
+
+.sidebar__nonprofit-details-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--cftv-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.sidebar__nonprofit-details-icon i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar__nonprofit-details-content {
+    flex: 1;
+}
+
+.sidebar__nonprofit-details-content span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--oxpins-gray);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.sidebar__nonprofit-details-content p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--oxpins-black);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.sidebar__nonprofit-details-content a {
+    color: var(--cftv-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar__nonprofit-details-content a:hover {
+    color: var(--cftv-navy);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .donation-details__donate {
+        flex-direction: column;
+    }
+
+    .donation-details__quote {
+        border-left: none;
+        border-top: 2px solid rgba(25, 42, 61, 0.2);
+        padding-left: 0;
+        padding-top: 15px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
