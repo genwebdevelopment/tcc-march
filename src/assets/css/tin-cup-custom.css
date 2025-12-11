@@ -1516,6 +1516,257 @@ a:hover {
     font-size: 16px;
 }
 
+/* ========================================
+   Page Header - Colorful Hero Image
+   ======================================== */
+
+/* Remove dark overlay and show colorful image */
+.page-header {
+    background-color: transparent !important;
+}
+
+.page-header-bg {
+    background-color: transparent !important;
+    background-blend-mode: normal !important;
+    opacity: 1 !important;
+}
+
+/* Add subtle dark overlay for text readability */
+.page-header-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+/* Reduce page header height by 25% */
+.page-header {
+    padding: 106px 0 99px !important;
+}
+
+/* ========================================
+   Category Filter Badges - Color Coded
+   ======================================== */
+
+/* Base filter button styles */
+.nonprofit-filter__btn {
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--cftv-navy);
+    border: 2px solid var(--cftv-navy);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nonprofit-filter__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* All - Gold */
+.nonprofit-filter__btn[data-category="all"] {
+    background-color: var(--cftv-gold);
+    border-color: var(--cftv-gold);
+    color: var(--cftv-navy);
+}
+
+.nonprofit-filter__btn[data-category="all"]:hover,
+.nonprofit-filter__btn[data-category="all"].active {
+    background-color: var(--cftv-navy);
+    border-color: var(--cftv-navy);
+    color: #fff;
+}
+
+/* Education - Blue */
+.nonprofit-filter__btn[data-category="education"] {
+    background-color: var(--cftv-blue);
+    border-color: var(--cftv-blue);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="education"]:hover,
+.nonprofit-filter__btn[data-category="education"].active {
+    background-color: var(--cftv-navy);
+    border-color: var(--cftv-navy);
+}
+
+/* Medical - Burgundy */
+.nonprofit-filter__btn[data-category="medical"] {
+    background-color: var(--cftv-burgundy);
+    border-color: var(--cftv-burgundy);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="medical"]:hover,
+.nonprofit-filter__btn[data-category="medical"].active {
+    background-color: #6b1523;
+    border-color: #6b1523;
+}
+
+/* Food - Gold */
+.nonprofit-filter__btn[data-category="food"] {
+    background-color: var(--cftv-gold);
+    border-color: var(--cftv-gold);
+    color: var(--cftv-navy);
+}
+
+.nonprofit-filter__btn[data-category="food"]:hover,
+.nonprofit-filter__btn[data-category="food"].active {
+    background-color: #e5a94e;
+    border-color: #e5a94e;
+}
+
+/* Environment - Teal */
+.nonprofit-filter__btn[data-category="environment"] {
+    background-color: var(--cftv-teal);
+    border-color: var(--cftv-teal);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="environment"]:hover,
+.nonprofit-filter__btn[data-category="environment"].active {
+    background-color: #4a6b67;
+    border-color: #4a6b67;
+}
+
+/* Youth - Purple */
+.nonprofit-filter__btn[data-category="youth"] {
+    background-color: var(--cftv-purple-light);
+    border-color: var(--cftv-purple-light);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="youth"]:hover,
+.nonprofit-filter__btn[data-category="youth"].active {
+    background-color: #47224a;
+    border-color: #47224a;
+}
+
+/* Community - Navy */
+.nonprofit-filter__btn[data-category="community"] {
+    background-color: var(--cftv-navy);
+    border-color: var(--cftv-navy);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="community"]:hover,
+.nonprofit-filter__btn[data-category="community"].active {
+    background-color: #0f1a26;
+    border-color: #0f1a26;
+}
+
+/* Arts & Culture - Purple */
+.nonprofit-filter__btn[data-category="arts"] {
+    background-color: var(--cftv-purple-light);
+    border-color: var(--cftv-purple-light);
+    color: #fff;
+}
+
+.nonprofit-filter__btn[data-category="arts"]:hover,
+.nonprofit-filter__btn[data-category="arts"].active {
+    background-color: #47224a;
+    border-color: #47224a;
+}
+
+/* ========================================
+   Category Tags on Cards - Color Coded
+   ======================================== */
+
+/* Education - Blue */
+.nonprofit-card-item[data-category="education"] .causes-one__cat {
+    background-color: var(--cftv-blue);
+}
+.nonprofit-card-item[data-category="education"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* Medical - Burgundy */
+.nonprofit-card-item[data-category="medical"] .causes-one__cat {
+    background-color: var(--cftv-burgundy);
+}
+.nonprofit-card-item[data-category="medical"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* Food - Gold */
+.nonprofit-card-item[data-category="food"] .causes-one__cat {
+    background-color: var(--cftv-gold);
+}
+.nonprofit-card-item[data-category="food"] .causes-one__cat p {
+    color: var(--cftv-navy);
+}
+
+/* Environment - Teal */
+.nonprofit-card-item[data-category="environment"] .causes-one__cat {
+    background-color: var(--cftv-teal);
+}
+.nonprofit-card-item[data-category="environment"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* Youth - Purple */
+.nonprofit-card-item[data-category="youth"] .causes-one__cat {
+    background-color: var(--cftv-purple-light);
+}
+.nonprofit-card-item[data-category="youth"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* Community - Navy */
+.nonprofit-card-item[data-category="community"] .causes-one__cat {
+    background-color: var(--cftv-navy);
+}
+.nonprofit-card-item[data-category="community"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* Arts & Culture - Purple */
+.nonprofit-card-item[data-category="arts"] .causes-one__cat {
+    background-color: var(--cftv-purple-light);
+}
+.nonprofit-card-item[data-category="arts"] .causes-one__cat p {
+    color: #fff;
+}
+
+/* ========================================
+   View More Button - Gold Style (matches home page)
+   ======================================== */
+
+.nonprofits-show-more__btn {
+    padding: 20px 60px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    background-color: var(--cftv-gold) !important;
+    border: none !important;
+    color: var(--cftv-navy) !important;
+    border-radius: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: none !important;
+}
+
+.nonprofits-show-more__btn:before {
+    display: none !important;
+}
+
+.nonprofits-show-more__btn:hover {
+    background-color: #e5a94e !important;
+    color: var(--cftv-navy) !important;
+    transform: translateY(-2px);
+}
+
+/* Remove arrow icon display */
+.nonprofits-show-more__btn i {
+    display: none !important;
+}
+
 /* Responsive adjustments for nonprofits page */
 @media (max-width: 991px) {
     .nonprofits-section {
