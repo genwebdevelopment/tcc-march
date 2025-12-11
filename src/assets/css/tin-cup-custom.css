@@ -17,6 +17,7 @@
     --cftv-purple-light: #5a2a5c;
     --cftv-teal: #5E847F;
     --cftv-blue-light: #e3eaef;
+    --cftv-coral: #E07A5F;
 
     /* Legacy/Deprecated - kept for compatibility */
     --cftv-blue-dark: #015c8b;
@@ -47,6 +48,9 @@ p {
     border-color: var(--cftv-purple) !important;
     color: #ffffff !important;
     border-radius: 18px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    padding: 15px 49px !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -1646,17 +1650,18 @@ a:hover {
     border-color: #6b1523;
 }
 
-/* Food - Gold */
+/* Food - Light Gray Blue */
 .nonprofit-filter__btn[data-category="food"] {
-    background-color: var(--cftv-gold);
-    border-color: var(--cftv-gold);
+    background-color: var(--cftv-blue-light);
+    border-color: var(--cftv-blue-light);
     color: var(--cftv-navy);
 }
 
 .nonprofit-filter__btn[data-category="food"]:hover,
 .nonprofit-filter__btn[data-category="food"].active {
-    background-color: #e5a94e;
-    border-color: #e5a94e;
+    background-color: var(--cftv-blue);
+    border-color: var(--cftv-blue);
+    color: #fff;
 }
 
 /* Environment - Teal */
@@ -1698,17 +1703,17 @@ a:hover {
     border-color: #0f1a26;
 }
 
-/* Arts & Culture - Purple */
+/* Arts & Culture - Coral */
 .nonprofit-filter__btn[data-category="arts"] {
-    background-color: var(--cftv-purple-light);
-    border-color: var(--cftv-purple-light);
+    background-color: var(--cftv-coral);
+    border-color: var(--cftv-coral);
     color: #fff;
 }
 
 .nonprofit-filter__btn[data-category="arts"]:hover,
 .nonprofit-filter__btn[data-category="arts"].active {
-    background-color: #47224a;
-    border-color: #47224a;
+    background-color: #c8654a;
+    border-color: #c8654a;
 }
 
 /* ========================================
@@ -1731,9 +1736,9 @@ a:hover {
     color: #fff;
 }
 
-/* Food - Gold */
+/* Food - Light Gray Blue */
 .nonprofit-card-item[data-category="food"] .causes-one__cat {
-    background-color: var(--cftv-gold);
+    background-color: var(--cftv-blue-light);
 }
 .nonprofit-card-item[data-category="food"] .causes-one__cat p {
     color: var(--cftv-navy);
@@ -1763,9 +1768,9 @@ a:hover {
     color: #fff;
 }
 
-/* Arts & Culture - Purple */
+/* Arts & Culture - Coral */
 .nonprofit-card-item[data-category="arts"] .causes-one__cat {
-    background-color: var(--cftv-purple-light);
+    background-color: var(--cftv-coral);
 }
 .nonprofit-card-item[data-category="arts"] .causes-one__cat p {
     color: #fff;
