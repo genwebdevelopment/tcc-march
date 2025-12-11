@@ -1255,7 +1255,7 @@ a:hover {
 
 /* Animate text elements on page load */
 .main-slider__sub-title {
-    color: #ffffff !important;
+    color: #e3eaef !important;
     position: relative !important;
     z-index: 10 !important;
     animation: fadeInUp 1s ease-out 0.3s forwards !important;
@@ -1274,6 +1274,42 @@ a:hover {
 .main-slider__btn-box {
     animation: fadeInUp 1s ease-out 0.9s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.9s forwards !important;
+}
+
+/* Hero button - Match footer button colors but keep original animation */
+.main-slider__btn {
+    background-color: var(--cftv-gold) !important;
+    border-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+    /* Ensure animation properties are not blocked */
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+/* Keep the circular slide animation with white background */
+.main-slider__btn:before {
+    background-color: #ffffff !important;
+    /* Ensure the animation circle is properly configured */
+    transition-duration: 800ms !important;
+    position: absolute !important;
+    width: 200% !important;
+    height: 200% !important;
+    content: "" !important;
+    top: -230% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: 50% !important;
+    z-index: -1 !important;
+}
+
+.main-slider__btn:hover {
+    color: var(--cftv-blue) !important;
+}
+
+/* Ensure hover triggers the circle animation */
+.main-slider__btn:hover:before {
+    top: -40% !important;
 }
 
 /* Ensure elements become visible after animation */
