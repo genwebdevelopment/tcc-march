@@ -116,26 +116,12 @@ description: Learn more about this nonprofit organization and how you can suppor
                     <div class="donation-details__sidebar-donate">
                         <div class="sidebar-shape-1"
                             style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
-                        <ul class="list-unstyled donation-details__sidebar-donate-list">
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-solidarity"></span>
-                                </div>
-                                <div class="text">
-                                    <span>Raised</span>
-                                    <p>$25,270</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-target-1"></span>
-                                </div>
-                                <div class="text">
-                                    <span>Goal</span>
-                                    <p>$30,000</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="donation-details__donate-amount">
+                            <div class="donation-amount-input-wrapper">
+                                <span class="donation-amount-symbol">$</span>
+                                <input type="number" class="donation-amount-input" id="donation-amount" name="donation-amount" placeholder="0.00" min="1" step="0.01">
+                            </div>
+                        </div>
                         <div class="donation-details__sidebar-donate-btn">
                             <a href="#" class="thm-btn">Donate Now</a>
                         </div>
