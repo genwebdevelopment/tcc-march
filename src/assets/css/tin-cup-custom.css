@@ -1878,11 +1878,11 @@ a:hover {
 
 /* Category tag color - Gold with Navy text */
 .donation-details__date {
-    background-color: var(--cftv-gold) !important;
+    background-color: var(--cftv-blue) !important;
 }
 
 .donation-details__date p {
-    color: var(--cftv-navy) !important;
+    color: #fff !important;
 }
 
 /* Categories section */
@@ -2294,6 +2294,53 @@ a:hover {
     background-color: var(--cftv-navy) !important;
     border-color: var(--cftv-navy) !important;
     color: #fff !important;
+}
+
+/* Donation Amount Input Field */
+.donation-details__donate-amount {
+    position: relative;
+    z-index: 1;
+    margin: 20px 0;
+}
+
+.donation-amount-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.donation-amount-symbol {
+    position: absolute;
+    left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.donation-amount-input {
+    width: 100%;
+    padding: 15px 15px 15px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cftv-text-dark);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.donation-amount-input:focus {
+    border-color: var(--cftv-blue);
+    box-shadow: 0 0 0 3px rgba(0, 82, 130, 0.1);
+}
+
+.donation-amount-input::placeholder {
+    color: #999;
+    font-weight: 400;
 }
 
 /* Sidebar Nonprofit Details Box */
