@@ -60,6 +60,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
     .color-navy { background-color: #192a3d; }
     .color-gold { background-color: #febe58; }
     .color-teal { background-color: #5E847F; }
+    .color-coral { background-color: #E07A5F; }
 
     .color-blue-light h4,
     .color-blue-light p,
@@ -271,6 +272,14 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
                     <p>#e3eaef</p>
                     <p>RGB(227, 234, 239)</p>
                     <small>Backgrounds, hover states</small>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="color-swatch color-coral">
+                    <h4>Coral</h4>
+                    <p>#E07A5F</p>
+                    <p>RGB(224, 122, 95)</p>
+                    <small>Category badges, accents</small>
                 </div>
             </div>
         </div>
@@ -580,6 +589,178 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
     </div>
 </section>
 <!-- Event Branding End -->
+
+<!-- Category Badges & Tags Start -->
+<section class="brand-guide-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">UI Components</span>
+            <h2 class="section-title__title">Category Badges & Tags</h2>
+            <p style="max-width: 700px; margin: 20px auto;">
+                Color-coded category badges and tags for nonprofit filtering and organization.
+            </p>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-lg-12">
+                <h4 style="margin-bottom: 25px; font-weight: 700;">Filter Button Colors</h4>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #febe58; color: #192a3d; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            All - Gold
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #005282; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Education - Blue
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #851a2c; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Medical - Burgundy
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #e3eaef; color: #192a3d; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Food - Light Gray-Blue
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #5E847F; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Environment - Teal
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #5a2a5c; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Youth - Purple
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #192a3d; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Community - Navy
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 20px;">
+                        <div style="background: #E07A5F; color: #fff; padding: 12px 24px; border-radius: 25px; text-align: center; font-weight: 600;">
+                            Arts & Culture - Coral
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="usage-do">
+                    <h5 style="color: #005282; margin-bottom: 15px;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Do</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Use consistent colors for each category</li>
+                        <li>Maintain 25px border-radius for filter buttons</li>
+                        <li>Use white text on dark backgrounds, navy text on light backgrounds</li>
+                        <li>Apply same colors to card category tags</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="usage-dont">
+                    <h5 style="color: #E74C3C; margin-bottom: 15px;"><i class="fas fa-times-circle" style="margin-right: 8px;"></i> Don't</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Mix category colors or use different colors for same category</li>
+                        <li>Use colors that don't meet contrast requirements</li>
+                        <li>Change border-radius or padding inconsistently</li>
+                        <li>Use category colors for non-category elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin-top: 40px;">
+            <h5 style="color: #005282; margin-bottom: 20px; font-weight: 700;">CSS Variables Reference</h5>
+            <pre style="background: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>--cftv-gold: #febe58;          /* All */
+--cftv-blue: #005282;         /* Education */
+--cftv-burgundy: #851a2c;     /* Medical */
+--cftv-blue-light: #e3eaef;   /* Food */
+--cftv-teal: #5E847F;         /* Environment */
+--cftv-purple-light: #5a2a5c; /* Youth */
+--cftv-navy: #192a3d;         /* Community */
+--cftv-coral: #E07A5F;        /* Arts & Culture */</code></pre>
+        </div>
+    </div>
+</section>
+<!-- Category Badges & Tags End -->
+
+<!-- Buttons Start -->
+<section class="brand-guide-section" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">UI Components</span>
+            <h2 class="section-title__title">Button Styles</h2>
+            <p style="max-width: 700px; margin: 20px auto;">
+                Standard button styling for consistent call-to-action elements across the site.
+            </p>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-lg-6">
+                <h4 style="margin-bottom: 25px; font-weight: 700;">Primary Button</h4>
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
+                    <a href="#" class="thm-btn" style="display: inline-block; margin-bottom: 20px;">Donate Now</a>
+                    <div style="margin-top: 20px;">
+                        <p style="margin-bottom: 10px;"><strong>Font Size:</strong> 14px</p>
+                        <p style="margin-bottom: 10px;"><strong>Font Weight:</strong> 800 (Bold)</p>
+                        <p style="margin-bottom: 10px;"><strong>Padding:</strong> 15px 49px</p>
+                        <p style="margin-bottom: 10px;"><strong>Border Radius:</strong> 18px</p>
+                        <p style="margin-bottom: 10px;"><strong>Background:</strong> #005282 (Blue)</p>
+                        <p style="margin-bottom: 10px;"><strong>Text Color:</strong> #ffffff</p>
+                        <p style="margin-bottom: 10px;"><strong>Text Transform:</strong> Uppercase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4 style="margin-bottom: 25px; font-weight: 700;">Secondary Button (Gold)</h4>
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
+                    <a href="#" class="thm-btn" style="display: inline-block; margin-bottom: 20px; background-color: #febe58 !important; color: #192a3d !important;">Support a Nonprofit</a>
+                    <div style="margin-top: 20px;">
+                        <p style="margin-bottom: 10px;"><strong>Font Size:</strong> 14px</p>
+                        <p style="margin-bottom: 10px;"><strong>Font Weight:</strong> 800 (Bold)</p>
+                        <p style="margin-bottom: 10px;"><strong>Padding:</strong> 15px 49px</p>
+                        <p style="margin-bottom: 10px;"><strong>Border Radius:</strong> 18px</p>
+                        <p style="margin-bottom: 10px;"><strong>Background:</strong> #febe58 (Gold)</p>
+                        <p style="margin-bottom: 10px;"><strong>Text Color:</strong> #192a3d (Navy)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="usage-do">
+                    <h5 style="color: #005282; margin-bottom: 15px;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Do</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Use 14px font size for all buttons</li>
+                        <li>Maintain consistent padding (15px 49px)</li>
+                        <li>Use 18px border-radius</li>
+                        <li>Apply uppercase text transform</li>
+                        <li>Use font-weight 800 (bold)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="usage-dont">
+                    <h5 style="color: #E74C3C; margin-bottom: 15px;"><i class="fas fa-times-circle" style="margin-right: 8px;"></i> Don't</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Use different font sizes for buttons</li>
+                        <li>Vary padding or border-radius inconsistently</li>
+                        <li>Use lowercase or mixed case button text</li>
+                        <li>Apply lighter font weights</li>
+                        <li>Create custom button styles that don't match these standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Buttons End -->
 
 <!-- Contact Section Start -->
 <section class="brand-guide-section" style="background: linear-gradient(135deg, #005282 0%, #5E847F 100%); color: white;">
