@@ -1426,12 +1426,38 @@ a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed height image container for logos */
+.causes-one__img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.causes-one__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background-color: #ffffff;
 }
 
 .causes-one__content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: 20px;
 }
 
 .causes-one__title {
@@ -1441,6 +1467,9 @@ a:hover {
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.4;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .causes-one__title a {
@@ -1451,17 +1480,36 @@ a:hover {
 }
 
 .causes-one__text {
-    min-height: 48px;
+    min-height: 66px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 
 .causes-one__progress {
     margin-top: auto;
+}
+
+/* Category badge positioning */
+.causes-one__cat {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.causes-one__cat p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Nonprofit Category Filter */
