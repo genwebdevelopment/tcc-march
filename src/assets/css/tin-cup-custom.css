@@ -1641,7 +1641,7 @@ a:hover {
    ======================================== */
 
 .nonprofit-info-box {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: left;
 }
 
@@ -2606,7 +2606,7 @@ a:hover {
    ======================================== */
 
 .page-header-simple {
-    background-color: var(--cftv-blue);
+    background-color: var(--cftv-burgundy);
     padding: 40px 0 50px;
     position: relative;
 }
