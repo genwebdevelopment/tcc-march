@@ -1666,23 +1666,22 @@ a:hover {
    Category Filter Badges
    ======================================== */
 
-/* Filter wrapper - grid layout for equal width, left-aligned */
+/* Filter wrapper - 5 column grid layout */
 .nonprofit-filter__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    justify-items: stretch;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
 }
 
 /* Base filter button styles */
 .nonprofit-filter__btn {
-    padding: 12px 20px;
+    padding: 6px 10px;
     font-size: 14px;
     font-weight: 600;
     color: #fff;
     background-color: var(--cftv-navy);
     border: 2px solid var(--cftv-navy);
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
@@ -1941,12 +1940,6 @@ a:hover {
 }
 
 /* Responsive adjustments for nonprofits page */
-@media (max-width: 1199px) {
-    .nonprofit-filter__wrapper {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-}
-
 @media (max-width: 991px) {
     .nonprofits-section {
         padding: 60px 0;
@@ -1961,11 +1954,11 @@ a:hover {
     }
 
     .nonprofit-filter__wrapper {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .nonprofit-filter__btn {
-        padding: 10px 15px;
+        padding: 6px 8px;
         font-size: 13px;
     }
 
@@ -1988,9 +1981,7 @@ a:hover {
     .main-slider-single {
         min-height: 500px;
     }
-}
 
-/* Nonprofits Page Styles */
     .nonprofits-section {
         padding: 40px 0;
     }
@@ -2011,14 +2002,14 @@ a:hover {
 
     .nonprofit-filter__wrapper {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
     }
 
     .nonprofit-filter__btn {
-        padding: 10px 12px;
+        padding: 6px 8px;
         font-size: 12px;
-        border-radius: 20px;
+        border-radius: 25px;
     }
+}
 
 /* ========================================
    Donation/Nonprofit Details Page - Custom Styling
@@ -2809,11 +2800,12 @@ a:hover {
 
 @media (max-width: 480px) {
     .nonprofit-filter__wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .nonprofit-filter__btn {
-        padding: 8px 10px;
+        padding: 8px 6px;
         font-size: 11px;
     }
 }
