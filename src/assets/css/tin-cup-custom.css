@@ -1508,8 +1508,8 @@ a:hover {
     margin: 0;
     font-size: 12px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 /* Nonprofit Category Filter */
@@ -1901,10 +1901,34 @@ a:hover {
     text-decoration: none;
 }
 
-/* Card hover effect */
+/* Card hover effect - only grow animation, no overlay or tilt */
+.causes-one__single--clickable {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .causes-one__single--clickable:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove gray overlay animation on card images */
+.causes-one__img::before,
+.causes-one__img::after {
+    display: none !important;
+}
+
+.causes-one__single:hover .causes-one__img::before,
+.causes-one__single:hover .causes-one__img::after {
+    display: none !important;
+}
+
+/* Remove any image overlay effects */
+.causes-one__img img {
+    transition: none !important;
+}
+
+.causes-one__single:hover .causes-one__img img {
+    transform: none !important;
 }
 
 /* ========================================
