@@ -2683,10 +2683,11 @@ a:hover {
 
 .donation-details__testimonial {
     position: relative;
-    background-color: var(--cftv-gold);
+    background-color: var(--cftv-navy);
     border-radius: var(--oxpins-bdr-radius);
     padding: 30px 35px;
     margin-top: 30px;
+    margin-bottom: 30px;
     overflow: hidden;
 }
 
@@ -2718,7 +2719,7 @@ a:hover {
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--cftv-gold);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
@@ -2755,7 +2756,7 @@ a:hover {
 .donation-details__testimonial .donation-details__quote p {
     font-size: 16px;
     font-style: italic;
-    color: var(--cftv-navy);
+    color: #ffffff;
     margin: 0;
     line-height: 1.7;
 }
@@ -2768,7 +2769,7 @@ a:hover {
 .donation-details__quote-attribution span {
     font-size: 14px;
     font-weight: 700;
-    color: var(--cftv-navy);
+    color: #ffffff;
     font-style: normal;
 }
 
