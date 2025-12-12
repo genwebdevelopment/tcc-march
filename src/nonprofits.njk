@@ -25,32 +25,38 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
 <section class="donation">
     <div class="container">
 
+        <!--Info Box Start-->
+        <div class="nonprofit-info-box">
+            <p>The Tin Cup Challenge is hosted by the Community Foundation of Teton Valley. For nonprofit program details, please visit <a href="https://www.cftetonvalley.org" target="_blank">www.cftetonvalley.org</a>.</p>
+        </div>
+        <!--Info Box End-->
+
         <!--Category Filter Start-->
         <div class="nonprofit-filter" id="nonprofit-filter">
             <div class="nonprofit-filter__wrapper">
                 <button class="nonprofit-filter__btn active" data-category="all" data-category-id="0">
                     All
                 </button>
-                <button class="nonprofit-filter__btn" data-category="education" data-category-id="1">
+                <button class="nonprofit-filter__btn" data-category="animal-rescue" data-category-id="1">
+                    Animal Rescue
+                </button>
+                <button class="nonprofit-filter__btn" data-category="arts" data-category-id="2">
+                    Arts & Culture
+                </button>
+                <button class="nonprofit-filter__btn" data-category="civic" data-category-id="3">
+                    Civic & Service
+                </button>
+                <button class="nonprofit-filter__btn" data-category="conservation" data-category-id="4">
+                    Conservation & Environment
+                </button>
+                <button class="nonprofit-filter__btn" data-category="education" data-category-id="5">
                     Education
                 </button>
-                <button class="nonprofit-filter__btn" data-category="medical" data-category-id="2">
-                    Medical
+                <button class="nonprofit-filter__btn" data-category="health" data-category-id="6">
+                    Health & Human Services
                 </button>
-                <button class="nonprofit-filter__btn" data-category="food" data-category-id="3">
-                    Food
-                </button>
-                <button class="nonprofit-filter__btn" data-category="environment" data-category-id="4">
-                    Environment
-                </button>
-                <button class="nonprofit-filter__btn" data-category="youth" data-category-id="5">
-                    Youth
-                </button>
-                <button class="nonprofit-filter__btn" data-category="community" data-category-id="6">
-                    Community
-                </button>
-                <button class="nonprofit-filter__btn" data-category="arts" data-category-id="7">
-                    Arts & Culture
+                <button class="nonprofit-filter__btn" data-category="sports" data-category-id="7">
+                    Sports & Recreation
                 </button>
             </div>
             <!-- Loading indicator for AJAX calls -->
@@ -73,7 +79,7 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
         <div class="row" id="nonprofits-grid">
             <!--Causes One Single Start-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="100ms" data-category="education" data-nonprofit-id="1">
-                <div class="causes-one__single">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-1.jpg" alt="">
                         <div class="causes-one__cat">
@@ -81,119 +87,119 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
-                                children get good life</a>
+                        <h3 class="causes-one__title">Let's education for
+                                children get good life
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="200ms" data-category="medical" data-nonprofit-id="2">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="200ms" data-category="health" data-nonprofit-id="2">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-2.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Medical</p>
+                            <p>Health & Human Services</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
-                                fact that a reader</a>
+                        <h3 class="causes-one__title">It is a long established
+                                fact that a reader
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="300ms" data-category="food" data-nonprofit-id="3">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="300ms" data-category="animal-rescue" data-nonprofit-id="3">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-3.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Food</p>
+                            <p>Animal Rescue</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
-                                of passages</a>
+                        <h3 class="causes-one__title">There are many variations
+                                of passages
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="400ms" data-category="environment" data-nonprofit-id="4">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="400ms" data-category="conservation" data-nonprofit-id="4">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-4.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Environment</p>
+                            <p>Conservation & Environment</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
-                                porta tempor ac</a>
+                        <h3 class="causes-one__title">Maecenas ut ligula ut nisi
+                                porta tempor ac
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="500ms" data-category="youth" data-nonprofit-id="5">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="500ms" data-category="sports" data-nonprofit-id="5">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-5.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Youth</p>
+                            <p>Sports & Recreation</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
-                                vitae risus congue</a>
+                        <h3 class="causes-one__title">Phasellus suscipit est
+                                vitae risus congue
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="600ms" data-category="community" data-nonprofit-id="6">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="600ms" data-category="civic" data-nonprofit-id="6">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-6.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Community</p>
+                            <p>Civic & Service</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
-                                porta luctus</a>
+                        <h3 class="causes-one__title">Sed malesuada nisl eget
+                                porta luctus
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="100ms" data-category="arts" data-nonprofit-id="7">
-                <div class="causes-one__single">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-1.jpg" alt="">
                         <div class="causes-one__cat">
@@ -201,19 +207,19 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
-                                children get good life</a>
+                        <h3 class="causes-one__title">Let's education for
+                                children get good life
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="200ms" data-category="education" data-nonprofit-id="8">
-                <div class="causes-one__single">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-2.jpg" alt="">
                         <div class="causes-one__cat">
@@ -221,120 +227,120 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
-                                fact that a reader</a>
+                        <h3 class="causes-one__title">It is a long established
+                                fact that a reader
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!-- Additional nonprofits (hidden initially) -->
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="300ms" data-category="medical" data-nonprofit-id="9">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="300ms" data-category="health" data-nonprofit-id="9">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-3.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Medical</p>
+                            <p>Health & Human Services</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
-                                of passages</a>
+                        <h3 class="causes-one__title">There are many variations
+                                of passages
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="food" data-nonprofit-id="10">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="animal-rescue" data-nonprofit-id="10">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-4.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Food</p>
+                            <p>Animal Rescue</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
-                                porta tempor ac</a>
+                        <h3 class="causes-one__title">Maecenas ut ligula ut nisi
+                                porta tempor ac
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="environment" data-nonprofit-id="11">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="conservation" data-nonprofit-id="11">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-5.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Environment</p>
+                            <p>Conservation & Environment</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
-                                vitae risus congue</a>
+                        <h3 class="causes-one__title">Phasellus suscipit est
+                                vitae risus congue
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="youth" data-nonprofit-id="12">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="sports" data-nonprofit-id="12">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-6.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Youth</p>
+                            <p>Sports & Recreation</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
-                                porta luctus</a>
+                        <h3 class="causes-one__title">Sed malesuada nisl eget
+                                porta luctus
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="100ms" data-category="community" data-nonprofit-id="13">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="100ms" data-category="civic" data-nonprofit-id="13">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-1.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Community</p>
+                            <p>Civic & Service</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Let's education for
-                                children get good life</a>
+                        <h3 class="causes-one__title">Let's education for
+                                children get good life
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="200ms" data-category="arts" data-nonprofit-id="14">
-                <div class="causes-one__single">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-2.jpg" alt="">
                         <div class="causes-one__cat">
@@ -342,19 +348,19 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">It is a long established
-                                fact that a reader</a>
+                        <h3 class="causes-one__title">It is a long established
+                                fact that a reader
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="300ms" data-category="education" data-nonprofit-id="15">
-                <div class="causes-one__single">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-3.jpg" alt="">
                         <div class="causes-one__cat">
@@ -362,73 +368,73 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">There are many variations
-                                of passages</a>
+                        <h3 class="causes-one__title">There are many variations
+                                of passages
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="medical" data-nonprofit-id="16">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="400ms" data-category="health" data-nonprofit-id="16">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-4.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Medical</p>
+                            <p>Health & Human Services</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Maecenas ut ligula ut nisi
-                                porta tempor ac</a>
+                        <h3 class="causes-one__title">Maecenas ut ligula ut nisi
+                                porta tempor ac
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="food" data-nonprofit-id="17">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="500ms" data-category="animal-rescue" data-nonprofit-id="17">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-5.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Food</p>
+                            <p>Animal Rescue</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Phasellus suscipit est
-                                vitae risus congue</a>
+                        <h3 class="causes-one__title">Phasellus suscipit est
+                                vitae risus congue
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
 
             <!--Causes One Single Start-->
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="environment" data-nonprofit-id="18">
-                <div class="causes-one__single">
+            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item nonprofit-hidden" data-wow-delay="600ms" data-category="conservation" data-nonprofit-id="18">
+                <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
                     <div class="causes-one__img">
                         <img src="/assets/images/resources/causes-1-6.jpg" alt="">
                         <div class="causes-one__cat">
-                            <p>Environment</p>
+                            <p>Conservation & Environment</p>
                         </div>
                     </div>
                     <div class="causes-one__content">
-                        <h3 class="causes-one__title"><a href="donation-details.html">Sed malesuada nisl eget
-                                porta luctus</a>
+                        <h3 class="causes-one__title">Sed malesuada nisl eget
+                                porta luctus
                         </h3>
                         <p class="causes-one__text">There are many of lorem, but majori have
                             suffered alteration in some form.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <!--Causes One Single End-->
         </div>
