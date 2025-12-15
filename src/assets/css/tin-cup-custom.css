@@ -2729,9 +2729,9 @@ a:hover {
         border-left: none;
         border-top: 2px solid rgba(25, 42, 61, 0.2);
         padding-left: 0;
-        padding-top: 15px;
+        /* padding-top: 15px; */
         margin-left: 0;
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
     .donation-details{
         padding: 50px 0 50px !important;
@@ -3191,4 +3191,8 @@ a:hover {
     .footer-widget__btn a{
         display: block !important;
     }
+}
+
+#nonprofits-grid .nonprofit-card-item .causes-one__content{
+    border: unset !important;
 }
