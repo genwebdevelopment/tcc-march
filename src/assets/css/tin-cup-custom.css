@@ -3192,3 +3192,7 @@ a:hover {
         display: block !important;
     }
 }
+
+#nonprofits-grid .nonprofit-card-item .causes-one__content{
+    border: unset !important;
+}
