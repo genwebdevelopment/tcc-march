@@ -50,6 +50,9 @@
 
 <body class="custom-cursor">
 
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
 
@@ -65,7 +68,9 @@
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
+        <main id="main-content">
         {{ content | safe }}
+        </main>
 
         {% include "footer.njk" %}
     </div><!-- /.page-wrapper -->
@@ -88,7 +93,7 @@
     </div>
     <!-- /.search-popup -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i></a>
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top" aria-label="Back to top"><i class="icon-up-arrow" aria-hidden="true"></i></a>
 
     <script src="/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

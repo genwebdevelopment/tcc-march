@@ -33,6 +33,56 @@
     --cftv-text-dark: #333333;
 }
 
+/* ========================================
+   Skip Link - Accessibility
+   ======================================== */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 100000;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: var(--cftv-navy);
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    outline: 2px solid var(--cftv-gold);
+    outline-offset: 2px;
+}
+
+/* Screen reader only - visually hidden but accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mobile nav close button - reset button styles */
+button.mobile-nav__close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 /* Body Text - Darker for better readability */
 body {
     color: var(--cftv-text-dark) !important;
@@ -1634,6 +1684,16 @@ a:hover {
 /* Reduce page header height by 25% */
 .page-header {
     padding: 106px 0 99px !important;
+}
+
+/* Style H1 in page header same as H2 for accessibility compliance */
+.page-header__inner h1 {
+    font-size: 40px;
+    color: var(--oxpins-white);
+    font-weight: 800;
+    line-height: 50px;
+    margin: 0;
+    text-transform: capitalize;
 }
 
 /* ========================================

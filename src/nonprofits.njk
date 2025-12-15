@@ -15,7 +15,7 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
                 <li><span>/</span></li>
                 <li class="active">Nonprofits</li>
             </ul>
-            <h2>Nonprofits</h2>
+            <h1>Nonprofits</h1>
         </div>
     </div>
 </section>
@@ -34,28 +34,28 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
         <!--Category Filter Start-->
         <div class="nonprofit-filter" id="nonprofit-filter">
             <div class="nonprofit-filter__wrapper">
-                <button class="nonprofit-filter__btn active" data-category="all" data-category-id="0">
+                <button class="nonprofit-filter__btn active" data-category="all" data-category-id="0" aria-pressed="true">
                     All
                 </button>
-                <button class="nonprofit-filter__btn" data-category="animal-rescue" data-category-id="1">
+                <button class="nonprofit-filter__btn" data-category="animal-rescue" data-category-id="1" aria-pressed="false">
                     Animal Rescue
                 </button>
-                <button class="nonprofit-filter__btn" data-category="arts" data-category-id="2">
+                <button class="nonprofit-filter__btn" data-category="arts" data-category-id="2" aria-pressed="false">
                     Arts & Culture
                 </button>
-                <button class="nonprofit-filter__btn" data-category="civic" data-category-id="3">
+                <button class="nonprofit-filter__btn" data-category="civic" data-category-id="3" aria-pressed="false">
                     Civic & Service
                 </button>
-                <button class="nonprofit-filter__btn" data-category="conservation" data-category-id="4">
+                <button class="nonprofit-filter__btn" data-category="conservation" data-category-id="4" aria-pressed="false">
                     Conservation & Environment
                 </button>
-                <button class="nonprofit-filter__btn" data-category="education" data-category-id="5">
+                <button class="nonprofit-filter__btn" data-category="education" data-category-id="5" aria-pressed="false">
                     Education
                 </button>
-                <button class="nonprofit-filter__btn" data-category="health" data-category-id="6">
+                <button class="nonprofit-filter__btn" data-category="health" data-category-id="6" aria-pressed="false">
                     Health & Human Services
                 </button>
-                <button class="nonprofit-filter__btn" data-category="sports" data-category-id="7">
+                <button class="nonprofit-filter__btn" data-category="sports" data-category-id="7" aria-pressed="false">
                     Sports & Recreation
                 </button>
             </div>
@@ -481,7 +481,7 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
 
         <!-- View More / View Less Button -->
         <div class="nonprofits-show-more text-center" id="show-more-wrapper">
-            <button id="toggle-nonprofits" class="thm-btn nonprofits-show-more__btn">
+            <button id="toggle-nonprofits" class="thm-btn nonprofits-show-more__btn" aria-expanded="false" aria-controls="nonprofits-grid">
                 <span class="btn-text">View More</span>
             </button>
         </div>
@@ -568,9 +568,13 @@ const NonprofitFilter = {
                 const categoryId = this.dataset.categoryId;
                 self.filterByCategory(category, categoryId);
 
-                // Update active state
-                self.elements.filterButtons.forEach(b => b.classList.remove('active'));
+                // Update active state and aria-pressed
+                self.elements.filterButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
                 this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
             });
         });
 
@@ -783,11 +787,13 @@ const NonprofitFilter = {
             });
         }
 
-        // Update button text
+        // Update button text and aria-expanded
         if (this.isExpanded) {
             this.elements.btnText.textContent = 'View Less';
+            this.elements.toggleBtn.setAttribute('aria-expanded', 'true');
         } else {
             this.elements.btnText.textContent = 'View More';
+            this.elements.toggleBtn.setAttribute('aria-expanded', 'false');
 
             // Scroll back to grid
             document.getElementById('nonprofits-grid').scrollIntoView({
