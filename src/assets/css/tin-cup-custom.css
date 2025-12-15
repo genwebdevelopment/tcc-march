@@ -76,13 +76,6 @@
     border: 0;
 }
 
-/* Mobile nav close button - reset button styles */
-button.mobile-nav__close {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
 /* Body Text - Darker for better readability */
 body {
     color: var(--cftv-text-dark) !important;
@@ -207,12 +200,12 @@ p {
 
 /* Donate now button background */
 .main-menu__btn {
-    background-color: var(--cftv-gold) !important;
+    background-color: var(--cftv-gold) ;
     font-size: 1.25em !important;
 }
 
 .main-menu__btn:before {
-    background-color: var(--cftv-gold) !important;
+    background-color: var(--cftv-gold) ;
 }
 
 /* Links */
@@ -436,7 +429,7 @@ a:hover {
 }
 
 .main-menu__list {
-    display: flex !important;
+    /* display: inline-block !important; */
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
@@ -923,7 +916,7 @@ a:hover {
 
 .about-three {
     background: linear-gradient(to bottom, #e1e8ed 0%, #f8f9fa 100%);
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 /* ========================================
@@ -1252,7 +1245,7 @@ a:hover {
 
 /* Move text content 50px to the left */
 .main-slider__content {
-    margin-left: -50px;
+    /* margin-left: -50px; */
     position: relative;
     z-index: 10;
 }
@@ -1381,6 +1374,21 @@ a:hover {
 }
 
 /* Responsive adjustments for curved edge */
+@media (max-width: 1199px) {
+    .main-slider__title {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+    }
+
+    .main-slider__sub-title {
+        font-size: 26px !important;
+    }
+
+    .main-slider__content {
+        padding-right: 20px;
+    }
+}
+
 @media (max-width: 991px) {
     .main-slider .image-layer {
         border-bottom-left-radius: 25%;
@@ -1388,11 +1396,49 @@ a:hover {
     }
 
     .main-slider__content {
-        margin-left: -30px;
+        /* margin-left: -30px; */
+        padding-top: 30px;
+        padding-right: 15px;
+    }
+
+    .main-slider__title {
+        font-size: 52px !important;
+        line-height: 1.2 !important;
+    }
+
+    .main-slider__sub-title {
+        /* font-size: 14px !important; */
     }
 
     .main-slider-single {
-        min-height: 600px;
+        min-height: 500px;
+        padding-top: 20px;
+    }
+
+    .main-slider {
+        margin-top: 0;
+    }
+
+    .main-slider__btn {
+        padding: 12px 25px !important;
+        /* font-size: 13px !important; */
+    }
+}
+
+@media (max-width: 767px) {
+    .main-slider-single {
+        min-height: 450px;
+        padding-top: 15px;
+    }
+
+    .main-slider__content {
+        padding-top: 20px;
+        margin-left: 0;
+        padding-right: 10px;
+    }
+
+    .main-slider .image-layer {
+        width: 45% !important;
     }
 }
 
@@ -2895,5 +2941,250 @@ a:hover {
     .nonprofit-filter__btn {
         padding: 8px 6px;
         font-size: 11px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE STYLES - Home Page
+   ======================================== */
+
+/* ----------------------------------------
+   Header Mobile Layout
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    /* Main wrapper - stack into two rows */
+    .main-menu__wrapper-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    /* Row 1 (TOP): Become a Challenger, Search, Cart - full width */
+    .main-menu__right-top {
+        order: 1;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-menu__right {
+        display: contents;
+    }
+
+    /* Row 2 (BOTTOM): Logo on left, Hamburger on right */
+    .main-menu__left {
+        flex: 1;
+        order: 2;
+    }
+
+    /* Hamburger goes to row 2, right side */
+    .main-menu__right-bottom {
+        order: 3;
+        display: flex;
+        align-items: center;
+        background-color: var(--cftv-white) !important;
+    }
+
+    .main-menu__main-menu-box {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hide donate button in nav bar on mobile */
+    .main-menu__main-menu-content-box {
+        display: none !important;
+    }
+
+    /* Show hamburger menu */
+    .mobile-nav__toggler {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        color: var(--cftv-navy) !important;
+        background-color: transparent !important;
+        padding: 8px;
+    }
+
+    .mobile-nav__toggler i {
+        color: var(--cftv-navy) !important;
+    }
+
+    .main-menu__right-top-right {
+        width: 100%;
+    }
+
+    .main-menu__top-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .main-menu__volunteers {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .main-menu__volunteers-icon img {
+        width: 30px;
+        height: auto;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 20px;
+    }
+
+    .main-menu__search-box,
+    .main-menu__cat-box {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-menu__logo img {
+        max-width: 120px !important;
+    }
+
+    .main-menu__top-buttons {
+        gap: 15px;
+    }
+
+    .main-menu__volunteers-icon img {
+        width: 25px;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 18px;
+    }
+
+    .main-menu__volunteers-text span {
+        font-size: 18px !important;
+    }
+
+    .main-menu__search-box,
+    .main-menu__cat-box {
+        font-size: 18px;
+    }
+
+    .mobile-nav__toggler {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .main-menu__logo img {
+        max-width: 100px !important;
+    }
+
+    .main-menu__top-buttons {
+        gap: 10px;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 15px;
+    }
+
+    .main-menu__volunteers-text span {
+        font-size: 15px !important;
+    }
+}
+
+/* Mobile Nav Donate Button - Same style as desktop */
+.mobile-nav__donate {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.mobile-nav__donate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 25px !important;
+    color: #ffffff !important;
+    border-radius: 18px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mobile-nav__donate-btn:before {
+    display: none !important;
+}
+
+.mobile-nav__donate-btn:hover {
+    background-color: var(--cftv-gold) !important;
+    border-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+}
+
+/* ----------------------------------------
+   Get Involved Cards - Mobile Spacing
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    .feature-three .col-xl-4 {
+        margin-bottom: 30px;
+    }
+
+    .feature-three .col-xl-4:last-child {
+        margin-bottom: 0;
+    }
+    .footer-widget__btn a{
+        display: ruby !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-three .col-xl-4 {
+        margin-bottom: 25px;
+    }
+    .mobile-donate-button.main-menu__btn.mobile-nav__donate-btn:before{
+        background-color: unset !important;
+        border-color: unset !important;
+    }
+    .make-donation__content:before{
+        right: unset !important;
+    }
+}
+
+/* ----------------------------------------
+   Countdown Section Responsive (Spacing Only)
+   ---------------------------------------- */
+@media (max-width: 480px) {
+    .make-donation__content {
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .event-countdown__timer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .countdown-item {
+        gap: 5px;
+    }
+
+    .countdown-value {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .event-countdown__buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer-widget__btn a{
+        display: block !important;
     }
 }
