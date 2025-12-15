@@ -1901,13 +1901,12 @@ a:hover {
     text-decoration: none;
 }
 
-/* Card hover effect - only grow animation, no overlay or tilt */
+/* Card hover effect - box shadow only, no card zoom */
 .causes-one__single--clickable {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .causes-one__single--clickable:hover {
-    transform: scale(1.03);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1922,13 +1921,17 @@ a:hover {
     display: none !important;
 }
 
-/* Remove any image overlay effects */
-.causes-one__img img {
-    transition: none !important;
+/* Image zoom effect on hover - only image zooms, not card */
+.causes-one__img {
+    overflow: hidden;
 }
 
-.causes-one__single:hover .causes-one__img img {
-    transform: none !important;
+.causes-one__img img {
+    transition: transform 0.3s ease !important;
+}
+
+.causes-one__single--clickable:hover .causes-one__img img {
+    transform: scale(1.08) !important;
 }
 
 /* ========================================
