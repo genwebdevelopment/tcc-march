@@ -2007,13 +2007,14 @@ a:hover {
     text-decoration: none;
 }
 
-/* Card hover effect - box shadow only, no card zoom */
+/* Card hover effect - lift animation and enhanced shadow */
 .causes-one__single--clickable {
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .causes-one__single--clickable:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
 /* Remove gray overlay animation on card images */
