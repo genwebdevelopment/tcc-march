@@ -2577,7 +2577,7 @@ a:hover {
 .donation-details__donate-amount {
     position: relative;
     z-index: 1;
-    margin: 20px 0;
+    margin: 0px 0 20px 0;
 }
 
 .donation-amount-input-wrapper {
@@ -2618,6 +2618,62 @@ a:hover {
 .donation-amount-input::placeholder {
     color: #999;
     font-weight: 400;
+}
+
+/* ========================================
+   Mobile/Tablet Donate Box Repositioning (Nonprofit Details Page)
+   - No duplicate HTML, just CSS reordering
+   ======================================== */
+
+/* Mobile and Tablet: Reorder donate box to top */
+@media (max-width: 991px) {
+    /* Make row a flex column for reordering */
+    .donation-details > .container > .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Move sidebar column to top */
+    .donation-details > .container > .row > .col-xl-4 {
+        order: -1;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Main content column */
+    .donation-details > .container > .row > .col-xl-8 {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Hide other sidebar items, only show donate box */
+    .donation-details__sidebar > *:not(.donation-details__sidebar-donate) {
+        display: none;
+    }
+
+    /* Make donate box full width */
+    .donation-details__sidebar-donate {
+        margin-bottom: 0;
+    }
+}
+
+/* Tablet: 2-column layout for donate box (input left, button right) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .donation-details__sidebar-donate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .donation-details__donate-amount {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .donation-details__sidebar-donate-btn {
+        flex-shrink: 0;
+    }
 }
 
 /* Sidebar Nonprofit Details Box */
@@ -2733,7 +2789,7 @@ a:hover {
         /* margin-top: 15px; */
     }
     .donation-details{
-        padding: 50px 0 50px !important;
+        padding: 0 0 50px !important;
     }
 }
 
