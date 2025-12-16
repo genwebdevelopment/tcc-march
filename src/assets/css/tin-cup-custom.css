@@ -1425,6 +1425,54 @@ a:hover {
     }
 }
 
+/* ----------------------------------------
+   Tablet Mode Adjustments (768px - 991px)
+   ---------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* 1. Center hero image within its container */
+    .main-slider .image-layer {
+        background-position: center center !important;
+    }
+
+    /* 2. Countdown - reduce size to fit all 4 items on one line */
+    .event-countdown__title {
+        font-size: 36px;
+    }
+
+    .event-countdown__timer {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .countdown-item {
+        gap: 5px;
+    }
+
+    .countdown-value {
+        font-size: 42px;
+        min-width: 70px;
+        padding: 10px 12px;
+    }
+
+    .countdown-label {
+        font-size: 16px;
+    }
+
+    .event-countdown__buttons {
+        gap: 16px;
+    }
+
+    .event-countdown__btn {
+        padding: 12px 25px !important;
+        font-size: 16px !important;
+    }
+    .make-donation.event-countdown .make-donation__content{
+        padding: unset !important;
+    }
+}
+
 @media (max-width: 767px) {
     .main-slider-single {
         min-height: 450px;
@@ -3140,6 +3188,9 @@ a:hover {
     .footer-widget__btn a{
         display: ruby !important;
     }
+    .make-donation__content:before{
+        right: unset !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -3149,9 +3200,6 @@ a:hover {
     .mobile-donate-button.main-menu__btn.mobile-nav__donate-btn:before{
         background-color: unset !important;
         border-color: unset !important;
-    }
-    .make-donation__content:before{
-        right: unset !important;
     }
 }
 
