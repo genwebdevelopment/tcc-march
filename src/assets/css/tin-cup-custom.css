@@ -2028,17 +2028,14 @@ a:hover {
     display: none !important;
 }
 
-/* Image zoom effect on hover - only image zooms, not card */
-.causes-one__img {
-    overflow: hidden;
-}
-
+/* Disable image zoom effect - animation only on card, not image */
 .causes-one__img img {
-    transition: transform 0.3s ease !important;
+    transition: none !important;
+    transform: none !important;
 }
 
-.causes-one__single--clickable:hover .causes-one__img img {
-    transform: scale(1.08) !important;
+.causes-one__single:hover .causes-one__img img {
+    transform: none !important;
 }
 
 /* ========================================
