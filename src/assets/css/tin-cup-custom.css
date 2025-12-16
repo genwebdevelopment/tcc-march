@@ -1315,6 +1315,22 @@ a:hover {
     z-index: 10 !important;
     animation: fadeInUp 1s ease-out 0.6s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.6s forwards !important;
+    margin-bottom: 10px !important;
+}
+
+/* Hero subtitle - smaller text below main title */
+.main-slider__subtitle {
+    color: #ffffff !important;
+    font-size: 48px !important;
+    font-weight: 500 !important;
+    font-family: var(--oxpins-font) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.75s forwards !important;
+    -webkit-animation: fadeInUp 1s ease-out 0.75s forwards !important;
 }
 
 /* Animate button */
@@ -1362,6 +1378,7 @@ a:hover {
 /* Ensure elements become visible after animation */
 .main-slider-single .main-slider__sub-title,
 .main-slider-single .main-slider__title,
+.main-slider-single .main-slider__subtitle,
 .main-slider-single .main-slider__btn-box {
     animation-fill-mode: forwards !important;
     -webkit-animation-fill-mode: forwards !important;
@@ -1382,6 +1399,10 @@ a:hover {
 
     .main-slider__sub-title {
         font-size: 26px !important;
+    }
+
+    .main-slider__subtitle {
+        font-size: 36px !important;
     }
 
     .main-slider__content {
@@ -1408,6 +1429,12 @@ a:hover {
 
     .main-slider__sub-title {
         /* font-size: 14px !important; */
+    }
+
+    .main-slider__subtitle {
+        font-size: 32px !important;
+        margin-top: 15px !important;
+        margin-bottom: 20px !important;
     }
 
     .main-slider-single {
