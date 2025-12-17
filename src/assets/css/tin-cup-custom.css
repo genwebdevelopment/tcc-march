@@ -1328,7 +1328,7 @@ a:hover {
     position: relative !important;
     z-index: 10 !important;
     margin-top: 25px !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 50px !important;
     opacity: 0;
     animation: fadeInUp 1s ease-out 0.75s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.75s forwards !important;
@@ -1435,7 +1435,7 @@ a:hover {
     .main-slider__subtitle {
         font-size: 32px !important;
         margin-top: 15px !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 35px !important;
     }
 
     .main-slider-single {
@@ -1541,7 +1541,7 @@ a:hover {
     .main-slider__subtitle {
         font-size: 22px !important;
         margin-top: 8px !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 25px !important;
     }
 
     .main-slider__btn-box {
