@@ -1502,19 +1502,76 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+    /* Remove min-height and extra padding from hero section */
     .main-slider-single {
-        min-height: 450px;
-        padding-top: 15px;
+        min-height: auto !important;
+        height: auto !important;
+        padding-top: 15px !important;
+        padding-bottom: 20px !important;
+        display: block !important;
+    }
+
+    .main-slider {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .main-slider__content {
-        padding-top: 20px;
+        padding-top: 10px !important;
+        padding-bottom: 0 !important;
         margin-left: 0;
         padding-right: 10px;
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .main-slider__sub-title {
+        text-align: center;
+        margin-bottom: 8px !important;
+        margin-top: 0 !important;
+    }
+
+    .main-slider__title {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 5px !important;
+        margin-top: 0 !important;
+    }
+
+    .main-slider__subtitle {
+        font-size: 22px !important;
+        margin-top: 8px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .main-slider__btn-box {
+        text-align: center;
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .main-slider__btn {
+        padding: 10px 25px !important;
+        font-size: 13px !important;
     }
 
     .main-slider .image-layer {
-        width: 45% !important;
+        display: none !important;
+    }
+
+    /* Adjust hero container for mobile */
+    .hero-container {
+        padding: 20px 15px !important;
+    }
+
+    .hero-container .col-xl-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .hero-container .row {
+        margin: 0;
     }
 }
 
