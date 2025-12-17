@@ -1319,11 +1319,12 @@ a:hover {
 }
 
 /* Hero subtitle - smaller text below main title */
+/* Uses same font as title (Oswald) but with lighter weight */
 .main-slider__subtitle {
     color: #ffffff !important;
     font-size: 48px !important;
-    font-weight: 500 !important;
-    font-family: var(--oxpins-font) !important;
+    font-weight: 400 !important;
+    font-family: var(--oxpins-font-two) !important;
     position: relative !important;
     z-index: 10 !important;
     margin-top: 25px !important;
