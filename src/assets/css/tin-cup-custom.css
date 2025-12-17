@@ -1426,6 +1426,7 @@ a:hover {
     .main-slider__title {
         font-size: 52px !important;
         line-height: 1.2 !important;
+        margin-top: 10px !important;
     }
 
     .main-slider__sub-title {
@@ -1535,7 +1536,7 @@ a:hover {
         font-size: 32px !important;
         line-height: 1.1 !important;
         margin-bottom: 5px !important;
-        margin-top: 0 !important;
+        margin-top: 10px !important;
     }
 
     .main-slider__subtitle {
@@ -3148,6 +3149,9 @@ a:hover {
 
     .donation-details__testimonial .donation-details__quote p {
         font-size: 15px;
+    }
+    .donation-details__sidebar {
+        margin-top: 40px !important;
     }
 }
 
