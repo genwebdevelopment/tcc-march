@@ -118,20 +118,31 @@ description: Learn more about this nonprofit organization and how you can suppor
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-5">
-                <div class="donation-details__sidebar">
-                    <div class="donation-details__sidebar-donate">
+            <!--Sidebar Donate Widget (Top on mobile)-->
+            <div class="col-xl-4 col-lg-5 donation-details__sidebar-donate-col">
+                <div class="donation-details__sidebar-donate">
+                    <div class="sidebar-shape-1"
+                        style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
+                    <div class="donation-details__donate-amount">
+                        <label for="donation-amount" class="sr-only">Donation amount in dollars</label>
+                        <div class="donation-amount-input-wrapper">
+                            <span class="donation-amount-symbol" aria-hidden="true">$</span>
+                            <input type="number" class="donation-amount-input" id="donation-amount" name="donation-amount" placeholder="0.00" min="1" step="0.01" aria-label="Donation amount">
+                        </div>
+                    </div>
+                    <div class="donation-details__sidebar-donate-btn">
+                        <a href="#" class="thm-btn">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <!--Sidebar Other Items (Right on desktop, bottom on mobile)-->
+            <div class="col-xl-4 col-lg-5 donation-details__sidebar-other-col">
+                <div class="donation-details__sidebar-other">
+                    <div class="sidebar__nonprofit-logo">
                         <div class="sidebar-shape-1"
                             style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
-                        <div class="donation-details__donate-amount">
-                            <label for="donation-amount" class="sr-only">Donation amount in dollars</label>
-                            <div class="donation-amount-input-wrapper">
-                                <span class="donation-amount-symbol" aria-hidden="true">$</span>
-                                <input type="number" class="donation-amount-input" id="donation-amount" name="donation-amount" placeholder="0.00" min="1" step="0.01" aria-label="Donation amount">
-                            </div>
-                        </div>
-                        <div class="donation-details__sidebar-donate-btn">
-                            <a href="#" class="thm-btn">Donate Now</a>
+                        <div class="sidebar__nonprofit-logo-inner">
+                            <img src="/assets/images/nonprofits/eftv_logo_color-1.jpg" alt="Education Foundation of Teton Valley Logo">
                         </div>
                     </div>
                     <div class="sidebar__nonprofit-details">
