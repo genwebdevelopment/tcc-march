@@ -1,0 +1,16 @@
+{#
+  Donate Button Partial
+
+  Usage: {% include "partials/donate-button.njk" %}
+
+  This button can be conditionally displayed based on Giving Period.
+  When adding backend logic, add conditions here to show/hide the button.
+
+  Example with future backend condition:
+  {% if givingPeriodActive %}
+    <a href="/nonprofits/" class="thm-btn {{ btnClass | default('') }}">Donate</a>
+  {% endif %}
+#}
+
+{# For now, always display the button. Add conditions here later. #}
+<a href="/nonprofits/" class="thm-btn {{ btnClass | default('') }}">Donate</a>

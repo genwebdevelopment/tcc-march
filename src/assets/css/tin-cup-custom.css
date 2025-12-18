@@ -1349,6 +1349,9 @@ a:hover {
 
 /* Animate button */
 .main-slider__btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     animation: fadeInUp 1s ease-out 0.9s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.9s forwards !important;
 }
@@ -1559,13 +1562,14 @@ a:hover {
     }
 
     .main-slider__btn-box {
+        justify-content: center;
         text-align: center;
         margin-top: 0 !important;
         padding-bottom: 0 !important;
     }
 
     .main-slider__btn {
-        padding: 10px 25px !important;
+        padding: 10px 20px !important;
         font-size: 13px !important;
     }
 
