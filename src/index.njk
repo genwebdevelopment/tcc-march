@@ -26,6 +26,8 @@ description: Tin Cup Challenge - One of the most innovative charitable fundraise
                         <p class="main-slider__subtitle">Generosity in Action</p>
                         <div class="main-slider__btn-box">
                             <a href="#join-the-fun" class="thm-btn main-slider__btn">Register to Run</a>
+                            {% set btnClass = "main-slider__btn" %}
+                            {% include "partials/donate-button.njk" %}
                         </div>
                     </div>
                 </div>
