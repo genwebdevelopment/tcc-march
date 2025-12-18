@@ -1338,7 +1338,7 @@ a:hover {
 .main-slider__btn-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     animation: fadeInUp 1s ease-out 0.9s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.9s forwards !important;
 }
