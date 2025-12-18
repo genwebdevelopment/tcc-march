@@ -3254,13 +3254,13 @@ body.locked .page-wrapper {
 }
 
 .causes-one__cat {
-  position: absolute;
+  /* position: absolute;
   bottom: 30px;
   left: 30px;
+  z-index: 2; */
   background-color: var(--oxpins-primary);
   padding: 6px 25px;
   border-radius: 15px;
-  z-index: 2;
 }
 
 .causes-one__cat p {
