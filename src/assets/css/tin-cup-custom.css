@@ -200,12 +200,12 @@ p {
 
 /* Donate now button background */
 .main-menu__btn {
-    background-color: var(--cftv-gold) ;
+    background-color: var(--cftv-gold);
     font-size: 1.25em !important;
 }
 
 .main-menu__btn:before {
-    background-color: var(--cftv-gold) ;
+    background-color: var(--cftv-gold);
 }
 
 /* Links */
@@ -465,6 +465,19 @@ a:hover {
 
 .main-menu__list li a:hover::after {
     width: 100%;
+}
+
+/* ----------------------------------------
+   Navigation Fix for Mid-sized Screens
+   Reduces gap to prevent donate button overlap
+   ---------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1360px) {
+    .main-menu__list {
+        gap: 0px !important;
+    }
+    .main-menu__right-bottom {
+        padding-left: 0px;
+    }
 }
 
 /* Hero Section Adjustments */
