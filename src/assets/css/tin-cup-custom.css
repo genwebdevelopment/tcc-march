@@ -3036,7 +3036,7 @@ a:hover {
 
 .donation-details__testimonial {
     position: relative;
-    background-color: var(--cftv-navy);
+    background-color: #005282;
     border-radius: var(--oxpins-bdr-radius);
     padding: 30px 35px;
     margin-top: 30px;
@@ -3068,8 +3068,8 @@ a:hover {
 /* Optional testimonial image */
 .donation-details__testimonial-image {
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--cftv-gold);
@@ -3139,8 +3139,8 @@ a:hover {
     }
 
     .donation-details__testimonial-image {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .donation-details__quote-attribution {
