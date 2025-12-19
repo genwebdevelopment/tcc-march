@@ -42,8 +42,8 @@
     <link rel="stylesheet" href="/assets/vendors/timepicker/timePicker.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="/assets/css/oxpins.css" />
-    <link rel="stylesheet" href="/assets/css/tin-cup-custom.css" />
+    <link rel="stylesheet" href="/assets/css/oxpins.css?v={{ build.timestamp }}" />
+    <link rel="stylesheet" href="/assets/css/tin-cup-custom.css?v={{ build.timestamp }}" />
 
     {% block head %}{% endblock %}
 </head>
@@ -121,7 +121,7 @@
     <script src="/assets/vendors/circleType/jquery.lettering.min.js"></script>
 
     <!-- template js -->
-    <script src="/assets/js/oxpins.js"></script>
+    <script src="/assets/js/oxpins.js?v={{ build.timestamp }}"></script>
 
     {% block scripts %}{% endblock %}
 </body>
