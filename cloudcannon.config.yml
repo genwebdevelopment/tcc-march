@@ -1,11 +1,69 @@
-source: /
 paths:
   uploads: uploads
   static: ''
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+    disable_url: false
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      icon_background_color:
+      image:
+      metadata:
+      gallery:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  original_site:
+    path: original-site
+    icon: diagonal_line
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  src:
+    path: src
+    icon: abc
+    disable_url: false
+    preview:
+    _inputs:
+      $.layout:
+        cascade: true
+      $.title:
+        cascade: true
+      $.description:
+        cascade: true
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 _enabled_editors:
   - data
   - visual
   - content
+_inputs:
+  $.description:
+    type:
+    cascade: true
+_editables:
+  text:
+    allow_custom_markup: true
+    remove_custom_markup: false
+    bold:
+    copyformatting:
+    italic:
+    link:
+    paths:
+    redo:
+    removeformat:
+    strike:
+    subscript:
+    superscript:
+    underline:
+    undo:
 commit_templates:
   - label:
     template_string:
@@ -13,10 +71,10 @@ commit_templates:
     _inputs:
     extra_data:
 editor:
-  default_path:
+  default_path: /
 source_editor:
   tab_size: 2
-  theme: vscode_dark
+  theme: atomone
   show_gutter: true
 timezone: America/Denver
 markdown:
