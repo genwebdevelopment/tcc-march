@@ -1,20 +1,22 @@
+# Source directory for Eleventy
+source: src
+
 paths:
   uploads: uploads
   static: ''
+  data: _data
+  layouts: _layouts
+  includes: _includes
+
 collections_config:
   pages:
     path: ''
     icon: wysiwyg
     disable_url: false
-    preview:
-      text:
-      subtext:
-      icon:
-      icon_color:
-      icon_background_color:
-      image:
-      metadata:
-      gallery:
+    _enabled_editors:
+      - visual
+      - content
+      - data
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -25,51 +27,43 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  src:
-    path: src
-    icon: abc
-    disable_url: false
-    preview:
-    _inputs:
-      $.layout:
-        cascade: true
-      $.title:
-        cascade: true
-      $.description:
-        cascade: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
 _enabled_editors:
   - data
   - visual
   - content
 _inputs:
   $.description:
-    type:
+    type: textarea
+    cascade: true
+  $.title:
+    type: text
     cascade: true
 _editables:
   text:
     allow_custom_markup: true
     remove_custom_markup: false
-    bold:
-    copyformatting:
-    italic:
-    link:
-    paths:
-    redo:
-    removeformat:
-    strike:
-    subscript:
-    superscript:
-    underline:
-    undo:
-commit_templates:
-  - label:
-    template_string:
-    template_path:
-    _inputs:
-    extra_data:
+    bold: true
+    copyformatting: true
+    italic: true
+    link: true
+    redo: true
+    removeformat: true
+    strike: true
+    subscript: true
+    superscript: true
+    underline: true
+    undo: true
+  block:
+    allow_custom_markup: true
+    remove_custom_markup: false
+    bold: true
+    italic: true
+    link: true
+    redo: true
+    undo: true
+    removeformat: true
+    bulletedlist: true
+    numberedlist: true
 editor:
   default_path: /
 source_editor:
