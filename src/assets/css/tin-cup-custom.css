@@ -2781,7 +2781,9 @@ a:hover {
         grid-template-rows: auto 1fr;
         gap: 0 30px;
     }
-
+    .feature-four__single{
+        margin-bottom: 30px !important;
+    }
     /* Main content spans both rows on the left */
     .donation-details > .container > .row > .col-xl-8,
     .donation-details > .container > .row > .col-lg-7 {
@@ -3551,4 +3553,469 @@ a:hover {
 
 #nonprofits-grid .nonprofit-card-item .causes-one__content{
     border: unset !important;
+}
+
+/* ========================================
+   EVENT DAY PAGE - Page-Specific Styles
+   These styles only affect the event-day page
+   Using .event-day-page wrapper for scoping
+   ======================================== */
+
+/* Page Header - Remove bottom margin */
+.event-day-page .page-header {
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------
+   Event Day Countdown - Full Width Blue
+   ---------------------------------------- */
+.event-day-page .make-donation.event-countdown {
+    background-color: var(--oxpins-base) !important;
+    /* padding: 20px 0 !important; */
+}
+
+.event-day-page .make-donation__content{
+    min-height: 200px !important;
+}
+.event-day-page .make-donation.event-countdown .make-donation__inner {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.event-day-page .make-donation.event-countdown .make-donation__content {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.event-day-page .make-donation.event-countdown .make-donation__content::before {
+    display: none !important;
+}
+
+.event-day-page .event-countdown__title {
+    font-size: 28px !important;
+    /* margin-bottom: 15px !important; */
+}
+
+.event-day-page .countdown-value {
+    font-size: 28px !important;
+    min-width: 55px !important;
+    height: 55px !important;
+    background-color: var(--cftv-purple) !important;
+}
+
+.event-day-page .countdown-label {
+    font-size: 10px !important;
+}
+
+.event-day-page .countdown-item {
+    gap: 3px !important;
+}
+
+.event-day-page .event-countdown__timer {
+    gap: 10px !important;
+}
+
+/* ----------------------------------------
+   Event Day Community Counts Section
+   ---------------------------------------- */
+.event-day-page .community-counts {
+    padding: 40px 0 30px !important;
+}
+
+.event-day-page .community-counts .section-title {
+    margin-bottom: 20px !important;
+}
+
+/* ----------------------------------------
+   Event Day Feature Four Section
+   ---------------------------------------- */
+.event-day-page .feature-four {
+    padding: 30px 0 !important;
+}
+
+.event-day-page .feature-four__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event-day-page .feature-four__row > [class*="col-"] {
+    display: flex;
+}
+
+.event-day-page .feature-four__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.event-day-page .feature-four__link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-day-page .feature-four__text {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* ----------------------------------------
+   Event Day Event Details Section
+   ---------------------------------------- */
+.event-day-page .event-details {
+    padding: 40px 0 !important;
+}
+
+/* ----------------------------------------
+   Event Day FAQ Section
+   ---------------------------------------- */
+.event-day-page .faq-page {
+    padding: 40px 0 !important;
+}
+
+.event-day-page .faq-page .section-title {
+    margin-bottom: 30px !important;
+}
+
+/* ----------------------------------------
+   Event Day About Two Section
+   ---------------------------------------- */
+.event-day-page .about-two {
+    padding: 80px 0 !important;
+}
+
+/* Fix image overflow in About Two section */
+.event-day-page .about-two__img-box {
+    position: relative;
+    max-width: 100%;
+}
+
+.event-day-page .about-two__img {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.event-day-page .about-two__img img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-day-page .about-two__img-two {
+    position: absolute !important;
+    max-width: 300px !important;
+    overflow: hidden;
+}
+
+.event-day-page .about-two__img-two img {
+    width: 100%;
+    height: auto;
+    max-height: 2000px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    .event-day-page .about-two__img-two {
+        max-width: 200px !important;
+    }
+
+    .event-day-page .about-two__img-two img {
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 767px) {
+    .event-day-page .about-two__img img {
+        max-height: 300px;
+    }
+
+    .event-day-page .about-two__img-two {
+        max-width: 120px !important;
+    }
+
+    .event-day-page .about-two__img-two img {
+        max-height: 100px;
+    }
+}
+
+/* ----------------------------------------
+   Event Day Help Section
+   ---------------------------------------- */
+/* .event-day-page .help {
+    padding: 50px 0 !important;
+} */
+
+/* ----------------------------------------
+   Event Day Urgent Cause Video Section
+   ---------------------------------------- */
+.event-day-page .urgent-cause {
+    margin-bottom: 60px !important;
+}
+
+.event-day-page .urgent-cause__inner {
+    position: relative;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Video Container */
+.event-day-page .event-day-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 45%; /* Reduced height */
+    height: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 991px) {
+    .event-day-page .event-day-video-container {
+        padding-bottom: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .event-day-page .event-day-video-container {
+        padding-bottom: 56.25%; /* 16:9 for mobile */
+    }
+}
+
+.event-day-page .event-day-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video Overlay with Thumbnail */
+.event-day-page .event-day-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/images/tin-cup/race-start.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.event-day-page .event-day-video-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 82, 130, 0.6) 0%, rgba(94, 132, 127, 0.6) 100%);
+}
+
+.event-day-page .event-day-video-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Play Button */
+.event-day-page .event-day-video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+    background-color: var(--cftv-gold);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.event-day-page .event-day-video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #ffffff;
+}
+
+.event-day-page .event-day-video-play-btn .icon-play-button {
+    font-size: 30px;
+    color: var(--cftv-navy);
+    margin-left: 5px;
+}
+
+.event-day-page .event-day-video-play-btn .icon-play-button::before {
+    content: '\f04b';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+/* ----------------------------------------
+   Event Day Responsive Styles
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    .event-day-page .countdown-value {
+        font-size: 24px !important;
+        min-width: 48px !important;
+        height: 48px !important;
+    }
+
+    .event-day-page .event-countdown__title {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .event-day-page .countdown-value {
+        font-size: 20px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+    }
+
+    .event-day-page .countdown-label {
+        font-size: 9px !important;
+    }
+
+    .event-day-page .event-countdown__timer {
+        gap: 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-day-page .event-countdown__timer {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .event-day-page .countdown-value {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+}
+
+/* ----------------------------------------
+   Dawn Banks Award Section - Event Day Page
+   ---------------------------------------- */
+.event-day-page .help .event-day-nonprofit-awards-section .section-title__title {
+    color: #ffffff !important;
+}
+
+.event-day-page .help .nonprofit-info-box p {
+    color: #ffffff !important;
+}
+
+.event-day-page .help .nonprofit-info-box a {
+    color: var(--cftv-gold) !important;
+    text-decoration: underline;
+}
+
+.event-day-page .help .nonprofit-info-box a:hover {
+    color: #ffffff !important;
+}
+
+/* ----------------------------------------
+   Countdown Timer - Centered Numbers
+   ---------------------------------------- */
+.event-day-page .event-countdown__timer {
+    justify-content: center !important;
+}
+
+.event-day-page .countdown-item {
+    text-align: center !important;
+}
+
+.event-day-page .countdown-value {
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* ----------------------------------------
+   Feature Four Cards - Responsive Spacing
+   ---------------------------------------- */
+.event-day-page .feature-four__inner {
+    overflow: visible;
+}
+
+.event-day-page .feature-four__single {
+    margin-bottom: 0 !important;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .event-day-page .feature-four__row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .event-day-page .feature-four__row > [class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px !important;
+    }
+
+    .event-day-page .feature-four__row > [class*="col-"]:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .event-day-page .feature-four__single {
+        margin-bottom: 0 !important;
+    }
+
+    .event-day-page .feature-four__link {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .event-day-page .feature-four__row > [class*="col-"] {
+        margin-bottom: 25px !important;
+    }
+
+    .event-day-page .feature-four__row > [class*="col-"]:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* ----------------------------------------
+   FAQ Section - h3 styling for ADA compliance
+   ---------------------------------------- */
+.event-day-page .faq-page .accrodion-title h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--oxpins-black);
+    margin: 0;
+    line-height: 1.4;
+    font-family: var(--oxpins-font-two);
+}
+
+.event-day-page .faq-page .accrodion.active .accrodion-title h3 {
+    color: var(--oxpins-base);
+}
+
+/* ----------------------------------------
+   About Two Section - h3 styling for ADA compliance
+   ---------------------------------------- */
+.event-day-page .about-two .section-title h3.section-title__title {
+    font-size: 45px;
 }
