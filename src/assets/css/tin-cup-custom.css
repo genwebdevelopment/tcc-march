@@ -4019,3 +4019,272 @@ a:hover {
 .event-day-page .about-two .section-title h3.section-title__title {
     font-size: 45px;
 }
+
+/* ========================================
+   Engage Page Styles
+   ======================================== */
+
+/* ----------------------------------------
+   Engage Page - Fund Totals Section
+   ---------------------------------------- */
+.engage-page .engage-fund-totals {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.engage-page .engage-fund-totals .section-title {
+    margin-bottom: 40px;
+}
+
+.engage-page .engage-fund-totals .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.engage-page .engage-fund-totals .row {
+    width: 100%;
+    justify-content: center;
+}
+
+.engage-page .engage-fund-totals [class*="col-"] {
+    display: flex;
+    justify-content: center;
+}
+
+.engage-page .engage-fund-totals .donation-details__left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate {
+    background-color: var(--oxpins-extra) !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+    float: none !important;
+    width: auto !important;
+    max-width: 100%;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-shape {
+    background-color: transparent !important;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-list li .icon {
+    background-color: transparent !important;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-list li .icon span {
+    color: var(--cftv-blue) !important;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.engage-page .engage-fund-totals .donation-details__donate-list li {
+    text-align: center;
+}
+
+/* ----------------------------------------
+   Engage Page - How to Give Section
+   ---------------------------------------- */
+.engage-page .how-to-give-section {
+    padding: 80px 0;
+}
+
+.engage-page .how-to-give-section .row {
+    display: flex;
+    align-items: center;
+}
+
+.engage-page .how-to-give-section .about-three__left {
+    margin-top: 0;
+}
+
+.engage-page .how-to-give-section .about-three__text-1 {
+    margin-bottom: 30px;
+}
+
+.engage-page .how-to-give-section .about-three__btn {
+    margin-top: 10px;
+}
+
+.engage-page .how-to-give-section .about-three__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.engage-page .how-to-give-section .about-three__img-box {
+    margin: 0 auto;
+}
+
+/* ----------------------------------------
+   Engage Page - About Three Alt (Image Left) - Tin Cup Challengers
+   ---------------------------------------- */
+.engage-page .about-three.about-three--alt {
+    background: #ffffff !important;
+}
+
+.engage-page .about-three__right--left {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.engage-page .about-three__border--left {
+    left: -20px !important;
+    right: auto !important;
+}
+
+/* ----------------------------------------
+   Engage Page - FAQ Section Background
+   ---------------------------------------- */
+
+/* ----------------------------------------
+   Engage Page - Responsive Styles
+   ---------------------------------------- */
+@media (max-width: 991px) {
+    .engage-page .engage-fund-totals .donation-details__donate-list {
+        gap: 40px;
+    }
+
+    .engage-page .about-three__right--left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .engage-page .engage-fund-totals {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .engage-page .engage-fund-totals .donation-details__donate-list {
+        gap: 30px;
+    }
+}
+
+/* ----------------------------------------
+   Engage Page - Volunteer Section
+   ---------------------------------------- */
+.engage-page .volunteer-section {
+    background-color: var(--cftv-cream);
+}
+
+.engage-page .volunteer-section__subtitle {
+    color: var(--cftv-purple);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* H3 styling for In-Kind section subtitle */
+.engage-page .about-three__subtitle {
+    color: var(--cftv-purple);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.engage-page .volunteer-section .faq-one__text-2 {
+    margin-bottom: 15px;
+}
+
+.engage-page .volunteer-section .volunteer-roles-table ul {
+    margin-bottom: 0;
+}
+
+.engage-page .volunteer-section .volunteer-roles-table li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.engage-page .volunteer-section .volunteer-roles-table strong {
+    color: var(--cftv-purple);
+}
+
+/* ----------------------------------------
+   Engage Page - In-Kind Donors Section
+   ---------------------------------------- */
+.engage-page .in-kind-donors-section {
+    padding: 100px 0 60px;
+    background-color: #ffffff;
+}
+
+.engage-page .in-kind-donors__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.engage-page .in-kind-donors__subtitle {
+    color: var(--cftv-purple);
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.engage-page .in-kind-donors__subtitle:first-of-type {
+    margin-top: 0;
+}
+
+.engage-page .in-kind-donors__text {
+    color: var(--cftv-text-dark);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.engage-page .in-kind-donors__btn {
+    margin-top: 30px;
+}
+
+/* In-Kind Donors Brand Slider */
+.engage-page .brand-one.brand-three {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* background-color: #ffffff; */
+}
+
+.engage-page .in-kind-logos__title {
+    margin-bottom: 40px;
+}
+
+.engage-page .in-kind-logos__title h4 {
+    color: var(--cftv-purple);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .engage-page .in-kind-donors-section {
+        padding: 60px 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .engage-page .in-kind-donors-section {
+        padding: 40px 0 30px;
+    }
+
+    .engage-page .in-kind-donors__subtitle {
+        font-size: 18px;
+    }
+}
