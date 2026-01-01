@@ -4064,7 +4064,27 @@ a:hover {
 }
 
 .engage-page .engage-fund-totals .section-title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.engage-page .fund-totals__description {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cftv-text-dark);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.engage-page .fund-totals__description a {
+    color: var(--cftv-purple);
+    text-decoration: underline;
+}
+
+.engage-page .fund-totals__description a:hover {
+    color: var(--cftv-gold);
 }
 
 .engage-page .engage-fund-totals .container {
@@ -4849,6 +4869,81 @@ a:hover {
 }
 
 .challengers-page .challenger-brand-slider .swiper-slide {
+/* ----------------------------------------
+   Engage Page - How to Give Section Subtitle
+   ---------------------------------------- */
+.engage-page .how-to-give__subtitle {
+    color: var(--cftv-purple);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.engage-page .how-to-give__subtitle:first-of-type {
+    margin-top: 0;
+}
+
+/* ----------------------------------------
+   Engage Page - Volunteer Section Spacing Fix
+   ---------------------------------------- */
+.engage-page .volunteer-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.engage-page .volunteer-section .faq-one__left {
+    padding-top: 0;
+}
+
+.engage-page .volunteer-section .section-title {
+    margin-bottom: 15px;
+}
+
+.engage-page .volunteer-section .faq-one__text-1 {
+    margin-bottom: 20px;
+}
+
+.engage-page .volunteer-section__subtitle {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------
+   Engage Page - In-Kind Section Spacing Fix
+   ---------------------------------------- */
+.engage-page .in-kind-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.engage-page .in-kind-section .section-title {
+    margin-bottom: 10px;
+}
+
+.engage-page .in-kind-section .about-three__subtitle {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.engage-page .in-kind-section .about-three__text-1,
+.engage-page .in-kind-section .about-three__text-2 {
+    margin-bottom: 10px;
+}
+
+.engage-page .in-kind-section .about-three__btn {
+    margin-top: 15px;
+}
+
+/* ----------------------------------------
+   Engage Page - Brand Carousel Image Alignment Fix
+   ---------------------------------------- */
+.engage-page .brand-one.brand-three {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.engage-page .brand-one.brand-three .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4911,4 +5006,11 @@ a:hover {
     .challengers-page .challenger-brand-slider .swiper-slide img {
         max-height: 50px;
     }
+}
+
+.engage-page .brand-one.brand-three .swiper-slide img {
+    max-height: 80px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
