@@ -1,12 +1,38 @@
 (function ($) {
   "use strict";
 
+  // Fisher-Yates shuffle algorithm for arrays
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Shuffle slides in a swiper container
+  function shuffleSwiperSlides(container) {
+    let wrapper = container.find('.swiper-wrapper');
+    let slides = wrapper.children('.swiper-slide').get();
+    shuffleArray(slides);
+    wrapper.empty();
+    $.each(slides, function(index, slide) {
+      wrapper.append(slide);
+    });
+  }
+
   function thmSwiperInit() {
     // swiper slider
     if ($(".thm-swiper__slider").length) {
       $(".thm-swiper__slider").each(function () {
         let elm = $(this);
         let options = elm.data("swiper-options");
+
+        // Shuffle slides for challenger brand sliders and engage page brand sliders
+        if (elm.hasClass('challenger-brand-slider') || elm.closest('.brand-one.brand-three').length) {
+          shuffleSwiperSlides(elm);
+        }
+
         let thmSwiperSlider = new Swiper(elm, options);
       });
     }
