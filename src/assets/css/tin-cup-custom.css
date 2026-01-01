@@ -3674,6 +3674,37 @@ a:hover {
     padding: 40px 0 !important;
 }
 
+/* Map Download Button */
+.event-day-page .event-details__map {
+    margin-bottom: 0;
+    background: transparent !important;
+    padding: 0;
+    border: none;
+}
+
+.event-day-page .event-details__map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0;
+    display: block;
+}
+
+.event-day-page .event-details__map-download {
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent !important;
+    width: 100%;
+    border: none;
+    clear: both;
+}
+
+.event-day-page .event-details__map-btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
 /* ----------------------------------------
    Event Day FAQ Section
    ---------------------------------------- */
