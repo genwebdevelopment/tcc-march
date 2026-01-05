@@ -3567,55 +3567,9 @@ a:hover {
 }
 
 /* ----------------------------------------
-   Event Day Countdown - Full Width Blue
+   Event Day Countdown - Uses same styles as Homepage
+   No overrides needed - inherits from global countdown styles
    ---------------------------------------- */
-.event-day-page .make-donation.event-countdown {
-    background-color: var(--oxpins-base) !important;
-    /* padding: 20px 0 !important; */
-}
-
-.event-day-page .make-donation__content{
-    min-height: 200px !important;
-}
-.event-day-page .make-donation.event-countdown .make-donation__inner {
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-}
-
-.event-day-page .make-donation.event-countdown .make-donation__content {
-    padding: 0 !important;
-    background: transparent !important;
-}
-
-.event-day-page .make-donation.event-countdown .make-donation__content::before {
-    display: none !important;
-}
-
-.event-day-page .event-countdown__title {
-    font-size: 28px !important;
-    /* margin-bottom: 15px !important; */
-}
-
-.event-day-page .countdown-value {
-    font-size: 28px !important;
-    min-width: 55px !important;
-    height: 55px !important;
-    background-color: var(--cftv-purple) !important;
-}
-
-.event-day-page .countdown-label {
-    font-size: 10px !important;
-}
-
-.event-day-page .countdown-item {
-    gap: 3px !important;
-}
-
-.event-day-page .event-countdown__timer {
-    gap: 10px !important;
-}
 
 /* ----------------------------------------
    Event Day Community Counts Section
@@ -3688,6 +3642,7 @@ a:hover {
     border-radius: 10px;
     margin-bottom: 0;
     display: block;
+    mix-blend-mode: normal;
 }
 
 .event-day-page .event-details__map-download {
@@ -3705,11 +3660,22 @@ a:hover {
     text-decoration: none;
 }
 
+/* Event Day Social Icons - Match footer hover style */
+.event-day-page .event-details__social a:hover {
+    background-color: #ffffff !important;
+    color: var(--cftv-blue) !important;
+}
+
+.event-day-page .event-details__social a:after {
+    background-color: #ffffff !important;
+}
+
 /* ----------------------------------------
    Event Day FAQ Section
    ---------------------------------------- */
 .event-day-page .faq-page {
     padding: 40px 0 !important;
+    background-color: var(--oxpins-extra);
 }
 
 .event-day-page .faq-page .section-title {
@@ -3777,6 +3743,99 @@ a:hover {
 
     .event-day-page .about-two__img-two img {
         max-height: 100px;
+    }
+}
+
+/* ----------------------------------------
+   Tin Cup Awards Section
+   ---------------------------------------- */
+.tin-cup-awards {
+    padding: 60px 0;
+    background-color: var(--oxpins-extra);
+}
+
+.tin-cup-awards__description {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.tin-cup-awards__description p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--oxpins-gray);
+}
+
+.tin-cup-awards__card {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.tin-cup-awards__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tin-cup-awards__image-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.tin-cup-awards__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tin-cup-awards__content {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.tin-cup-awards__place {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cftv-burgundy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.tin-cup-awards__winner {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--oxpins-black);
+    margin: 0;
+    line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+    .tin-cup-awards__image-wrapper {
+        height: 220px;
+    }
+
+    .tin-cup-awards__winner {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tin-cup-awards {
+        padding: 40px 0;
+    }
+
+    .tin-cup-awards__image-wrapper {
+        height: 200px;
+    }
+
+    .tin-cup-awards__winner {
+        font-size: 18px;
     }
 }
 
@@ -3900,48 +3959,8 @@ a:hover {
 }
 
 /* ----------------------------------------
-   Event Day Responsive Styles
+   Event Day Responsive Styles - Countdown uses global styles
    ---------------------------------------- */
-@media (max-width: 991px) {
-    .event-day-page .countdown-value {
-        font-size: 24px !important;
-        min-width: 48px !important;
-        height: 48px !important;
-    }
-
-    .event-day-page .event-countdown__title {
-        font-size: 16px !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .event-day-page .countdown-value {
-        font-size: 20px !important;
-        min-width: 42px !important;
-        height: 42px !important;
-    }
-
-    .event-day-page .countdown-label {
-        font-size: 9px !important;
-    }
-
-    .event-day-page .event-countdown__timer {
-        gap: 8px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .event-day-page .event-countdown__timer {
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 8px !important;
-    }
-
-    .event-day-page .countdown-value {
-        width: 100% !important;
-        min-width: unset !important;
-    }
-}
 
 /* ----------------------------------------
    Dawn Banks Award Section - Event Day Page
@@ -3964,24 +3983,6 @@ a:hover {
 }
 
 /* ----------------------------------------
-   Countdown Timer - Centered Numbers
-   ---------------------------------------- */
-.event-day-page .event-countdown__timer {
-    justify-content: center !important;
-}
-
-.event-day-page .countdown-item {
-    text-align: center !important;
-}
-
-.event-day-page .countdown-value {
-    text-align: center !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* ----------------------------------------
    Feature Four Cards - Responsive Spacing
    ---------------------------------------- */
 .event-day-page .feature-four__inner {
@@ -3991,6 +3992,7 @@ a:hover {
 .event-day-page .feature-four__single {
     margin-bottom: 0 !important;
     position: relative;
+    background-color: var(--cftv-burgundy);
 }
 
 @media (max-width: 991px) {
@@ -5025,6 +5027,146 @@ a:hover {
     .challengers-page .challenger-brand-slider .swiper-slide img {
         height: 70px;
         max-width: 100px;
+    }
+}
+
+/* ----------------------------------------
+   Past Events Gallery Section
+   ---------------------------------------- */
+.past-events-gallery {
+    position: relative;
+    display: block;
+}
+
+.past-events-gallery__header {
+    background-color: #5E847F;
+    text-align: center;
+    padding: 50px 0 60px;
+    position: relative;
+}
+
+.past-events-gallery__header::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 15px solid #5E847F;
+}
+
+.past-events-gallery__title {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--cftv-navy);
+    margin: 0;
+    font-family: var(--oxpins-font-two);
+    letter-spacing: -0.04em;
+}
+
+.past-events-gallery__carousel-wrapper {
+    padding: 40px 15px 30px;
+    background-color: #fff;
+    position: relative;
+}
+
+.past-events-gallery__carousel {
+    margin: 0;
+}
+
+.past-events-gallery__item {
+    padding: 0 6px;
+}
+
+.past-events-gallery__item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.past-events-gallery__item img:hover {
+    transform: scale(1.02);
+}
+
+/* Hide Navigation Arrows */
+.past-events-gallery__carousel.owl-theme .owl-nav {
+    display: none;
+}
+
+/* Carousel Dots - Centered Below */
+.past-events-gallery__carousel-wrapper .owl-dots {
+    text-align: right;
+    margin-top: 25px !important;
+    padding-right: 30px;
+}
+
+.past-events-gallery__carousel-wrapper .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.past-events-gallery__carousel-wrapper .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(94, 132, 127, 0.35) !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.past-events-gallery__carousel-wrapper .owl-dots .owl-dot.active span {
+    background-color: transparent !important;
+    border-color: #5E847F;
+}
+
+.past-events-gallery__carousel-wrapper .owl-dots .owl-dot:hover span {
+    background-color: #5E847F !important;
+}
+
+@media (max-width: 991px) {
+    .past-events-gallery__header {
+        padding: 40px 0 50px;
+    }
+
+    .past-events-gallery__title {
+        font-size: 34px;
+    }
+
+    .past-events-gallery__item img {
+        height: 280px;
+    }
+
+    .past-events-gallery__carousel-wrapper {
+        padding: 50px 0 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .past-events-gallery__header {
+        padding: 35px 0 45px;
+    }
+
+    .past-events-gallery__title {
+        font-size: 28px;
+    }
+
+    .past-events-gallery__carousel-wrapper {
+        padding: 40px 0 60px;
+    }
+
+    .past-events-gallery__item img {
+        height: 220px;
+        border-radius: 20px;
+    }
+
+    .past-events-gallery__carousel.owl-theme .owl-dots {
+        bottom: 20px;
+        right: 20px;
     }
 }
 

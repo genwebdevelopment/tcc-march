@@ -6073,7 +6073,7 @@ body.locked .page-wrapper {
   position: relative;
   display: block;
   background-color: var(--oxpins-base);
-  padding: 120px 0 246px;
+  padding: 50px 0 170px;
   z-index: 1;
 }
 
