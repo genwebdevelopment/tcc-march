@@ -4236,14 +4236,29 @@ a:hover {
    Engage Page - Volunteer Section
    ---------------------------------------- */
 .engage-page .volunteer-section {
-    background-color: var(--cftv-cream);
+    background-color: var(--oxpins-extra);
+    position: relative;
+}
+
+.engage-page .volunteer-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/assets/images/backgrounds/donation-details-donate-shape.webp);
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .engage-page .volunteer-section__subtitle {
     color: var(--cftv-purple);
     font-size: 22px;
     font-weight: 600;
-    margin-top: 25px;
+    margin-top: 50px !important;
     margin-bottom: 15px;
 }
 
@@ -4252,7 +4267,7 @@ a:hover {
     color: var(--cftv-purple);
     font-size: 22px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 50px !important;
     margin-bottom: 15px;
 }
 
@@ -4911,7 +4926,7 @@ a:hover {
 }
 
 .engage-page .volunteer-section .section-title {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .engage-page .volunteer-section .faq-one__text-1 {
@@ -4919,8 +4934,12 @@ a:hover {
 }
 
 .engage-page .volunteer-section__subtitle {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+}
+
+.engage-page .volunteer-section .faq-one__btn {
+    margin-top: 30px !important;
 }
 
 /* ----------------------------------------
@@ -4932,12 +4951,12 @@ a:hover {
 }
 
 .engage-page .in-kind-section .section-title {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .engage-page .in-kind-section .about-three__subtitle {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
 }
 
 .engage-page .in-kind-section .about-three__text-1,
@@ -4946,29 +4965,38 @@ a:hover {
 }
 
 .engage-page .in-kind-section .about-three__btn {
-    margin-top: 15px;
+    margin-top: 30px !important;
 }
 
 /* ----------------------------------------
    Engage Page - Brand Carousel Image Alignment Fix
    ---------------------------------------- */
 .engage-page .brand-one.brand-three {
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 50px;
+    background: linear-gradient(rgb(247 248 249) 0%, rgb(255 255 255) 100%) !important;
+    border-top: none;
+    border-bottom: none;
 }
 
 .engage-page .brand-one.brand-three .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 100px;
+    overflow: visible;
 }
 
 .engage-page .brand-one.brand-three .swiper-slide img {
-    max-height: 100px;
+    max-height: 80px;
     width: auto;
-    max-width: 100%;
+    max-width: 140px;
     object-fit: contain;
+    opacity: 1;
+}
+
+.engage-page .brand-one.brand-three .swiper-slide img:hover {
+    opacity: 0.5;
 }
 
 .challengers-page .challenger-brand-slider .swiper-slide img {

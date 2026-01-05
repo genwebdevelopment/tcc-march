@@ -78,10 +78,10 @@ description: Get involved with the Tin Cup Challenge - donate, volunteer, and su
 <!--How to Give Section Start-->
 <section class="about-three how-to-give-section">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6">
+        <div class="row">
+            <div class="col-xl-12">
                 <div class="about-three__left">
-                    <div class="section-title text-left">
+                    <div class="section-title text-center">
                         <span class="section-title__tagline editable">Community Foundation of Teton Valley</span>
                         <h2 class="section-title__title editable">How to Give Through the Tin Cup Challenge</h2>
                     </div>
@@ -91,16 +91,6 @@ description: Get involved with the Tin Cup Challenge - donate, volunteer, and su
                     <p class="about-three__text-1 editable">One in three households in Teton Valley give through the Tin Cup Challenge—it's a true community effort. Donations come in all sizes, from all over the valley, united by a shared commitment to giving back. When you give during the Tin Cup Giving Period, your designated gifts are boosted by additional funding from Challengers and Friends of the Challenge through a partial match grant.</p>
                     <p class="about-three__text-1 editable">It's easy to give: just pick your favorite nonprofits, decide how much you want to give to each, and make one tax-deductible donation to the Community Foundation. Every gift counts and adds up to something big for our community.</p>
                     <a href="/nonprofits/" class="thm-btn about-three__btn editable">View All Nonprofits</a>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="about-three__right">
-                    <div class="about-three__img-box  wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                        <div class="about-three__img">
-                            <img src="/assets/images/tin-cup/race-start.jpg" alt="Tin Cup Challenge Race Start" class="editable" />
-                        </div>
-                        <div class="about-three__border"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -309,7 +299,7 @@ description: Get involved with the Tin Cup Challenge - donate, volunteer, and su
             <div class="brand-two-shape-1" style="background-image: url(/assets/images/shapes/brand-three-shape-1.png);">
             </div>
             <div class="container">
-                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "loop": true, "loopAdditionalSlides": 5, "speed": 800, "autoplay": { "delay": 2000, "disableOnInteraction": false }, "breakpoints": {
                             "0": {
                                 "spaceBetween": 30,
                                 "slidesPerView": 2
@@ -385,3 +375,63 @@ description: Get involved with the Tin Cup Challenge - donate, volunteer, and su
         <!--In-Kind Logos End-->
 
 </div><!-- /.engage-page -->
+
+{% block scripts %}
+<script>
+    // Pause logo slider on hover
+    (function() {
+        var retryCount = 0;
+        var maxRetries = 20;
+
+        function initHoverPause() {
+            var sliderContainer = document.querySelector('.engage-page .brand-one.brand-three .swiper-container');
+
+            if (!sliderContainer) {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(initHoverPause, 250);
+                }
+                return;
+            }
+
+            // Try to get the Swiper instance
+            var swiperInstance = sliderContainer.swiper;
+
+            if (!swiperInstance) {
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    setTimeout(initHoverPause, 250);
+                }
+                return;
+            }
+
+            // Add hover listeners to the entire slider area
+            sliderContainer.addEventListener('mouseenter', function() {
+                if (swiperInstance.autoplay && swiperInstance.autoplay.running) {
+                    swiperInstance.autoplay.stop();
+                }
+            });
+
+            sliderContainer.addEventListener('mouseleave', function() {
+                if (swiperInstance.autoplay) {
+                    swiperInstance.autoplay.start();
+                }
+            });
+        }
+
+        // Try immediately and also on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(initHoverPause, 500);
+            });
+        } else {
+            setTimeout(initHoverPause, 500);
+        }
+
+        // Also try on window load as a fallback
+        window.addEventListener('load', function() {
+            setTimeout(initHoverPause, 100);
+        });
+    })();
+</script>
+{% endblock %}
