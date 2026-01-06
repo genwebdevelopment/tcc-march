@@ -3747,6 +3747,7 @@ a:hover {
 /* Event Day Info Box - Textured background */
 .event-day-page .event-details__info {
     position: relative;
+    background-color: var(--oxpins-extra);
     border-top: 4px solid var(--cftv-blue);
 }
 
@@ -3950,7 +3951,7 @@ a:hover {
 .tin-cup-awards__winner {
     font-size: 32px;
     font-weight: 800;
-    color: var(--cftv-navy);
+    color: var(--cftv-purple);
     line-height: 1.2;
     margin: 0;
     font-family: 'Manrope', sans-serif;
