@@ -259,7 +259,54 @@ description: Join us for Tin Cup Challenge Event Day - 5K, 10K, Fun Run/Walk rac
         </section>
         <!--Tin Cup Awards End-->
 
-        <!--FAQ Page Start-->
+        <!--Help Start-->
+        <section class="help">
+            <div class="help-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                style=""></div>
+            <div class="help-shape-1" style="background-image: url(/assets/images/backgrounds/help-shape-1.webp);"></div>
+            <div class="container">
+                <div class="row">
+        <div class="event-day-nonprofit-awards-section section-title text-center">
+            <h2 class=" section-title__title editable">Dawn Banks
+Nonprofit Leadership Award</h2>
+        </div>
+        <div class="nonprofit-info-box">
+            <p class="editable">Sara McKoen White, the Executive Director of the Mental Health Coalition of Teton Valley was recognized with the Dawn Banks Nonprofit Leadership Award. Learn more about Sara and the Mental Health Coalition in the <a href="https://cftetonvalley.org/emily-bilcher-executive-director-of-family-safety-network-recognized-with-the-dawn-banks-award/" target="_blank">press release</a> .</p>
+        </div>
+                </div>
+            </div>
+        </section>
+        <!--Help End-->
+
+    
+
+                <!--Urgent Cause Start-->
+        <section class="urgent-cause">
+            <div class="container">
+                <div class="urgent-cause__inner wow fadeInUp" data-wow-delay="100ms">
+                    <div class="event-day-video-container">
+                        <!-- Video Thumbnail Overlay -->
+                        <div class="event-day-video-overlay" id="videoOverlay">
+                            <button class="event-day-video-play-btn" id="playVideoBtn" aria-label="Play video">
+                                <span class="icon-play-button" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <!-- YouTube Video Iframe -->
+                        <iframe
+                            id="eventDayVideo"
+                            src="https://www.youtube.com/embed/AvIOyE_Cu5M?si=BnjYI-Rq91awvvUH&enablejsapi=1"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Urgent Cause End-->
+    <!--FAQ Page Start-->
         <section class="faq-page">
             <div class="container">
                 <div class="section-title text-center">
@@ -375,53 +422,6 @@ description: Join us for Tin Cup Challenge Event Day - 5K, 10K, Fun Run/Walk rac
             </div>
         </section>
         <!--FAQ Page End-->
-
-        <!--Help Start-->
-        <section class="help">
-            <div class="help-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style=""></div>
-            <div class="help-shape-1" style="background-image: url(/assets/images/backgrounds/help-shape-1.webp);"></div>
-            <div class="container">
-                <div class="row">
-        <div class="event-day-nonprofit-awards-section section-title text-center">
-            <h2 class=" section-title__title editable">Dawn Banks
-Nonprofit Leadership Award</h2>
-        </div>
-        <div class="nonprofit-info-box">
-            <p class="editable">Sara McKoen White, the Executive Director of the Mental Health Coalition of Teton Valley was recognized with the Dawn Banks Nonprofit Leadership Award. Learn more about Sara and the Mental Health Coalition in the <a href="https://cftetonvalley.org/emily-bilcher-executive-director-of-family-safety-network-recognized-with-the-dawn-banks-award/" target="_blank">press release</a> .</p>
-        </div>
-                </div>
-            </div>
-        </section>
-        <!--Help End-->
-
-                <!--Urgent Cause Start-->
-        <section class="urgent-cause">
-            <div class="container">
-                <div class="urgent-cause__inner wow fadeInUp" data-wow-delay="100ms">
-                    <div class="event-day-video-container">
-                        <!-- Video Thumbnail Overlay -->
-                        <div class="event-day-video-overlay" id="videoOverlay">
-                            <button class="event-day-video-play-btn" id="playVideoBtn" aria-label="Play video">
-                                <span class="icon-play-button" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                        <!-- YouTube Video Iframe -->
-                        <iframe
-                            id="eventDayVideo"
-                            src="https://www.youtube.com/embed/AvIOyE_Cu5M?si=BnjYI-Rq91awvvUH&enablejsapi=1"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Urgent Cause End-->
-
         <!--Past Events Gallery Start-->
         <section class="past-events-gallery">
             <div class="past-events-gallery__header">
@@ -455,6 +455,27 @@ Nonprofit Leadership Award</h2>
             </div>
         </section>
         <!--Past Events Gallery End-->
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox-modal" id="lightboxModal">
+            <div class="lightbox-modal__overlay"></div>
+            <div class="lightbox-modal__content">
+                <button class="lightbox-modal__close" aria-label="Close lightbox">&times;</button>
+                <button class="lightbox-modal__prev" aria-label="Previous image">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <div class="lightbox-modal__image-container">
+                    <img class="lightbox-modal__image" src="" alt="Gallery image">
+                </div>
+                <button class="lightbox-modal__next" aria-label="Next image">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="lightbox-modal__counter">
+                    <span class="lightbox-modal__current">1</span> / <span class="lightbox-modal__total">6</span>
+                </div>
+            </div>
+        </div>
+        <!-- Lightbox Modal End -->
 
 </div><!-- /.event-day-page -->
 
@@ -605,6 +626,98 @@ Nonprofit Leadership Award</h2>
         }
 
         initPastEventsCarousel();
+    })();
+</script>
+
+<!-- Lightbox Gallery Script -->
+<script>
+    (function() {
+        // Get unique image sources from the gallery (excluding duplicates from owl-carousel clones)
+        function getUniqueImages() {
+            const images = [];
+            const seen = new Set();
+            document.querySelectorAll('.past-events-gallery__item:not(.cloned) img').forEach(function(img) {
+                if (!seen.has(img.src)) {
+                    seen.add(img.src);
+                    images.push({
+                        src: img.src,
+                        alt: img.alt
+                    });
+                }
+            });
+            return images;
+        }
+
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        const modal = document.getElementById('lightboxModal');
+        const modalImage = modal.querySelector('.lightbox-modal__image');
+        const prevBtn = modal.querySelector('.lightbox-modal__prev');
+        const nextBtn = modal.querySelector('.lightbox-modal__next');
+        const closeBtn = modal.querySelector('.lightbox-modal__close');
+        const overlay = modal.querySelector('.lightbox-modal__overlay');
+        const currentSpan = modal.querySelector('.lightbox-modal__current');
+        const totalSpan = modal.querySelector('.lightbox-modal__total');
+
+        function openLightbox(index) {
+            galleryImages = getUniqueImages();
+            currentIndex = index;
+            updateImage();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateImage() {
+            const img = galleryImages[currentIndex];
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+            currentSpan.textContent = currentIndex + 1;
+            totalSpan.textContent = galleryImages.length;
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateImage();
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateImage();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', showPrev);
+        nextBtn.addEventListener('click', showNext);
+        closeBtn.addEventListener('click', closeLightbox);
+        overlay.addEventListener('click', closeLightbox);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+        });
+
+        // Click on gallery images
+        document.addEventListener('click', function(e) {
+            const item = e.target.closest('.past-events-gallery__item');
+            if (item) {
+                const img = item.querySelector('img');
+                if (img) {
+                    // Find the index of this image in our unique array
+                    const uniqueImages = getUniqueImages();
+                    const index = uniqueImages.findIndex(function(i) { return i.src === img.src; });
+                    openLightbox(index >= 0 ? index : 0);
+                }
+            }
+        });
     })();
 </script>
 {% endblock %}
