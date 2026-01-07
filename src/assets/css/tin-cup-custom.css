@@ -4474,6 +4474,35 @@ a:hover {
     /* background-color: #ffffff; */
 }
 
+/* In-Kind Logos Wrapper with Play/Pause Button */
+.engage-page .in-kind-logos-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.engage-page .in-kind-slider {
+    flex: 1;
+}
+
+/* Continuous smooth scrolling */
+.engage-page .in-kind-slider .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+/* Disable click/touch interaction to prevent breaking scroll */
+.engage-page .in-kind-slider .swiper-slide {
+    pointer-events: none;
+    user-select: none;
+}
+
+.engage-page .in-kind-slider .swiper-slide img {
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
 .engage-page .in-kind-logos__title {
     margin-bottom: 40px;
 }
