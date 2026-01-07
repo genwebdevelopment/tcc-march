@@ -4535,6 +4535,17 @@ a:hover {
     box-shadow: none;
 }
 
+/* Challenger Levels right column - offset for visual separation */
+.challengers-page .how-to-give-section .donation-details__left {
+    padding-left: 25px;
+}
+
+@media (max-width: 1199px) {
+    .challengers-page .how-to-give-section .donation-details__left {
+        padding-left: 0;
+    }
+}
+
 /* Tablet responsive styles */
 @media (max-width: 991px) {
     /* Feature Four Cards - Add margin bottom on tablet */
@@ -4925,11 +4936,26 @@ a:hover {
    Challengers FAQ Section - Tin Cup Challengers Levels
    ======================================== */
 .challengers-page .challengers-faq-section {
+    position: relative;
     padding: 60px 0;
     background-color: var(--oxpins-extra);
+    z-index: 1;
+}
+
+.challengers-page .challengers-faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(/assets/images/shapes/feature-four-shape-1.png);
-    background-repeat: repeat;
-    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .challengers-page .challengers-faq-section .section-title {
