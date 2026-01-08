@@ -667,87 +667,95 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Event Day Page - Hide image and buttons in countdown */
-.event-day-page .event-countdown {
-    background-color: var(--cftv-cream) !important;
-    overflow: visible !important;
+/* Event Day Page - Slim Countdown Bar */
+.event-countdown-bar {
+    background-color: #ffffff;
+    padding: 0;
 }
 
-.event-day-page .event-countdown .container {
-    max-width: 100% !important;
-    padding-right: 0 !important;
+.event-countdown-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    max-width: 50%;
+    margin-right: 0;
+    background-color: var(--cftv-blue);
+    padding: 12px 30px;
+    gap: 20px;
+    border-radius: 0 0 0 50px;
 }
 
-.event-day-page .make-donation__inner {
-    background-color: transparent !important;
+.event-countdown-bar__title {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    margin-right: 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.event-day-page .make-donation__left {
-    display: none !important;
+.countdown-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.event-day-page .event-countdown__buttons {
-    display: none !important;
+.countdown-circle__value {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cftv-gold);
+    line-height: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 14px;
+    border-radius: 10px;
+    min-width: 50px;
+    text-align: center;
 }
 
-.event-day-page .make-donation .row {
-    justify-content: flex-end !important;
-    margin-right: 0 !important;
-}
-
-.event-day-page .make-donation .col-xl-8 {
-    flex: 0 0 85% !important;
-    max-width: 85% !important;
-    padding-right: 0 !important;
-}
-
-.event-day-page .make-donation__right {
-    border-radius: 0 0 0 80px !important;
-    overflow: hidden !important;
-}
-
-.event-day-page .make-donation__content {
-    min-height: auto !important;
-    padding: 35px 40px !important;
-    text-align: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.event-day-page .event-countdown__title {
-    text-align: center !important;
-    font-size: 28px !important;
-}
-
-.event-day-page .event-countdown__timer {
-    justify-content: center !important;
-    gap: 15px !important;
-}
-
-.event-day-page .countdown-value {
-    font-size: 42px !important;
-    padding: 12px 20px !important;
-    min-width: 80px !important;
-}
-
-.event-day-page .countdown-label {
-    font-size: 11px !important;
-    letter-spacing: 1.5px !important;
+.countdown-circle__label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-top: 6px;
 }
 
 @media (max-width: 991px) {
-    .event-day-page .event-countdown .container {
-        padding-right: 15px !important;
+    .event-countdown-bar__inner {
+        max-width: 100%;
+        border-radius: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575px) {
+    .event-countdown-bar__inner {
+        padding: 12px 15px;
+        gap: 8px;
     }
 
-    .event-day-page .make-donation .col-xl-8 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        padding-right: 15px !important;
+    .event-countdown-bar__title {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
     }
 
-    .event-day-page .make-donation__right {
-        border-radius: 0 !important;
+    .countdown-circle__value {
+        font-size: 20px;
+        padding: 8px 10px;
+        min-width: 40px;
+        border-radius: 8px;
+    }
+
+    .countdown-circle__label {
+        font-size: 8px;
+        margin-top: 4px;
     }
 }
 
@@ -3785,11 +3793,11 @@ a:hover {
    ---------------------------------------- */
 .event-day-page .faq-page {
     position: relative;
-    padding: 40px 0 !important;
-    background-color: var(--oxpins-extra);
+    padding: 70px 0 !important;
+    /* background-color: var(--oxpins-extra); */
 }
 
-.event-day-page .faq-page::before {
+/* .event-day-page .faq-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -3801,7 +3809,7 @@ a:hover {
     background-position: center;
     opacity: 0.1;
     pointer-events: none;
-}
+} */
 
 .event-day-page .faq-page .section-title {
     margin-bottom: 30px !important;
@@ -3872,11 +3880,78 @@ a:hover {
 }
 
 /* ----------------------------------------
+   Nonprofit Awards & Help Section Wrapper
+   ---------------------------------------- */
+.nonprofit-awards-and-help-section {
+    position: relative;
+    background-color: var(--oxpins-extra);
+    z-index: 1;
+    padding: 80px 0;
+}
+
+.nonprofit-awards-and-help-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/assets/images/shapes/feature-four-shape-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+}
+.nonprofit-awards-and-help-section .main-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Tin Cup Awards Title Section (top heading) */
+.tin-cup-awards-title {
+    text-align: center;
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    padding-bottom: 20px;
+}
+
+.tin-cup-awards-title .section-title__title {
+    margin-bottom: 20px;
+}
+
+.tin-cup-awards-title p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--oxpins-gray);
+}
+
+/* Nonprofit Spirit Awards Heading */
+.nonprofit-spirit-awards__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------------
    Tin Cup Awards Section
    ---------------------------------------- */
 .tin-cup-awards {
-    padding: 60px 0;
-    background-color: var(--oxpins-extra);
+    margin-top: -150px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 50px;
 }
 
 .tin-cup-awards .row {
@@ -3933,9 +4008,11 @@ a:hover {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     padding: 25px 20px;
     text-align: center;
+    min-height: 120px;
 }
 
 .tin-cup-awards__place {
@@ -3960,6 +4037,15 @@ a:hover {
 }
 
 @media (max-width: 991px) {
+    .tin-cup-awards {
+        margin-top: -80px;
+    }
+
+    .nonprofit-spirit-awards__title {
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
+
     .tin-cup-awards__image-wrapper {
         height: 220px;
     }
@@ -3972,6 +4058,12 @@ a:hover {
 @media (max-width: 767px) {
     .tin-cup-awards {
         padding: 40px 0;
+        margin-top: -60px;
+    }
+
+    .nonprofit-spirit-awards__title {
+        font-size: 20px;
+        margin-bottom: 80px;
     }
 
     .tin-cup-awards__image-wrapper {
@@ -3980,6 +4072,17 @@ a:hover {
 
     .tin-cup-awards__winner {
         font-size: 26px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tin-cup-awards {
+        margin-top: -50px;
+    }
+
+    .nonprofit-spirit-awards__title {
+        font-size: 18px;
+        margin-bottom: 70px;
     }
 }
 
@@ -3993,9 +4096,9 @@ a:hover {
 /* ----------------------------------------
    Event Day Urgent Cause Video Section
    ---------------------------------------- */
-.event-day-page .urgent-cause {
+/* .event-day-page .urgent-cause {
     margin-bottom: 60px !important;
-}
+} */
 
 .event-day-page .urgent-cause__inner {
     position: relative;
