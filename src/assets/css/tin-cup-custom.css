@@ -3898,9 +3898,9 @@ a:hover {
     right: 0;
     bottom: 0;
     background-image: url(/assets/images/shapes/events-two-shape-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: auto;
     mix-blend-mode: luminosity;
     opacity: 0.1;
     z-index: -1;
@@ -4209,6 +4209,24 @@ a:hover {
 /* ----------------------------------------
    Event Day Responsive Styles - Countdown uses global styles
    ---------------------------------------- */
+
+/* ----------------------------------------
+   Event Day - Help Sections (Blue Boxes)
+   ---------------------------------------- */
+.event-day-page .nonprofit-awards-and-help-section .help {
+    border-radius: 20px;
+    padding: 40px 0 170px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.event-day-page .nonprofit-awards-and-help-section .help .help-bg {
+    display: none;
+}
+
+.event-day-page .nonprofit-awards-and-help-section .help .help-shape-1 {
+    display: none;
+}
 
 /* ----------------------------------------
    Dawn Banks Award Section - Event Day Page
