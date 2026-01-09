@@ -5102,9 +5102,9 @@ a:hover {
     right: 0;
     bottom: 0;
     background-image: url(/assets/images/shapes/events-two-shape-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: auto;
     mix-blend-mode: luminosity;
     opacity: 0.1;
     z-index: -1;
