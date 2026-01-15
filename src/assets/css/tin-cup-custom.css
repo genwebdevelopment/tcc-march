@@ -5816,19 +5816,19 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-right: 30px;
+    margin-right: 50px; /* Increased space between sponsored and Become a Challenger */
 }
 
 .main-menu__sponsored-text {
     font-size: 30px;
     font-weight: 700;
-    color: var(--cftv-navy); /* "Sponsored" in navy - like "Become a" */
+    color: var(--cftv-navy); /* "by:" in navy */
     margin: 0;
     line-height: 30px; /* Match "Become a Challenger" line-height */
     font-family: var(--oxpins-font-three); /* Same script font as Become a Challenger */
 }
 
-/* "by:" in burgundy with underline - like "Challenger" */
+/* "Sponsored" in burgundy with underline */
 .main-menu__sponsored-text span {
     position: relative;
     display: inline-block;
@@ -5907,33 +5907,201 @@ a:hover {
     }
 }
 
+/* Hide mobile sponsored section on desktop */
+.main-menu__sponsored-by--mobile {
+    display: none;
+}
+
 @media (max-width: 991px) {
     .main-menu__volunteers-text {
         font-size: 18px !important;
     }
 
-    .main-menu__sponsored-text {
-        font-size: 18px;
+    /* Hide desktop sponsored section, show mobile version */
+    .main-menu__top-buttons .main-menu__sponsored-by {
+        display: none !important;
     }
 
-    .main-menu__sponsor-logo {
-        height: 30px;
+    /* Main wrapper - relative for absolute positioning of hamburger */
+    .main-menu__wrapper-inner {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        position: relative !important;
     }
 
-    .main-menu__sponsored-by {
-        margin-right: 12px;
-        gap: 6px;
+    /* Top row: Become a Challenger + Search/Cart - full width, appears first */
+    .main-menu__right-top {
+        width: 100% !important;
+        order: -1 !important;
+    }
+
+    .main-menu__right-top-right {
+        width: 100% !important;
+    }
+
+    /* Top buttons row - Become a Challenger on left, Search/Cart on right */
+    .main-menu__top-buttons {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0 !important;
+    }
+
+    /* Volunteers (Become a Challenger) - stays on left */
+    .main-menu__volunteers {
+        order: 1 !important;
+        margin-right: auto !important;
+    }
+
+    /* Search and Cart - grouped together on right */
+    .main-menu__search-box {
+        order: 2 !important;
+        margin-right: 15px !important;
+    }
+
+    .main-menu__cat-box {
+        order: 3 !important;
+    }
+
+    /* Bottom row - Logo section */
+    .main-menu__left {
+        display: flex !important;
+        align-items: center !important;
+        flex: 1 1 auto !important;
+        margin-right: 60px !important;
+        float: none !important;
+    }
+
+    /* Hide the right section content except hamburger */
+    .main-menu__right {
+        position: static !important;
+        float: none !important;
+    }
+
+    .main-menu__right-bottom {
+        position: static !important;
+    }
+
+    /* Hide donate button on tablet/mobile */
+    .main-menu__main-menu-content-box {
+        display: none !important;
+    }
+
+    /* Position hamburger absolutely on the logo row */
+    .mobile-nav__toggler {
+        position: absolute !important;
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+
+    /* Sponsored section on tablet - positioned between logo and hamburger */
+    .main-menu__sponsored-by--mobile {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 1 !important;
+        justify-content: flex-end !important;
+        margin-right: 8px !important;
+    }
+
+    /* Match "Become a Challenger" styling */
+    .main-menu__sponsored-by--mobile .main-menu__sponsored-text {
+        font-size: 18px !important;
+        line-height: 18px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsor-logo {
+        height: 35px !important;
     }
 }
 
 @media (max-width: 767px) {
-    /* Hide Sponsored By on mobile */
-    .main-menu__sponsored-by {
-        display: none;
-    }
-
     .main-menu__volunteers-text {
         font-size: 15px !important;
+    }
+
+    .main-menu__sponsored-by--mobile {
+        gap: 8px !important;
+        margin-right: 11px !important;
+    }
+
+    /* Match "Become a Challenger" styling - same size */
+    .main-menu__sponsored-by--mobile .main-menu__sponsored-text {
+        font-size: 15px !important;
+        line-height: 15px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsor-logo {
+        height: 28px !important;
+    }
+
+    /* Ensure site logo is visible */
+    .main-menu__logo img {
+        min-width: 100px !important;
+        max-width: 120px !important;
+    }
+}
+
+/* Small screens (425px and below) */
+@media (max-width: 425px) {
+    .main-menu__sponsored-by--mobile {
+        gap: 5px !important;
+        margin-right: 8px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsored-text {
+        font-size: 13px !important;
+        line-height: 13px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsor-logo {
+        height: 22px !important;
+    }
+
+    .main-menu__logo img {
+        min-width: 80px !important;
+        max-width: 90px !important;
+    }
+}
+
+/* Very small screens (375px and below) */
+@media (max-width: 375px) {
+    .main-menu__sponsored-by--mobile {
+        gap: 4px !important;
+        margin-right: 6px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsored-text {
+        font-size: 12px !important;
+        line-height: 12px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsor-logo {
+        height: 18px !important;
+    }
+
+    .main-menu__logo img {
+        min-width: 70px !important;
+        max-width: 80px !important;
+    }
+}
+
+/* Extra small screens (320px) */
+@media (max-width: 320px) {
+    .main-menu__sponsored-by--mobile .main-menu__sponsored-text {
+        font-size: 10px !important;
+        line-height: 10px !important;
+    }
+
+    .main-menu__sponsored-by--mobile .main-menu__sponsor-logo {
+        height: 15px !important;
+    }
+
+    .main-menu__logo img {
+        min-width: 60px !important;
+        max-width: 70px !important;
     }
 }
 
