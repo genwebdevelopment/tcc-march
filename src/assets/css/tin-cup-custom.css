@@ -5720,3 +5720,139 @@ a:hover {
     }
 }
 
+/* ----------------------------------------
+   Header Sponsored By Section
+   ---------------------------------------- */
+
+/* Top buttons container */
+.main-menu__top-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Sponsored By Section - Matches "Become a Challenger" style */
+.main-menu__sponsored-by {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 30px;
+}
+
+.main-menu__sponsored-text {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--cftv-navy); /* "Sponsored" in navy - like "Become a" */
+    margin: 0;
+    line-height: 30px; /* Match "Become a Challenger" line-height */
+    font-family: var(--oxpins-font-three); /* Same script font as Become a Challenger */
+}
+
+/* "by:" in burgundy with underline - like "Challenger" */
+.main-menu__sponsored-text span {
+    position: relative;
+    display: inline-block;
+    color: var(--cftv-burgundy);
+}
+
+.main-menu__sponsored-text span:before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    background-color: var(--cftv-burgundy);
+    height: 1px;
+}
+
+.main-menu__sponsor-logo-link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.main-menu__sponsor-logo-link:hover {
+    opacity: 0.8;
+}
+
+.main-menu__sponsor-logo {
+    height: 45px;
+    width: auto;
+}
+
+/* Become a Challenger - 30px font size (keeping original styling) */
+.main-menu__volunteers-text {
+    font-size: 30px !important;
+}
+
+/* ----------------------------------------
+   Header Sponsored By - Responsive
+   ---------------------------------------- */
+
+@media (max-width: 1400px) {
+    .main-menu__sponsored-text {
+        font-size: 24px;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 24px !important;
+    }
+
+    .main-menu__sponsor-logo {
+        height: 40px;
+    }
+
+    .main-menu__sponsored-by {
+        margin-right: 20px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .main-menu__sponsored-text {
+        font-size: 20px;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 20px !important;
+    }
+
+    .main-menu__sponsor-logo {
+        height: 35px;
+    }
+
+    .main-menu__sponsored-by {
+        margin-right: 15px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-menu__volunteers-text {
+        font-size: 18px !important;
+    }
+
+    .main-menu__sponsored-text {
+        font-size: 18px;
+    }
+
+    .main-menu__sponsor-logo {
+        height: 30px;
+    }
+
+    .main-menu__sponsored-by {
+        margin-right: 12px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Hide Sponsored By on mobile */
+    .main-menu__sponsored-by {
+        display: none;
+    }
+
+    .main-menu__volunteers-text {
+        font-size: 15px !important;
+    }
+}
+
