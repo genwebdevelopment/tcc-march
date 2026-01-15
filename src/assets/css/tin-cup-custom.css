@@ -1753,11 +1753,19 @@ a:hover {
 /* Causes One Cards - Equal Height */
 #nonprofits-grid {
     row-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .nonprofit-card-item {
     display: flex;
     margin-bottom: 0;
+}
+
+.nonprofit-card-item .causes-one__single {
+    width: 100%;
+    height: 100%;
 }
 
 .causes-one__single {
@@ -1797,6 +1805,8 @@ a:hover {
     flex-direction: column;
     flex-grow: 1;
     padding: 5px 15px 15px;
+    background-color: #ffffff;
+    border: none !important;
 }
 
 .causes-one__title {
@@ -1827,6 +1837,7 @@ a:hover {
     line-height: 1.5;
     margin-bottom: 0;
     font-size: 14px;
+    flex-grow: 1;
 }
 
 .causes-one__progress {
@@ -1850,6 +1861,75 @@ a:hover {
     text-transform: none;
     letter-spacing: 0;
     line-height: 1.4;
+}
+
+/* Nonprofit Cards - Tablet Responsive (max-width: 991px) */
+@media (max-width: 991px) {
+    .causes-one__content {
+        padding: 5px 12px 12px;
+    }
+
+    .causes-one__title {
+        min-height: auto;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .causes-one__cat {
+        margin-bottom: 5px;
+    }
+
+    .causes-one__cat p {
+        font-size: 14px;
+    }
+
+    .causes-one__text {
+        min-height: 54px;
+        font-size: 13px;
+        flex-grow: 1;
+    }
+
+    .causes-one__img img {
+        padding: 15px;
+    }
+
+    .causes-one__content {
+        background-color: #ffffff;
+    }
+}
+
+/* Nonprofit Cards - Mobile Responsive (max-width: 767px) */
+@media (max-width: 767px) {
+    .causes-one__content {
+        padding: 5px 10px 10px;
+        background-color: #ffffff;
+    }
+
+    .causes-one__title {
+        min-height: auto;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .causes-one__cat {
+        padding: 4px 12px;
+        margin-bottom: 5px;
+    }
+
+    .causes-one__cat p {
+        font-size: 14px;
+    }
+
+    .causes-one__text {
+        min-height: 50px;
+        font-size: 13px;
+        line-height: 1.4;
+        flex-grow: 1;
+    }
+
+    .causes-one__img img {
+        padding: 12px;
+    }
 }
 
 /* Nonprofit Category Filter */
