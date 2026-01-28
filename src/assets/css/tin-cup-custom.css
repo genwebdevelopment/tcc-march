@@ -202,10 +202,25 @@ p {
 .main-menu__btn {
     background-color: var(--cftv-gold);
     font-size: 1.25em !important;
+    padding-right: 50px !important;
+}
+
+.main-menu__btn:hover {
+    background-color: #ffffff !important;
+    color: var(--cftv-navy) !important;
 }
 
 .main-menu__btn:before {
-    background-color: var(--cftv-gold);
+    background-color: var(--cftv-navy) !important;
+}
+
+.main-menu__btn:hover:before {
+    background-color: var(--cftv-navy) !important;
+}
+
+/* Remove padding that causes white gap on right side of header */
+.main-menu__wrapper {
+    padding-right: 0 !important;
 }
 
 /* Links */
@@ -6224,3 +6239,99 @@ a:hover {
     }
 }
 
+/* ========================================
+   CTA Banner - Global Element
+   ======================================== */
+.cta-banner {
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--cftv-teal);
+}
+
+.cta-banner__content {
+    padding-right: 30px;
+}
+
+.cta-banner__tagline {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.cta-banner__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.cta-banner__btn-box {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-banner__btn {
+    background-color: var(--cftv-gold) !important;
+    color: var(--cftv-navy) !important;
+    font-size: 16px !important;
+    padding: 18px 45px !important;
+}
+
+.cta-banner__btn:before {
+    background-color: #ffffff !important;
+}
+
+.cta-banner__btn:hover {
+    color: var(--cftv-navy) !important;
+}
+
+/* CTA Banner Responsive */
+@media (max-width: 991px) {
+    .cta-banner {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .cta-banner__content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .cta-banner__title {
+        font-size: 30px;
+    }
+
+    .cta-banner__btn-box {
+        margin-top: 0;
+    }
+
+    .cta-banner .text-lg-end {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .cta-banner {
+        padding: 50px 0;
+    }
+
+    .cta-banner__tagline {
+        font-size: 14px;
+    }
+
+    .cta-banner__title {
+        font-size: 24px;
+    }
+
+    .cta-banner__btn {
+        padding: 15px 35px !important;
+        font-size: 14px !important;
+    }
+}

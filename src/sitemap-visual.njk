@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Cup Challenge - Site Map</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cftv-navy: #003366;
+            --cftv-gold: #C9A227;
+            --cftv-light-blue: #4A90A4;
+            --cftv-white: #ffffff;
+            --cftv-gray: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--cftv-gray);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--cftv-navy);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .sitemap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .sitemap-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .page-card {
+            background: var(--cftv-white);
+            border-radius: 12px;
+            padding: 20px 30px;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 3px solid transparent;
+        }
+
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--cftv-gold);
+        }
+
+        .page-card.home {
+            background: var(--cftv-navy);
+            color: var(--cftv-white);
+        }
+
+        .page-card.home:hover {
+            background: #004080;
+        }
+
+        .page-card.new {
+            border: 2px dashed var(--cftv-gold);
+        }
+
+        .page-card.new::after {
+            content: 'NEW';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--cftv-gold);
+            color: var(--cftv-navy);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        .page-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .connector {
+            width: 2px;
+            height: 30px;
+            background: var(--cftv-navy);
+        }
+
+        .connector-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .connector-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 2px;
+            background: var(--cftv-navy);
+            width: 80%;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            display: none;
+            position: fixed;
+            background: var(--cftv-white);
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 450px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            text-align: left;
+        }
+
+        .tooltip.active {
+            display: block;
+        }
+
+        .tooltip h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            color: var(--cftv-navy);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--cftv-gold);
+        }
+
+        .tooltip ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tooltip > ul > li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            font-weight: 600;
+            color: var(--cftv-navy);
+        }
+
+        .tooltip > ul > li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: var(--cftv-gold);
+            border-radius: 50%;
+        }
+
+        .tooltip ul ul {
+            margin-top: 8px;
+            padding-left: 15px;
+        }
+
+        .tooltip ul ul li {
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 6px;
+            font-size: 14px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .tooltip ul ul li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--cftv-light-blue);
+        }
+
+        .tooltip ul ul ul li::before {
+            content: '•';
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--cftv-white);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .legend-box {
+            width: 30px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .legend-box.home {
+            background: var(--cftv-navy);
+        }
+
+        .legend-box.new {
+            background: var(--cftv-white);
+            border: 2px dashed var(--cftv-gold);
+        }
+
+        .legend-box.existing {
+            background: var(--cftv-white);
+            border: 1px solid #ddd;
+        }
+
+        .legend-box.global {
+            background: var(--cftv-light-blue);
+        }
+
+        .page-card.global {
+            background: var(--cftv-light-blue);
+            color: var(--cftv-white);
+        }
+
+        .page-card.global:hover {
+            background: #3a7a8a;
+        }
+
+        .section-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .instructions {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .sitemap-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tooltip {
+                max-width: 90vw;
+                left: 5vw !important;
+                right: 5vw !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tin Cup Challenge Site Map</h1>
+        <p class="subtitle">Visual overview of website structure and content</p>
+        <p class="instructions">Hover over any page to see detailed content information</p>
+
+        <div class="sitemap">
+            <!-- Home Page -->
+            <div class="sitemap-row">
+                <div class="page-card home" data-page="home">
+                    <div class="page-name">Home</div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- Main Navigation Pages -->
+            <div class="sitemap-row">
+                <div class="page-card new" data-page="give-now">
+                    <div class="page-name">Give Now</div>
+                </div>
+                <div class="page-card new" data-page="how-it-works">
+                    <div class="page-name">How It Works</div>
+                </div>
+                <div class="page-card" data-page="nonprofits">
+                    <div class="page-name">Nonprofits</div>
+                </div>
+                <div class="page-card" data-page="challengers">
+                    <div class="page-name">Challengers</div>
+                </div>
+            </div>
+        </div>
+
+            <div class="connector"></div>
+
+            <!-- Global Elements -->
+            <div class="section-label">Global Elements (All Pages)</div>
+            <div class="sitemap-row">
+                <div class="page-card global" data-page="banner">
+                    <div class="page-name">CTA Banner</div>
+                </div>
+                <div class="page-card global" data-page="footer">
+                    <div class="page-name">Footer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box home"></div>
+                <span>Home Page</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box new"></div>
+                <span>New Page</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box existing"></div>
+                <span>Existing Page</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box global"></div>
+                <span>Global Element</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltips -->
+    <div class="tooltip" id="tooltip-home">
+        <h3>Home Page</h3>
+        <ul>
+            <li>Hero Section
+                <ul>
+                    <li>Give Now / How It Works buttons</li>
+                    <li>Choose the nonprofits you love</li>
+                    <li>Give one gift through Tin Cup</li>
+                    <li>Your gift will be partially MATCHED!</li>
+                </ul>
+            </li>
+            <li>Give Now Section</li>
+            <li>Browse Nonprofit Section</li>
+            <li>Stats Section</li>
+            <li>Event Day & Race Info Section
+                <ul>
+                    <li>Join us on Event Day - "Tin Cup is more than a fundraiser — it's a community celebration. Join us on Event Day to run, cheer, volunteer, and celebrate local nonprofits."</li>
+                    <li>Third Saturday in July + Date, Time, Location</li>
+                    <li>Countdown Ticker (smaller)</li>
+                    <li>Links: Register to Run, Run Map, Schedule of Events</li>
+                </ul>
+            </li>
+            <li>Powered by Challengers Section
+                <ul>
+                    <li>Carousel of top-level $10K+ business challengers</li>
+                    <li>Meet the Challengers link</li>
+                </ul>
+            </li>
+            <li>Community Energy Section
+                <ul>
+                    <li>Photos from event day</li>
+                </ul>
+            </li>
+            <li>Are You a Nonprofit? Banner
+                <ul>
+                    <li>Tin Cup is administered by CFTV. Visit Tin Cup Challenge Program page for registration, rules, and important dates.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-give-now">
+        <h3>Give Now Page (NEW)</h3>
+        <ul>
+            <li>Give directly to nonprofits (link to cart)
+                <ul>
+                    <li>Giving directly to nonprofits furthers critical missions. Nonprofits receive 100% of your donation.</li>
+                </ul>
+            </li>
+            <li>Become a Challenger (link to cart)
+                <ul>
+                    <li>Challengers help sustain the local nonprofit community by offering matching funds to all participating organizations during the Tin Cup Challenge, supporting Competitive Grants, funding Youth Philanthropy initiatives, and contributing to Nonprofit Resources like workshops at the Community Foundation of Teton Valley.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-how-it-works">
+        <h3>How It Works Page (NEW)</h3>
+        <ul>
+            <li>How the Tin Cup Challenge Works
+                <ul>
+                    <li>One gift. One receipt. Greater impact for the nonprofits you love.</li>
+                </ul>
+            </li>
+            <li>Giving through Tin Cup is easy
+                <ul>
+                    <li>Step 1: Choose the nonprofits you love - Browse participating nonprofits and choose one or more to support!</li>
+                    <li>Step 2: Give one gift through Tin Cup - Give online, by check, wire, or stock. Your nonprofit(s) receives 100% of your donation. The Community Foundation stewards your gift and provides one tax receipt.</li>
+                    <li>Step 3: Your gift is partially matched - Challengers provide matching funds so your gift goes further.</li>
+                </ul>
+            </li>
+            <li>Why Tin Cup Matters
+                <ul>
+                    <li>Tin Cup brings our community together to support local nonprofits in a powerful way. By giving together during a short window, we unlock matching funds and create momentum that nonprofits rely on all year.</li>
+                    <li>Powered by Community: Challengers, In-Kind Donors, Volunteers, CFTV</li>
+                </ul>
+            </li>
+            <li>Are you a nonprofit? (Banner/Button)</li>
+            <li>FAQ's Section
+                <ul>
+                    <li>Can I give to multiple nonprofits?</li>
+                    <li>Is my gift tax deductible?</li>
+                    <li>What if I want to give by check?</li>
+                    <li>How does the match work?</li>
+                    <li>When do nonprofits receive funds?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-nonprofits">
+        <h3>Nonprofits Page</h3>
+        <ul>
+            <li>Nonprofit Directory - cards link to specific pages
+                <ul>
+                    <li>Hero Message: "Discover Participating Nonprofits"</li>
+                    <li>"Explore the causes you can support through the Tin Cup Challenge."</li>
+                    <li>Search Bar + Filter by Category (dropdown) + sort by alpha/most recent</li>
+                    <li>Reverse Sector font on NP cards (make font color match top button color, no sector button on cards)</li>
+                </ul>
+            </li>
+            <li>Are you a nonprofit? (Banner)</li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-challengers">
+        <h3>Challengers Page</h3>
+        <ul>
+            <li>Business (logos) and Community Challengers
+                <ul>
+                    <li>TITANIUM - $75,000+</li>
+                    <li>TIN - $50,000+</li>
+                    <li>PLATINUM - $35,000+</li>
+                    <li>GOLD - $25,000+</li>
+                    <li>SILVER - $15,000+</li>
+                    <li>BRONZE - $10,000+</li>
+                    <li>COPPER - $7,500+</li>
+                    <li>NICKEL - $5,000+</li>
+                    <li>PEWTER - $2,500+</li>
+                    <li>BRASS - $1,500+</li>
+                </ul>
+            </li>
+            <li>Become a Challenger</li>
+            <li>Challenger quote + pic slider</li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-banner">
+        <h3>CTA Banner (All Pages)</h3>
+        <ul>
+            <li>Make your gift go further today
+                <ul>
+                    <li>Give Now button</li>
+                    <li>Appears above footer on all pages</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tooltip" id="tooltip-footer">
+        <h3>Footer (All Pages)</h3>
+        <ul>
+            <li>CFTV Logo (links to CFTV site) ✓
+                <ul>
+                    <li>Mission statement</li>
+                    <li>Give button</li>
+                </ul>
+            </li>
+            <li>Links
+                <ul>
+                    <li>Event Schedule</li>
+                    <li>About (links to How It Works)</li>
+                    <li>Participating Nonprofits</li>
+                    <li>Tin Cup Challengers</li>
+                    <li>Brand Guide</li>
+                </ul>
+            </li>
+            <li>Get Involved
+                <ul>
+                    <li>Register for the Race</li>
+                    <li>Become a Challenger</li>
+                    <li>Make a Donation</li>
+                    <li>Volunteer</li>
+                    <li>Participate as a Nonprofit</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageCards = document.querySelectorAll('.page-card');
+            const tooltips = document.querySelectorAll('.tooltip');
+
+            pageCards.forEach(card => {
+                card.addEventListener('mouseenter', function(e) {
+                    const pageId = this.getAttribute('data-page');
+                    const tooltip = document.getElementById('tooltip-' + pageId);
+
+                    if (tooltip) {
+                        // Hide all tooltips first
+                        tooltips.forEach(t => t.classList.remove('active'));
+
+                        // Position and show the tooltip
+                        const rect = this.getBoundingClientRect();
+                        const tooltipRect = tooltip.getBoundingClientRect();
+
+                        let left = rect.left + (rect.width / 2) - 225;
+                        let top = rect.bottom + 15;
+
+                        // Keep tooltip within viewport
+                        if (left < 10) left = 10;
+                        if (left + 450 > window.innerWidth) left = window.innerWidth - 460;
+                        if (top + 400 > window.innerHeight) top = rect.top - 400 - 15;
+
+                        tooltip.style.left = left + 'px';
+                        tooltip.style.top = top + 'px';
+                        tooltip.classList.add('active');
+                    }
+                });
+
+                card.addEventListener('mouseleave', function(e) {
+                    // Check if mouse is moving to the tooltip
+                    const pageId = this.getAttribute('data-page');
+                    const tooltip = document.getElementById('tooltip-' + pageId);
+
+                    setTimeout(() => {
+                        if (!tooltip.matches(':hover') && !this.matches(':hover')) {
+                            tooltip.classList.remove('active');
+                        }
+                    }, 100);
+                });
+            });
+
+            // Keep tooltip visible when hovering over it
+            tooltips.forEach(tooltip => {
+                tooltip.addEventListener('mouseleave', function() {
+                    this.classList.remove('active');
+                });
+            });
+
+            // Close tooltip when clicking elsewhere
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.page-card') && !e.target.closest('.tooltip')) {
+                    tooltips.forEach(t => t.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
