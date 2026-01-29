@@ -1441,10 +1441,10 @@ a:hover {
     -webkit-transform: scale(1) !important;
 }
 
-/* Move text content to the left */
+/* Hero text content positioning */
 .main-slider__content {
-    margin-left: -100px;
-    padding-left: 30px;
+    margin-left: 0;
+    padding-left: 0;
     position: relative;
     z-index: 10;
 }
@@ -1452,7 +1452,8 @@ a:hover {
 /* Single hero slide container */
 .main-slider-single {
     position: relative;
-    min-height: 440px;
+    min-height: auto;
+    padding: 40px 0;
     display: flex;
     align-items: center;
 }
@@ -1508,9 +1509,9 @@ a:hover {
     -webkit-animation: fadeInUp 1s ease-out 0.3s forwards !important;
     font-family: 'Oswald', sans-serif !important;
     font-weight: 600 !important;
-    font-size: 44px !important;
-    line-height: 1 !important;
-    margin-bottom: 25px !important;
+    font-size: 64px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
 }
 
 .main-slider__title {
@@ -1519,7 +1520,7 @@ a:hover {
     z-index: 10 !important;
     animation: fadeInUp 1s ease-out 0.6s forwards !important;
     -webkit-animation: fadeInUp 1s ease-out 0.6s forwards !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 20px !important;
     font-family: 'Manrope', sans-serif !important;
     font-weight: 400 !important;
     font-size: 24px !important;
@@ -6334,4 +6335,103 @@ a:hover {
         padding: 15px 35px !important;
         font-size: 14px !important;
     }
+}
+
+/* Give Now Section */
+.give-now-section {
+    padding: 30px 0;
+    background-color: var(--cftv-gold);
+}
+
+.give-now-section__content {
+    max-width: 100%;
+}
+
+.give-now-section__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--cftv-navy);
+    margin-bottom: 15px;
+}
+
+.give-now-section__text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--cftv-navy);
+    margin-bottom: 0;
+}
+
+.give-now-section__btn-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.give-now-section__btn {
+    background-color: var(--cftv-navy) !important;
+    color: #ffffff !important;
+    padding: 18px 45px !important;
+    font-size: 14px !important;
+}
+
+.give-now-section__btn:before {
+    background-color: #ffffff !important;
+}
+
+.give-now-section__btn:hover {
+    color: var(--cftv-navy) !important;
+}
+
+/* Give Now Section Responsive */
+@media (max-width: 991px) {
+    .give-now-section__content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .give-now-section__btn-box {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .give-now-section {
+        padding: 40px 0;
+    }
+
+    .give-now-section__title {
+        font-size: 36px;
+    }
+
+    .give-now-section__text {
+        font-size: 16px;
+    }
+
+    .give-now-section__btn-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .give-now-section__btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* ==========================================================================
+   TEMPORARILY HIDDEN SECTIONS
+   See /src/HIDDEN-SECTIONS.md for full documentation
+   ========================================================================== */
+
+/* Hero section buttons - hidden until ready */
+.main-slider__btn-box {
+    display: none !important;
+}
+
+/* Countdown to Event Day section - hidden until ready */
+.event-countdown {
+    display: none !important;
 }
