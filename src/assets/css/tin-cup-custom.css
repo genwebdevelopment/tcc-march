@@ -85,6 +85,11 @@ p {
     color: var(--cftv-text-dark);
 }
 
+/* Section titles - fix tight kerning from theme */
+.section-title__title {
+    letter-spacing: normal !important;
+}
+
 /* Primary Button - Global Style */
 .thm-btn {
     background-color: var(--cftv-purple) !important;
@@ -119,6 +124,10 @@ p {
 
 .events-two {
     padding-top: 180px !important;
+}
+
+.events-two .section-title__title {
+    color: var(--cftv-navy) !important;
 }
 
 /* Event date badges */
@@ -1852,10 +1861,10 @@ a:hover {
 }
 
 /* Add curved left edge to slider images using border radius */
-/* Keep image static at 45% width, no animation, full color */
+/* Keep image static at 55% width, no animation, full color */
 .main-slider .image-layer {
     border-bottom-left-radius: 28%;
-    width: 45% !important;
+    width: 55% !important;
     right: 0 !important;
     left: auto !important;
     mix-blend-mode: normal !important;
@@ -1875,13 +1884,17 @@ a:hover {
     padding-left: 0;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
 }
 
 /* Single hero slide container */
 .main-slider-single {
     position: relative;
     min-height: auto;
-    padding: 25px 0;
+    padding: 17.5px 0;
     display: flex;
     align-items: center;
 }
@@ -1891,8 +1904,8 @@ a:hover {
 .main-slider-single .hero-container {
     position: relative;
     z-index: 10;
-    padding-top: 250px !important;
-    padding-bottom: 40px !important;
+    padding-top: 240px !important;
+    padding-bottom: 30px !important;
 }
 
 /* Custom hero container with wider max-width */
@@ -7023,12 +7036,12 @@ a:hover {
 }
 
 .stats-section__heading {
-    font-size: 50px;
+    font-size: 36px;
     font-weight: 900;
     color: var(--cftv-navy);
     margin-bottom: 0;
     line-height: 1.2;
-    letter-spacing: -0.04em;
+    letter-spacing: normal;
 }
 
 .stats-section__stats-row {
@@ -7106,7 +7119,7 @@ a:hover {
     }
 
     .stats-section__heading {
-        font-size: 42px;
+        font-size: 32px;
     }
 
     .stats-section__number {
@@ -7132,7 +7145,7 @@ a:hover {
     }
 
     .stats-section__heading {
-        font-size: 35px;
+        font-size: 28px;
     }
 
     .stats-section__number {
