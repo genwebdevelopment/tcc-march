@@ -954,6 +954,7 @@ a:hover {
 /* Events Two Countdown */
 .events-two__left {
     position: relative;
+    margin-top: -40px;
 }
 
 .events-two__countdown-box {
@@ -1581,6 +1582,21 @@ a:hover {
     background: #f9f6f1;
     padding: 90px 0 180px !important;
     border-radius: 0 0 60px 60px;
+}
+
+.about-three__btn {
+    background-color: var(--cftv-burgundy) !important;
+    border-color: var(--cftv-burgundy) !important;
+}
+
+.about-three__btn:before {
+    background-color: var(--cftv-blue) !important;
+}
+
+.about-three__btn:hover {
+    background-color: var(--cftv-blue) !important;
+    border-color: var(--cftv-blue) !important;
+    color: #ffffff !important;
 }
 
 /* ========================================
