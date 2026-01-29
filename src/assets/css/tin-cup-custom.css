@@ -361,6 +361,8 @@ a:hover {
     background-color: var(--cftv-gold) !important;
     border-color: var(--cftv-gold) !important;
     color: var(--cftv-navy) !important;
+    border-radius: 18px !important;
+    transition: all 0.3s ease;
 }
 
 .footer-widget__btn a:before {
@@ -371,6 +373,8 @@ a:hover {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     color: var(--cftv-blue) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Hero slider images - full color instead of black and white */
@@ -979,15 +983,18 @@ a:hover {
     display: inline-block;
     background-color: var(--cftv-navy) !important;
     color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.events-two__left .events-two__btn:before {
+    display: none !important;
 }
 
 .events-two__left .events-two__btn:hover {
     background-color: var(--cftv-gold) !important;
     color: var(--cftv-navy) !important;
-}
-
-.events-two__left .events-two__btn:before {
-    background-color: var(--cftv-gold) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .events-two__date-location {
@@ -1587,16 +1594,19 @@ a:hover {
 .about-three__btn {
     background-color: var(--cftv-burgundy) !important;
     border-color: var(--cftv-burgundy) !important;
+    transition: all 0.3s ease;
 }
 
 .about-three__btn:before {
-    background-color: var(--cftv-blue) !important;
+    display: none !important;
 }
 
 .about-three__btn:hover {
     background-color: var(--cftv-blue) !important;
     border-color: var(--cftv-blue) !important;
     color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ========================================
@@ -6808,15 +6818,19 @@ a:hover {
     background-color: var(--cftv-gold) !important;
     color: var(--cftv-navy) !important;
     font-size: 16px !important;
-    padding: 18px 45px !important;
+    padding: 15px 45px !important;
+    transition: all 0.3s ease;
 }
 
 .cta-banner__btn:before {
-    background-color: #ffffff !important;
+    display: none !important;
 }
 
 .cta-banner__btn:hover {
+    background-color: #ffffff !important;
     color: var(--cftv-navy) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* CTA Banner Responsive */
@@ -6903,10 +6917,15 @@ a:hover {
 .give-now-section__btn {
     background-color: var(--cftv-navy) !important;
     color: #ffffff !important;
-    padding: 18px 45px !important;
+    padding: 15px 45px !important;
     font-size: 14px !important;
     animation: slideInFromRight 0.6s ease-out forwards;
     opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.give-now-section__btn:before {
+    display: none !important;
 }
 
 .give-now-section__btn:nth-child(1) {
@@ -6928,12 +6947,11 @@ a:hover {
     }
 }
 
-.give-now-section__btn:before {
-    background-color: #ffffff !important;
-}
-
 .give-now-section__btn:hover {
-    color: var(--cftv-navy) !important;
+    background-color: var(--cftv-blue) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Give Now Section Responsive */
@@ -7013,7 +7031,7 @@ a:hover {
     background-color: var(--cftv-gold) !important;
     border-color: var(--cftv-gold) !important;
     color: var(--cftv-navy) !important;
-    padding: 18px 45px !important;
+    padding: 15px 45px !important;
     font-size: 16px !important;
     font-weight: 800 !important;
     animation: slideInFromRight 0.6s ease-out forwards;
@@ -7022,11 +7040,14 @@ a:hover {
 }
 
 .nonprofit-banner__btn:before {
-    background-color: #ffffff !important;
+    display: none !important;
 }
 
 .nonprofit-banner__btn:hover {
-    color: var(--cftv-blue) !important;
+    background-color: #ffffff !important;
+    color: var(--cftv-navy) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Nonprofit Banner Responsive */
