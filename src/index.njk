@@ -20,7 +20,11 @@ description: >-
             <div class="row">
                 <div class="col-xl-6 col-lg-8">
                     <div class="main-slider__content">
-                        <h1 class="main-slider__sub-title editable">Give Local.<br>Give Together.<br>Give Bigger.</h1>
+                        <h1 class="main-slider__sub-title editable hero-animated-text">
+                            <span class="hero-line"><span class="hero-give">Give </span><span class="hero-word" data-word="1"><span class="hero-letter">L</span><span class="hero-letter">o</span><span class="hero-letter">c</span><span class="hero-letter">a</span><span class="hero-letter">l</span><span class="hero-letter">.</span></span></span><br>
+                            <span class="hero-line"><span class="hero-give">Give </span><span class="hero-word" data-word="2"><span class="hero-letter">T</span><span class="hero-letter">o</span><span class="hero-letter">g</span><span class="hero-letter">e</span><span class="hero-letter">t</span><span class="hero-letter">h</span><span class="hero-letter">e</span><span class="hero-letter">r</span><span class="hero-letter">.</span></span></span><br>
+                            <span class="hero-line"><span class="hero-give">Give </span><span class="hero-word" data-word="3"><span class="hero-letter">B</span><span class="hero-letter">i</span><span class="hero-letter">g</span><span class="hero-letter">g</span><span class="hero-letter">e</span><span class="hero-letter">r</span><span class="hero-letter">.</span></span></span>
+                        </h1>
                         <h1 class="main-slider__title editable">Support the nonprofits you love and help your gift go further<br>with the Tin Cup Challenge.</h1>
                         <div class="main-slider__btn-box">
                             <a href="/give-now/" class="thm-btn main-slider__btn">Give Now</a>
@@ -466,6 +470,47 @@ description: >-
 <!--Nonprofit Banner End-->
 
 {% block scripts %}
+<!-- Hero Text Animation Script -->
+<script>
+    (function() {
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHeroAnimation);
+        } else {
+            initHeroAnimation();
+        }
+
+        function initHeroAnimation() {
+            // Hide letters initially
+            const allLetters = document.querySelectorAll('.hero-letter');
+            if (allLetters.length === 0) return;
+
+            allLetters.forEach(letter => letter.classList.add('animate-ready'));
+
+            // Small delay then start animation
+            setTimeout(function() {
+                const words = document.querySelectorAll('.hero-word');
+                let totalDelay = 0;
+                const letterDelay = 80; // Delay between each letter (ms)
+                const wordDelay = 400; // Extra delay between words (ms)
+
+                words.forEach((word, wordIndex) => {
+                    const letters = word.querySelectorAll('.hero-letter');
+
+                    letters.forEach((letter, letterIndex) => {
+                        setTimeout(() => {
+                            letter.classList.add('visible');
+                        }, totalDelay + (letterIndex * letterDelay));
+                    });
+
+                    // Update total delay for next word
+                    totalDelay += (letters.length * letterDelay) + wordDelay;
+                });
+            }, 300);
+        }
+    })();
+</script>
+
 <!-- Countdown Timer Script -->
 <script>
     (function() {
