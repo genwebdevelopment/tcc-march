@@ -171,7 +171,8 @@ description: >-
             <div class="col-xl-6 col-lg-6">
                 <div class="events-two__left">
                     <div class="section-title text-left">
-                        <h2 class="section-title__title editable">Join Us on Event Day - July 18, 2026</h2>
+                        <h2 class="section-title__title editable">Join Us on Event Day</h2>
+                        <h3 class="events-two__date-heading editable">July 18, 2026</h3>
                     </div>
                     <div class="events-two__countdown-box">
                         <p class="events-two__date-location editable">Countdown to Event Day</p>
@@ -778,6 +779,62 @@ description: >-
                 currentPosition = maxPosition;
             }
             updateCarousel();
+        });
+    })();
+</script>
+
+<!-- Challengers Carousel Infinite Scroll Script -->
+<script>
+    (function() {
+        const track = document.querySelector('.challengers-carousel__track');
+        if (!track) return;
+
+        // Remove CSS animation and handle with JavaScript for smoother infinite scroll
+        track.style.animation = 'none';
+
+        let scrollPosition = 0;
+        let isPaused = false;
+        const scrollSpeed = 0.5; // pixels per frame
+
+        // Get the width of the first half of logos (8 logos)
+        const logos = track.querySelectorAll('.challengers-carousel__logo');
+        const halfwayPoint = logos.length / 2;
+
+        function getHalfWidth() {
+            let width = 0;
+            for (let i = 0; i < halfwayPoint; i++) {
+                width += logos[i].offsetWidth;
+            }
+            // Add gaps (40px between each logo in the first half)
+            width += 40 * (halfwayPoint - 1);
+            return width;
+        }
+
+        function animate() {
+            if (!isPaused) {
+                scrollPosition += scrollSpeed;
+                const resetPoint = getHalfWidth() + 20; // +20 for the gap after last logo in first set
+
+                // Reset position seamlessly when we've scrolled past the first set
+                if (scrollPosition >= resetPoint) {
+                    scrollPosition = 0;
+                }
+
+                track.style.transform = `translateX(-${scrollPosition}px)`;
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // Start animation
+        animate();
+
+        // Pause animation on hover for better UX
+        track.addEventListener('mouseenter', () => {
+            isPaused = true;
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isPaused = false;
         });
     })();
 </script>
