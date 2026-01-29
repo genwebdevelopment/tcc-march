@@ -858,6 +858,7 @@ a:hover {
     overflow: visible !important;
     position: relative !important;
     margin-top: 50px !important;
+    max-width: 90% !important;
 }
 
 .about-three__img {
@@ -1113,8 +1114,8 @@ a:hover {
    ======================================== */
 
 .about-three {
-    background: linear-gradient(to bottom, #e1e8ed 0%, #f8f9fa 100%);
-    padding: 60px 0;
+    background: #ffffff;
+    padding: 120px 0 120px !important;
 }
 
 /* ========================================
@@ -1453,19 +1454,26 @@ a:hover {
 .main-slider-single {
     position: relative;
     min-height: auto;
-    padding: 40px 0;
+    padding: 25px 0;
     display: flex;
     align-items: center;
 }
 
-/* Ensure container has proper z-index */
+/* Ensure container has proper z-index and reduce height */
 .main-slider-single .container {
     position: relative;
     z-index: 10;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
 }
 
 /* Custom hero container with wider max-width */
 .hero-container {
+    max-width: 1400px !important;
+}
+
+/* Global container width - match hero width across entire site */
+.container {
     max-width: 1400px !important;
 }
 
@@ -1654,7 +1662,7 @@ a:hover {
     }
 
     .main-slider-single {
-        min-height: 315px;
+        min-height: auto;
         padding-top: 20px;
     }
 
@@ -2541,7 +2549,7 @@ a:hover {
     }
 
     .main-slider-single {
-        min-height: 315px;
+        min-height: auto;
     }
 
     .nonprofits-section {
