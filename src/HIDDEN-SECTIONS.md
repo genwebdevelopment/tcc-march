@@ -22,6 +22,14 @@ This document tracks all temporarily hidden sections on the Tin Cup Challenge we
 - **Reason:** Temporarily hidden
 - **To restore:** Remove the `.event-countdown { display: none !important; }` rule
 
+### 3. Get Involved Section
+- **Location:** Homepage, below Community Energy section
+- **Elements:** Three card layout with "Give", "Register to Run", and "Become a Challenger" cards
+- **CSS Selector:** `.feature-three`
+- **File:** `src/index.njk` (lines 345-396)
+- **Reason:** Temporarily hidden
+- **To restore:** Remove the `.feature-three { display: none !important; }` rule
+
 ---
 
 ## CSS Location

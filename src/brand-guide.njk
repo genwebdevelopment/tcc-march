@@ -53,7 +53,6 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
     .color-purple-dark { background-color: #5a2a5c; }
     .color-blue { background-color: #005282; }
     .color-blue-dark { background-color: #192a3d; }
-    .color-blue-light { background-color: #e3eaef; }
     .color-burgundy { background-color: #851a2c; }
     .color-burgundy-medium { background-color: #AC2B37; }
     .color-red { background-color: #E23F5C; }
@@ -61,6 +60,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
     .color-gold { background-color: #febe58; }
     .color-teal { background-color: #5E847F; }
     .color-coral { background-color: #E07A5F; }
+    .color-cream { background-color: #f9f6f1; }
 
     .color-blue-light h4,
     .color-blue-light p,
@@ -70,10 +70,11 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
     }
 
     .typography-sample {
-        background: #f8f9fa;
+        background: white;
         padding: 30px;
         border-radius: 12px;
         margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
     .font-display {
@@ -90,7 +91,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 
     .usage-do {
         border-left: 4px solid #005282;
-        background: #e6f2fc;
+        background: #f9f6f1;
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 8px;
@@ -98,41 +99,44 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 
     .usage-dont {
         border-left: 4px solid #E74C3C;
-        background: #fef5f4;
+        background: #fff5f4;
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 8px;
     }
 
     .stat-box {
-        background: linear-gradient(135deg, #005282 0%, #5E847F 100%);
-        color: white;
-        padding: 30px;
+        background-color: #f9f6f1;
+        color: #192a3d;
+        padding: 14px 40px;
         border-radius: 12px;
         text-align: center;
         margin-bottom: 30px;
     }
 
     .stat-box h3 {
-        font-size: 48px;
+        font-size: 42px;
         font-weight: 800;
-        margin-bottom: 10px;
-        color: #e3eaef;
+        margin-bottom: 5px;
+        color: #005282;
+        font-variant-numeric: tabular-nums;
     }
 
     .stat-box p {
-        font-size: 16px;
+        font-size: 14px;
         margin: 0;
-        opacity: 0.95;
+        color: #192a3d;
+        font-weight: 600;
+        text-transform: uppercase;
     }
 
     .tone-card {
-        background: white;
+        background: #f9f6f1;
         padding: 25px;
         border-radius: 12px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         margin-bottom: 20px;
-        border-top: 4px solid #005282;
+        border-left: 4px solid #005282;
     }
 
     .tone-card h5 {
@@ -173,25 +177,25 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 
         <div class="row">
             <div class="col-lg-3 col-md-6">
-                <div class="stat-box" style="background: linear-gradient(135deg, #005282 0%, #5E847F 100%);">
+                <div class="stat-box">
                     <h3>$30.8M</h3>
                     <p>Raised Since 2008</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="stat-box" style="background: linear-gradient(135deg, #005282 0%, #192a3d 100%);">
+                <div class="stat-box">
                     <h3>64</h3>
                     <p>Local Nonprofits</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="stat-box" style="background: linear-gradient(135deg, #851a2c 0%, #005282 100%);">
+                <div class="stat-box">
                     <h3>228</h3>
                     <p>Challengers in 2025</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="stat-box" style="background: linear-gradient(135deg, #5a2a5c 0%, #851a2c 100%);">
+                <div class="stat-box">
                     <h3>1,623</h3>
                     <p>Donors in 2025</p>
                 </div>
@@ -202,7 +206,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 <!-- Brand Overview End -->
 
 <!-- Brand Colors Start -->
-<section class="brand-guide-section" style="background-color: #f8f9fa;">
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline editable">Visual Identity</span>
@@ -267,14 +271,6 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="color-swatch color-blue-light">
-                    <h4>Light Gray-Blue</h4>
-                    <p>#e3eaef</p>
-                    <p>RGB(227, 234, 239)</p>
-                    <small>Backgrounds, hover states</small>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
                 <div class="color-swatch color-coral">
                     <h4>Coral</h4>
                     <p>#E07A5F</p>
@@ -282,13 +278,75 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
                     <small>Category badges, accents</small>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="color-swatch color-cream">
+                    <h4 style="color: #333; text-shadow: none;">Warm Cream</h4>
+                    <p style="color: #333; text-shadow: none;">#f9f6f1</p>
+                    <p style="color: #333; text-shadow: none;">RGB(249, 246, 241)</p>
+                    <small style="color: #333;">Section backgrounds, cards, stat boxes</small>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- Brand Colors End -->
 
-<!-- Typography Start -->
+<!-- Section Design Patterns Start -->
 <section class="brand-guide-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline editable">Layout Patterns</span>
+            <h2 class="section-title__title editable">Section Design</h2>
+            <p class="editable" style="max-width: 700px; margin: 20px auto;">
+                Our homepage uses curved section transitions and overlapping layouts to create visual depth and flow between content areas.
+            </p>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                    <h4 style="color: #005282; margin-bottom: 20px; font-weight: 700;">Curved Section Borders</h4>
+                    <p>Sections use curved bottom corners to create smooth visual transitions between content areas.</p>
+                    <div style="background: #f9f6f1; padding: 20px; border-radius: 0 0 60px 60px; margin-top: 20px; text-align: center;">
+                        <code style="background: white; padding: 8px 15px; border-radius: 6px; font-size: 13px;">border-radius: 0 0 60px 60px;</code>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 14px; color: #666;">Applied to: Stats section, About/Nonprofit section</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 30px;">
+                    <h4 style="color: #005282; margin-bottom: 20px; font-weight: 700;">Overlapping Sections</h4>
+                    <p>Sections overlap to reveal the curved corners against contrasting backgrounds.</p>
+                    <div style="position: relative; height: 120px; margin-top: 20px;">
+                        <div style="background: #f9f6f1; height: 80px; border-radius: 0 0 30px 30px; position: absolute; top: 0; left: 0; right: 0; z-index: 2;"></div>
+                        <div style="background: linear-gradient(135deg, #F8F5EC 0%, #e8e2d5 100%); height: 80px; position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; border-radius: 8px;"></div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 14px; color: #666;">Uses: negative margins (-60px) and padding-top (180px)</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 12px;">
+            <h5 style="color: #005282; margin-bottom: 20px; font-weight: 700;">CSS Pattern Reference</h5>
+            <pre style="background: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>/* Curved section with overlap */
+.section-with-curve {
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -60px;  /* Creates overlap */
+}
+
+/* Following section accommodates overlap */
+.following-section {
+    padding-top: 180px;  /* Extra space for curved section */
+}</code></pre>
+        </div>
+    </div>
+</section>
+<!-- Section Design Patterns End -->
+
+<!-- Typography Start -->
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">Typography</span>
@@ -341,7 +399,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 <!-- Typography End -->
 
 <!-- Brand Voice & Messaging Start -->
-<section class="brand-guide-section" style="background-color: #f8f9fa;">
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">Communication</span>
@@ -475,7 +533,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 <!-- Photography Style End -->
 
 <!-- Logo Usage Start -->
-<section class="brand-guide-section" style="background-color: #f8f9fa;">
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">Brand Assets</span>
@@ -557,10 +615,10 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
                 </div>
             </div>
             <div class="col-lg-4">
-                <div style="background: #e3eaef; color: #333; padding: 30px; border-radius: 12px; margin-bottom: 20px; text-align: center;">
+                <div style="background: #f9f6f1; color: #333; padding: 30px; border-radius: 12px; margin-bottom: 20px; text-align: center;">
                     <h4 style="color: #333; margin-bottom: 15px;">Tent Canopies</h4>
                     <p>Bright blue tents and purple accents create vibrant festival atmosphere</p>
-                    <p style="font-weight: 700; margin-top: 15px;">Light Gray-Blue: #e3eaef / Blue: #005282</p>
+                    <p style="font-weight: 700; margin-top: 15px;">Blue: #005282</p>
                 </div>
             </div>
         </div>
@@ -590,8 +648,61 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 </section>
 <!-- Event Branding End -->
 
-<!-- Category Badges & Tags Start -->
+<!-- Stats Component Start -->
 <section class="brand-guide-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline editable">UI Components</span>
+            <h2 class="section-title__title editable">Stats Display</h2>
+            <p class="editable" style="max-width: 700px; margin: 20px auto;">
+                Statistics are displayed in warm cream boxes with blue numbers for high visibility and brand consistency.
+            </p>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-lg-6">
+                <h4 style="margin-bottom: 25px; font-weight: 700;">Stat Box Style</h4>
+                <div style="background: #f9f6f1; padding: 14px 40px; border-radius: 12px; text-align: center; margin-bottom: 20px;">
+                    <span style="display: block; font-size: 42px; font-weight: 800; color: #005282; line-height: 1.2;">$4.3M</span>
+                    <span style="display: block; font-size: 14px; font-weight: 600; color: #192a3d; text-transform: uppercase;">2024 Campaign Total</span>
+                </div>
+                <div style="margin-top: 20px;">
+                    <p style="margin-bottom: 10px;"><strong>Background:</strong> #f9f6f1 (Warm Cream)</p>
+                    <p style="margin-bottom: 10px;"><strong>Number Color:</strong> #005282 (Blue)</p>
+                    <p style="margin-bottom: 10px;"><strong>Number Size:</strong> 42px, Weight 800</p>
+                    <p style="margin-bottom: 10px;"><strong>Label Color:</strong> #192a3d (Navy)</p>
+                    <p style="margin-bottom: 10px;"><strong>Label Style:</strong> 14px, Uppercase, Weight 600</p>
+                    <p style="margin-bottom: 10px;"><strong>Border Radius:</strong> 12px</p>
+                    <p style="margin-bottom: 10px;"><strong>Padding:</strong> 14px 40px</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4 style="margin-bottom: 25px; font-weight: 700;">Number Animation Tips</h4>
+                <div class="usage-do">
+                    <h5 style="color: #005282; margin-bottom: 15px;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Do</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Use <code>font-variant-numeric: tabular-nums</code> for stable widths</li>
+                        <li>Center numbers within fixed-width containers</li>
+                        <li>Use Intersection Observer to trigger on scroll</li>
+                        <li>Keep animation duration under 2 seconds</li>
+                    </ul>
+                </div>
+                <div class="usage-dont" style="margin-top: 20px;">
+                    <h5 style="color: #E74C3C; margin-bottom: 15px;"><i class="fas fa-times-circle" style="margin-right: 8px;"></i> Don't</h5>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Allow boxes to resize during animation</li>
+                        <li>Use proportional fonts for numbers</li>
+                        <li>Animate numbers that aren't in viewport</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Stats Component End -->
+
+<!-- Category Badges & Tags Start -->
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">UI Components</span>
@@ -682,10 +793,18 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
             </div>
         </div>
 
-        <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin-top: 40px;">
+        <div style="background: white; padding: 30px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
             <h5 style="color: #005282; margin-bottom: 20px; font-weight: 700;">CSS Variables Reference</h5>
-            <pre style="background: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>/* Category Filter Button Colors */
---cftv-gold: #febe58;          /* All */
+            <pre style="background: #fff; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>/* Primary Brand Colors */
+--cftv-blue: #005282;          /* Primary - buttons, headers, accents */
+--cftv-navy: #192a3d;          /* Footers, dark backgrounds */
+--cftv-burgundy: #851a2c;      /* Accent color, emphasis */
+--cftv-gold: #febe58;          /* Highlights, warm accents */
+
+/* Section Backgrounds */
+--cftv-cream: #f9f6f1;         /* Warm cream - section backgrounds, stat boxes */
+
+/* Category Filter Button Colors */
 --cftv-burgundy: #851a2c;      /* Animal Rescue */
 --cftv-coral: #E07A5F;         /* Arts & Culture */
 --cftv-navy: #192a3d;          /* Civic & Service */
@@ -698,8 +817,98 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 </section>
 <!-- Category Badges & Tags End -->
 
+<!-- Animations & Interactions Start -->
+<section class="brand-guide-section" style="background-color: #f9f6f1;">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline editable">Motion Design</span>
+            <h2 class="section-title__title editable">Animations & Interactions</h2>
+            <p class="editable" style="max-width: 700px; margin: 20px auto;">
+                Subtle animations enhance the user experience and draw attention to interactive elements.
+            </p>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <div class="col-lg-4">
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h5 style="color: #005282; margin-bottom: 15px; font-weight: 700;">Slide-In Animations</h5>
+                    <p style="font-size: 14px;">Buttons and CTAs slide in from the right on scroll to draw attention.</p>
+                    <pre style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 11px; overflow-x: auto; margin-top: 15px;"><code>@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}</code></pre>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h5 style="color: #005282; margin-bottom: 15px; font-weight: 700;">Number Scramble</h5>
+                    <p style="font-size: 14px;">Stats animate with counting effect using Intersection Observer for scroll triggers.</p>
+                    <pre style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 11px; overflow-x: auto; margin-top: 15px;"><code>/* Stable number widths */
+.stat-number {
+  font-variant-numeric:
+    tabular-nums;
+  text-align: center;
+  width: 100%;
+}</code></pre>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h5 style="color: #005282; margin-bottom: 15px; font-weight: 700;">Hover Effects</h5>
+                    <p style="font-size: 14px;">Cards and buttons lift on hover with subtle shadow changes.</p>
+                    <pre style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 11px; overflow-x: auto; margin-top: 15px;"><code>.card:hover {
+  transform:
+    translateY(-5px);
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.15);
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h5 style="color: #005282; margin-bottom: 15px; font-weight: 700;">Manual Carousel Navigation</h5>
+                    <p style="font-size: 14px; margin-bottom: 20px;">Image carousels use manual navigation with arrow buttons for user control.</p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                        <div style="width: 40px; height: 40px; background: rgba(0,0,0,0.5); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px;">&#10094;</div>
+                        <div style="display: flex; gap: 10px;">
+                            <div style="width: 60px; height: 45px; background: #f9f6f1; border-radius: 6px;"></div>
+                            <div style="width: 60px; height: 45px; background: #005282; border-radius: 6px;"></div>
+                            <div style="width: 60px; height: 45px; background: #f9f6f1; border-radius: 6px;"></div>
+                        </div>
+                        <div style="width: 40px; height: 40px; background: rgba(0,0,0,0.5); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px;">&#10095;</div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666; text-align: center;">Shows 5 images with navigation arrows</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h5 style="color: #005282; margin-bottom: 15px; font-weight: 700;">Logo Carousel</h5>
+                    <p style="font-size: 14px; margin-bottom: 20px;">Sponsor logos displayed in auto-scrolling carousel with infinite loop.</p>
+                    <div style="display: flex; gap: 15px; justify-content: center; align-items: center; padding: 15px 0;">
+                        <div style="width: 80px; height: 50px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px;">Logo</div>
+                        <div style="width: 80px; height: 50px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px;">Logo</div>
+                        <div style="width: 80px; height: 50px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px;">Logo</div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666; text-align: center;">Full-width, edge-to-edge layout</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Animations & Interactions End -->
+
 <!-- Buttons Start -->
-<section class="brand-guide-section" style="background-color: #f8f9fa;">
+<section class="brand-guide-section">
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">UI Components</span>
@@ -775,7 +984,7 @@ description: Tin Cup Challenge Brand Guide - Official colors, typography, and br
 <section class="brand-guide-section" style="background: linear-gradient(135deg, #005282 0%, #5E847F 100%); color: white;">
     <div class="container">
         <div class="text-center">
-            <h2 style="color: #e3eaef; margin-bottom: 20px; font-weight: 800;">Need Brand Assets or Have Questions?</h2>
+            <h2 style="color: #ffffff; margin-bottom: 20px; font-weight: 800;">Need Brand Assets or Have Questions?</h2>
             <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">
                 Contact the Community Foundation of Teton Valley for official logos, photos, or brand guidance.
             </p>
