@@ -1,8 +1,5 @@
-# CloudCannon build configuration
-source: ''
-
-# Site output directory
-output: _site
+# Source directory for Eleventy
+source: src
 
 paths:
   uploads: uploads
