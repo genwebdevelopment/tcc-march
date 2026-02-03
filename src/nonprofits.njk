@@ -21,15 +21,24 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
 </section>
 <!--Page Header End-->
 
+<!-- Intro Section -->
+<section class="nonprofits-intro" style="padding: 80px 0; background: var(--cftv-burgundy);">
+    <div class="container">
+        <div class="section-title text-center" style="margin-bottom: 0; padding-bottom: 0;">
+            <h2 class="section-title__title editable" style="color: #fff;">Discover Participating Nonprofits</h2>
+            <p class="editable" style="font-size: 24px; margin: 20px auto 0; color: #fff;">Explore the causes you can support through the Tin Cup Challenge.</p>
+        </div>
+        <!--Info Box Start-->
+        <div class="nonprofit-info-box" style="margin-top: 20px; margin-bottom: 0; background: transparent; text-align: center; width: 100%;">
+            <p class="editable" style="color: #fff;">The Tin Cup Challenge is hosted by the Community Foundation of Teton Valley. For nonprofit program details, please visit <a href="https://www.cftetonvalley.org" target="_blank">www.cftetonvalley.org</a> or visit the <a href="https://www.cftetonvalley.org/tin-cup-challenge-grants" target="_blank">Tin Cup Challenge Grants page</a> for more information.</p>
+        </div>
+        <!--Info Box End-->
+    </div>
+</section>
+
 <!--Donation Start-->
 <section class="donation">
     <div class="container">
-
-        <!--Info Box Start-->
-        <div class="nonprofit-info-box">
-            <p class="editable">The Tin Cup Challenge is hosted by the Community Foundation of Teton Valley. For nonprofit program details, please visit <a href="https://www.cftetonvalley.org" target="_blank">www.cftetonvalley.org</a> or visit the <a href="https://www.cftetonvalley.org/tin-cup-challenge-grants" target="_blank">Tin Cup Challenge Grants page</a> for more information.</p>
-        </div>
-        <!--Info Box End-->
 
         <!--Category Filter Start-->
         <div class="nonprofit-filter" id="nonprofit-filter">
@@ -66,6 +75,41 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
             </div>
         </div>
         <!--Category Filter End-->
+
+        <!-- Search and Filter Bar -->
+        <div class="nonprofit-search-filter" id="nonprofit-search-filter">
+            <div class="nonprofit-search-filter__row">
+                <!-- Search Input -->
+                <div class="nonprofit-search-filter__search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="nonprofit-search" placeholder="Search nonprofits..." aria-label="Search nonprofits">
+                </div>
+
+                <!-- Category Dropdown -->
+                <div class="nonprofit-search-filter__dropdown">
+                    <select id="category-filter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="animal-rescue">Animal Rescue</option>
+                        <option value="arts">Arts & Culture</option>
+                        <option value="civic">Civic & Service</option>
+                        <option value="conservation">Conservation & Environment</option>
+                        <option value="education">Education</option>
+                        <option value="health">Health & Human Services</option>
+                        <option value="sports">Sports & Recreation</option>
+                    </select>
+                </div>
+
+                <!-- Sort Dropdown -->
+                <div class="nonprofit-search-filter__dropdown">
+                    <select id="sort-filter" aria-label="Sort by">
+                        <option value="alphabetical">Sort: A-Z</option>
+                        <option value="reverse-alphabetical">Sort: Z-A</option>
+                        <option value="recent">Sort: Most Recent</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Search and Filter Bar End -->
 
         <!-- No Results Message -->
         <div class="nonprofit-no-results" id="no-results" style="display: none;">
@@ -491,36 +535,49 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
 
 <!--CTA Section Start-->
 
+<!--Nonprofit Banner Start-->
+<section class="nonprofit-banner">
+    <div class="container hero-container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="nonprofit-banner__content">
+                    <h3 class="nonprofit-banner__title editable">Are You a Nonprofit?</h3>
+                    <p class="nonprofit-banner__text editable">Tin Cup is administered by the Community Foundation of Teton Valley. Visit our Tin Cup Challenge Program page for registration rules and important dates.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="nonprofit-banner__btn-box">
+                    <a href="https://cftetonvalley.org/tin-cup-challenge/" class="thm-btn nonprofit-banner__btn" target="_blank">Visit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Nonprofit Banner End-->
+
 <!--CTA Section End-->
 
 {% block scripts %}
 <script>
 /**
- * Nonprofit Filter Module
- * Handles category filtering with support for future AJAX integration
- *
- * FUTURE AJAX INTEGRATION:
- * - Set NonprofitFilter.useAjax = true to enable AJAX mode
- * - Configure NonprofitFilter.ajaxUrl with your API endpoint
- * - The fetchNonprofits() method will make AJAX calls instead of client-side filtering
+ * Nonprofit Search & Filter Module
+ * Handles search, category filtering, and sorting
  */
 const NonprofitFilter = {
-    // Configuration - Change these for AJAX mode
-    useAjax: false,  // Set to true when ready to use AJAX
-    ajaxUrl: '/api/nonprofits',  // Your API endpoint
-
     // State
     currentCategory: 'all',
-    isExpanded: false,
-    initialVisibleCount: 8,
+    currentSearch: '',
+    currentSort: 'alphabetical',
+    isExpanded: true, // Always show all cards with new filter
 
     // DOM Elements
     elements: {
         grid: null,
-        filterButtons: null,
+        searchInput: null,
+        categorySelect: null,
+        sortSelect: null,
         toggleBtn: null,
         btnText: null,
-        loading: null,
         noResults: null,
         showMoreWrapper: null
     },
@@ -531,54 +588,90 @@ const NonprofitFilter = {
     init: function() {
         // Cache DOM elements
         this.elements.grid = document.getElementById('nonprofits-grid');
-        this.elements.filterButtons = document.querySelectorAll('.nonprofit-filter__btn');
+        this.elements.searchInput = document.getElementById('nonprofit-search');
+        this.elements.categorySelect = document.getElementById('category-filter');
+        this.elements.sortSelect = document.getElementById('sort-filter');
         this.elements.toggleBtn = document.getElementById('toggle-nonprofits');
         this.elements.btnText = this.elements.toggleBtn?.querySelector('.btn-text');
-        this.elements.loading = document.getElementById('filter-loading');
         this.elements.noResults = document.getElementById('no-results');
         this.elements.showMoreWrapper = document.getElementById('show-more-wrapper');
+
+        // Store original card data for sorting
+        this.storeCardData();
 
         // Bind events
         this.bindEvents();
 
-        // Store original hidden state for "all" category
-        this.storeOriginalState();
+        // Show all cards initially and apply default sort
+        this.showAllCards();
+        this.applyFilters();
+
+        // Hide View More button (all cards shown with new filter)
+        if (this.elements.showMoreWrapper) {
+            this.elements.showMoreWrapper.style.display = 'none';
+        }
     },
 
     /**
-     * Store the original hidden state of cards
+     * Store card data for sorting
      */
-    storeOriginalState: function() {
+    storeCardData: function() {
         const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
-        cards.forEach((card, index) => {
-            card.dataset.originalHidden = index >= this.initialVisibleCount ? 'true' : 'false';
+        cards.forEach((card) => {
+            const titleEl = card.querySelector('.causes-one__title');
+            const title = titleEl ? titleEl.textContent.trim() : '';
+            card.dataset.title = title;
+            // Use nonprofit-id as a proxy for "most recent" (higher ID = more recent)
+            card.dataset.order = card.dataset.nonprofitId || '0';
         });
     },
 
     /**
-     * Bind click events to filter buttons and toggle button
+     * Show all cards (remove hidden state)
+     */
+    showAllCards: function() {
+        const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
+        cards.forEach(card => {
+            card.classList.remove('nonprofit-hidden');
+            card.style.display = '';
+        });
+    },
+
+    /**
+     * Bind events for search, filter, and sort
      */
     bindEvents: function() {
         const self = this;
 
-        // Filter button clicks
-        this.elements.filterButtons.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                const category = this.dataset.category;
-                const categoryId = this.dataset.categoryId;
-                self.filterByCategory(category, categoryId);
-
-                // Update active state and aria-pressed
-                self.elements.filterButtons.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-pressed', 'false');
-                });
-                this.classList.add('active');
-                this.setAttribute('aria-pressed', 'true');
+        // Search input - debounced
+        if (this.elements.searchInput) {
+            let searchTimeout;
+            this.elements.searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    self.currentSearch = self.elements.searchInput.value.toLowerCase().trim();
+                    self.applyFilters();
+                }, 200);
             });
-        });
+        }
 
-        // Toggle button click
+        // Category dropdown
+        if (this.elements.categorySelect) {
+            this.elements.categorySelect.addEventListener('change', function() {
+                self.currentCategory = this.value;
+                self.applyFilters();
+            });
+        }
+
+        // Sort dropdown
+        if (this.elements.sortSelect) {
+            this.elements.sortSelect.addEventListener('change', function() {
+                self.currentSort = this.value;
+                self.applyFilters();
+            });
+        }
+
+        // Toggle button (View More/Less) - keep for compatibility
         if (this.elements.toggleBtn) {
             this.elements.toggleBtn.addEventListener('click', function() {
                 self.toggleExpand();
@@ -587,57 +680,31 @@ const NonprofitFilter = {
     },
 
     /**
-     * Filter nonprofits by category
-     * @param {string} category - Category slug
-     * @param {string} categoryId - Category ID for AJAX calls
+     * Apply all filters (search, category, sort)
      */
-    filterByCategory: function(category, categoryId) {
-        this.currentCategory = category;
-
-        if (this.useAjax) {
-            // AJAX MODE: Fetch from server
-            this.fetchNonprofits(category, categoryId);
-        } else {
-            // CLIENT-SIDE MODE: Filter existing cards
-            this.filterCardsClientSide(category);
-        }
-    },
-
-    /**
-     * Client-side filtering of nonprofit cards
-     * @param {string} category - Category to filter by
-     */
-    filterCardsClientSide: function(category) {
-        const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
+    applyFilters: function() {
+        const cards = Array.from(this.elements.grid.querySelectorAll('.nonprofit-card-item'));
         let visibleCount = 0;
-        let totalMatching = 0;
 
-        cards.forEach((card, index) => {
+        // First, filter cards
+        cards.forEach(card => {
             const cardCategory = card.dataset.category;
-            const isMatch = category === 'all' || cardCategory === category;
+            const cardTitle = card.dataset.title.toLowerCase();
+            const cardDescription = card.querySelector('.causes-one__text')?.textContent.toLowerCase() || '';
 
-            if (isMatch) {
-                totalMatching++;
+            // Category match
+            const categoryMatch = this.currentCategory === 'all' || cardCategory === this.currentCategory;
 
-                if (category === 'all') {
-                    // For "all", respect original hidden state unless expanded
-                    if (card.dataset.originalHidden === 'true' && !this.isExpanded) {
-                        card.style.display = 'none';
-                        card.classList.add('nonprofit-hidden');
-                        card.classList.remove('nonprofit-visible');
-                    } else {
-                        card.style.display = '';
-                        card.classList.remove('nonprofit-hidden');
-                        card.classList.add('nonprofit-visible');
-                        visibleCount++;
-                    }
-                } else {
-                    // For specific category, show all matching
-                    card.style.display = '';
-                    card.classList.remove('nonprofit-hidden');
-                    card.classList.add('nonprofit-visible');
-                    visibleCount++;
-                }
+            // Search match (title or description)
+            const searchMatch = this.currentSearch === '' ||
+                cardTitle.includes(this.currentSearch) ||
+                cardDescription.includes(this.currentSearch);
+
+            if (categoryMatch && searchMatch) {
+                card.style.display = '';
+                card.classList.remove('nonprofit-hidden');
+                card.classList.add('nonprofit-visible');
+                visibleCount++;
             } else {
                 card.style.display = 'none';
                 card.classList.add('nonprofit-hidden');
@@ -645,19 +712,13 @@ const NonprofitFilter = {
             }
         });
 
+        // Then, sort visible cards
+        this.sortCards();
+
         // Show/hide no results message
         this.elements.noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         this.elements.grid.style.display = visibleCount === 0 ? 'none' : '';
 
-        // Show/hide "View More" button based on category
-        if (category === 'all') {
-            const hiddenInAll = Array.from(cards).filter(c => c.dataset.originalHidden === 'true').length;
-            this.elements.showMoreWrapper.style.display = hiddenInAll > 0 ? '' : 'none';
-        } else {
-            // Hide "View More" when filtering by specific category
-            this.elements.showMoreWrapper.style.display = 'none';
-        }
-
         // Re-initialize WOW animations
         if (typeof WOW !== 'undefined') {
             new WOW().init();
@@ -665,102 +726,27 @@ const NonprofitFilter = {
     },
 
     /**
-     * AJAX: Fetch nonprofits from server
-     * @param {string} category - Category slug
-     * @param {string} categoryId - Category ID
+     * Sort cards based on current sort option
      */
-    fetchNonprofits: function(category, categoryId) {
-        const self = this;
+    sortCards: function() {
+        const grid = this.elements.grid;
+        const cards = Array.from(grid.querySelectorAll('.nonprofit-card-item'));
 
-        // Show loading
-        this.showLoading(true);
-        this.elements.grid.style.opacity = '0.5';
-
-        // Build request URL
-        const url = category === 'all'
-            ? this.ajaxUrl
-            : `${this.ajaxUrl}?category=${categoryId}`;
-
-        // Make AJAX request
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
+        cards.sort((a, b) => {
+            switch (this.currentSort) {
+                case 'alphabetical':
+                    return a.dataset.title.localeCompare(b.dataset.title);
+                case 'reverse-alphabetical':
+                    return b.dataset.title.localeCompare(a.dataset.title);
+                case 'recent':
+                    return parseInt(b.dataset.order) - parseInt(a.dataset.order);
+                default:
+                    return 0;
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            self.renderNonprofits(data.nonprofits || data);
-            self.showLoading(false);
-            self.elements.grid.style.opacity = '1';
-        })
-        .catch(error => {
-            console.error('Error fetching nonprofits:', error);
-            self.showLoading(false);
-            self.elements.grid.style.opacity = '1';
-            // Fallback to client-side filtering on error
-            self.filterCardsClientSide(category);
         });
-    },
 
-    /**
-     * Render nonprofits from AJAX response
-     * @param {Array} nonprofits - Array of nonprofit objects
-     */
-    renderNonprofits: function(nonprofits) {
-        if (!nonprofits || nonprofits.length === 0) {
-            this.elements.grid.innerHTML = '';
-            this.elements.noResults.style.display = 'block';
-            this.elements.grid.style.display = 'none';
-            this.elements.showMoreWrapper.style.display = 'none';
-            return;
-        }
-
-        this.elements.noResults.style.display = 'none';
-        this.elements.grid.style.display = '';
-        this.elements.showMoreWrapper.style.display = 'none'; // Hide when using AJAX
-
-        // Generate HTML for each nonprofit
-        const html = nonprofits.map((np, index) => this.generateCardHTML(np, index)).join('');
-        this.elements.grid.innerHTML = html;
-
-        // Re-initialize WOW animations
-        if (typeof WOW !== 'undefined') {
-            new WOW().init();
-        }
-    },
-
-    /**
-     * Generate HTML for a single nonprofit card
-     * @param {Object} nonprofit - Nonprofit data object
-     * @param {number} index - Index for animation delay
-     * @returns {string} HTML string
-     */
-    generateCardHTML: function(nonprofit, index) {
-        const delay = ((index % 6) + 1) * 100;
-
-        return `
-            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item"
-                 data-wow-delay="${delay}ms"
-                 data-category="${nonprofit.category_slug || ''}"
-                 data-nonprofit-id="${nonprofit.id || ''}">
-                <div class="causes-one__single">
-                    <div class="causes-one__img">
-                        <img src="${nonprofit.image || '/assets/images/resources/causes-1-1.jpg'}" alt="${nonprofit.title || ''}">
-                    </div>
-                    <div class="causes-one__content">
-                        <h3 class="causes-one__title editable">
-                            <a href="${nonprofit.url || '#'}">${nonprofit.title || ''}</a>
-                        </h3>
-                        <div class="causes-one__cat" data-category="${nonprofit.category_slug || ''}">
-                            <p>${nonprofit.category || ''}</p>
-                        </div>
-                        <p class="causes-one__text editable">${nonprofit.description || ''}</p>
-                    </div>
-                </div>
-            </div>
-        `;
+        // Re-append cards in sorted order
+        cards.forEach(card => grid.appendChild(card));
     },
 
     /**
@@ -768,24 +754,6 @@ const NonprofitFilter = {
      */
     toggleExpand: function() {
         this.isExpanded = !this.isExpanded;
-
-        if (this.currentCategory === 'all') {
-            const cards = this.elements.grid.querySelectorAll('.nonprofit-card-item');
-
-            cards.forEach(card => {
-                if (card.dataset.originalHidden === 'true') {
-                    if (this.isExpanded) {
-                        card.style.display = '';
-                        card.classList.remove('nonprofit-hidden');
-                        card.classList.add('nonprofit-visible');
-                    } else {
-                        card.style.display = 'none';
-                        card.classList.add('nonprofit-hidden');
-                        card.classList.remove('nonprofit-visible');
-                    }
-                }
-            });
-        }
 
         // Update button text and aria-expanded
         if (this.isExpanded) {
@@ -802,19 +770,11 @@ const NonprofitFilter = {
             });
         }
 
+        this.applyFilters();
+
         // Re-initialize WOW animations
         if (this.isExpanded && typeof WOW !== 'undefined') {
             new WOW().init();
-        }
-    },
-
-    /**
-     * Show/hide loading indicator
-     * @param {boolean} show - Whether to show loading
-     */
-    showLoading: function(show) {
-        if (this.elements.loading) {
-            this.elements.loading.style.display = show ? 'flex' : 'none';
         }
     }
 };

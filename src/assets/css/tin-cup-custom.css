@@ -2489,18 +2489,21 @@ a:hover {
 
 /* Category badge positioning - after title */
 .causes-one__cat {
-    width: fit-content;
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 20px;
-    margin-bottom: 3px;
-    align-self: flex-end; /* Right align the tag */
+    width: 100%;
+    display: block;
+    padding: 10px 0 0 0;
+    border-radius: 0;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    border-top: 1px solid #e5e5e5;
+    background: none !important;
 }
 
 .causes-one__cat p {
     margin: 0;
+    font-family: 'Manrope', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: none;
     letter-spacing: 0;
     line-height: 1.4;
@@ -2523,7 +2526,7 @@ a:hover {
     }
 
     .causes-one__cat p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .causes-one__text {
@@ -2555,12 +2558,12 @@ a:hover {
     }
 
     .causes-one__cat {
-        padding: 4px 12px;
+        padding: 0;
         margin-bottom: 5px;
     }
 
     .causes-one__cat p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .causes-one__text {
@@ -2736,6 +2739,18 @@ a:hover {
     color: var(--cftv-navy) !important;
 }
 
+/* Nonprofit intro section - white links */
+.nonprofits-intro .nonprofit-info-box a {
+    color: #fff !important;
+    font-weight: 400;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.nonprofits-intro .nonprofit-info-box a:hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
 /* ========================================
    Category Filter Badges
    ======================================== */
@@ -2883,59 +2898,39 @@ a:hover {
    ======================================== */
 
 /* Animal Rescue - Burgundy */
-.nonprofit-card-item[data-category="animal-rescue"] .causes-one__cat {
-    background-color: var(--cftv-burgundy);
-}
+/* Category text colors */
 .nonprofit-card-item[data-category="animal-rescue"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-burgundy);
 }
 
 /* Arts & Culture - Coral */
-.nonprofit-card-item[data-category="arts"] .causes-one__cat {
-    background-color: var(--cftv-coral);
-}
 .nonprofit-card-item[data-category="arts"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-coral);
 }
 
 /* Civic & Service - Navy */
-.nonprofit-card-item[data-category="civic"] .causes-one__cat {
-    background-color: var(--cftv-navy);
-}
 .nonprofit-card-item[data-category="civic"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-navy);
 }
 
 /* Conservation & Environment - Teal */
-.nonprofit-card-item[data-category="conservation"] .causes-one__cat {
-    background-color: var(--cftv-teal);
-}
 .nonprofit-card-item[data-category="conservation"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-teal);
 }
 
 /* Education - Blue */
-.nonprofit-card-item[data-category="education"] .causes-one__cat {
-    background-color: var(--cftv-blue);
-}
 .nonprofit-card-item[data-category="education"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-blue);
 }
 
 /* Health & Human Services - Purple */
-.nonprofit-card-item[data-category="health"] .causes-one__cat {
-    background-color: var(--cftv-purple-light);
-}
 .nonprofit-card-item[data-category="health"] .causes-one__cat p {
-    color: #fff;
+    color: var(--cftv-purple-light);
 }
 
 /* Sports & Recreation - Orange */
-.nonprofit-card-item[data-category="sports"] .causes-one__cat {
-    background-color: #E67E22;
-}
 .nonprofit-card-item[data-category="sports"] .causes-one__cat p {
-    color: #fff;
+    color: #E67E22;
 }
 
 /* ========================================
@@ -4368,8 +4363,22 @@ a:hover {
     }
 }
 
-#nonprofits-grid .nonprofit-card-item .causes-one__content{
-    border: unset !important;
+/* Clean nonprofit cards - white box with rounded corners, no shadow */
+#nonprofits-grid .nonprofit-card-item .causes-one__single {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+#nonprofits-grid .nonprofit-card-item .causes-one__img {
+    border-radius: 12px 12px 0 0;
+}
+
+#nonprofits-grid .nonprofit-card-item .causes-one__content {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 0 12px 12px;
 }
 
 /* ========================================
@@ -7283,4 +7292,100 @@ a:hover {
 /* Get Involved section - hidden */
 .feature-three {
     display: none !important;
+}
+
+/* Nonprofit category filter buttons - hidden (replaced with search/dropdown) */
+.nonprofit-filter {
+    display: none !important;
+}
+
+/* ==========================================================================
+   NONPROFIT SEARCH AND FILTER BAR
+   ========================================================================== */
+
+.nonprofit-search-filter {
+    margin-bottom: 40px;
+}
+
+.nonprofit-search-filter__row {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.nonprofit-search-filter__search {
+    flex: 2;
+    min-width: 250px;
+    position: relative;
+}
+
+.nonprofit-search-filter__search i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.nonprofit-search-filter__search input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nonprofit-search-filter__search input:focus {
+    outline: none;
+    border-color: var(--cftv-navy);
+    box-shadow: 0 0 0 3px rgba(28, 49, 68, 0.1);
+}
+
+.nonprofit-search-filter__search input::placeholder {
+    color: #999;
+}
+
+.nonprofit-search-filter__dropdown {
+    flex: 1;
+    min-width: 180px;
+}
+
+.nonprofit-search-filter__dropdown select {
+    width: 100%;
+    padding: 14px 40px 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 16px center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nonprofit-search-filter__dropdown select:focus {
+    outline: none;
+    border-color: var(--cftv-navy);
+    box-shadow: 0 0 0 3px rgba(28, 49, 68, 0.1);
+}
+
+/* Responsive - Stack on mobile */
+@media (max-width: 767px) {
+    .nonprofit-search-filter__row {
+        flex-direction: column;
+    }
+
+    .nonprofit-search-filter__search,
+    .nonprofit-search-filter__dropdown {
+        flex: none;
+        width: 100%;
+        min-width: auto;
+    }
 }

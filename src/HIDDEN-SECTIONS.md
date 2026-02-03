@@ -30,6 +30,14 @@ This document tracks all temporarily hidden sections on the Tin Cup Challenge we
 - **Reason:** Temporarily hidden
 - **To restore:** Remove the `.feature-three { display: none !important; }` rule
 
+### 4. Nonprofit Category Filter Buttons
+- **Location:** Nonprofits page, above the nonprofit grid
+- **Elements:** Category filter buttons (All, Animal Rescue, Arts & Culture, etc.)
+- **CSS Selector:** `.nonprofit-filter`
+- **File:** `src/nonprofits.njk`
+- **Reason:** Replaced with search bar and dropdown filters
+- **To restore:** Remove the `.nonprofit-filter { display: none !important; }` rule and hide/remove the new `.nonprofit-search-filter` section
+
 ---
 
 ## CSS Location
