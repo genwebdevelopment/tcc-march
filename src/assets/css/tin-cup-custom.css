@@ -7001,6 +7001,34 @@ a:hover {
 }
 
 /* ==========================================================================
+   HOW IT WORKS PAGE
+   ========================================================================== */
+
+.powered-by a:hover {
+    color: var(--cftv-blue) !important;
+}
+
+.why-tin-cup {
+    background: #fff !important;
+}
+
+.why-tin-cup .about-three__img img {
+    border-color: var(--cftv-blue) !important;
+}
+
+.why-tin-cup .powered-by {
+    border: 4px solid var(--cftv-blue);
+}
+
+.faqs-section .faq-one-accrodion .accrodion {
+    border-radius: 30px;
+}
+
+.faqs-section .faq-one-accrodion .accrodion-title {
+    border-radius: 30px;
+}
+
+/* ==========================================================================
    NONPROFIT BANNER SECTION
    ========================================================================== */
 
