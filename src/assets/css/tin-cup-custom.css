@@ -216,6 +216,10 @@ p {
     background-color: var(--cftv-gold) !important;
 }
 
+.main-menu__volunteers-icon:hover img {
+    animation: none !important;
+}
+
 .events-two__meta li i {
     color: var(--cftv-blue) !important;
 }
@@ -1079,8 +1083,8 @@ a:hover {
    ========================================================================== */
 
 .challengers-carousel {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background-color: #ffffff;
     overflow: hidden;
 }
@@ -1372,7 +1376,7 @@ a:hover {
     }
 
     .challengers-carousel {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .community-energy__slide {
@@ -5408,17 +5412,59 @@ a:hover {
 /* Feature Four Section - Reduce padding */
 .challengers-page .feature-four {
     padding: 55px 0 25px;
+    background-color: var(--cftv-cream) !important;
 }
 
-/* Feature Four Boxes - Burgundy background */
+.challengers-page .feature-four .feature-four-shape {
+    display: none !important;
+}
+
 .challengers-page .feature-four__single {
-    background-color: var(--cftv-burgundy);
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* Challenger Levels in How to Give Section - Remove white background */
+.challengers-page .feature-four__single:hover {
+    transform: translateY(-5px);
+}
+
+.challengers-page .feature-four__icon i {
+    font-size: 50px;
+    color: var(--cftv-gold);
+}
+
+.challengers-page .feature-four__title {
+    letter-spacing: normal;
+}
+
+/* Feature Four Boxes - Individual colors */
+.challengers-page .feature-four__inner .row > div:nth-child(1) .feature-four__single {
+    background-color: var(--cftv-blue);
+}
+
+.challengers-page .feature-four__inner .row > div:nth-child(2) .feature-four__single {
+    background-color: var(--cftv-navy);
+}
+
+.challengers-page .feature-four__inner .row > div:nth-child(3) .feature-four__single {
+    background-color: var(--cftv-teal);
+}
+
+.challengers-page .how-to-give-section {
+    background: #fff;
+}
+
+.challengers-page .how-to-give-section .about-three__btn {
+    margin-top: 40px;
+}
+
+/* Challenger Levels box */
 .challengers-page .how-to-give-section .donation-details__summary {
-    background-color: transparent;
-    box-shadow: none;
+    background-color: var(--cftv-cream);
+    border-radius: 12px;
+    padding: 30px;
 }
 
 /* Challenger Levels right column - offset for visual separation */
@@ -5429,6 +5475,55 @@ a:hover {
 @media (max-width: 1199px) {
     .challengers-page .how-to-give-section .donation-details__left {
         padding-left: 0;
+    }
+}
+
+/* Challenger Quote Section */
+.challengers-page .challenger-quote-section {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.challenger-quote__content {
+    padding: 0 20px;
+}
+
+.challenger-quote__icon {
+    margin-bottom: 20px;
+}
+
+.challenger-quote__icon i {
+    font-size: 40px;
+    color: var(--cftv-gold);
+}
+
+.challenger-quote__text {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--cftv-navy);
+    font-style: italic;
+    margin: 0 0 25px;
+    padding: 0;
+    border: none;
+}
+
+.challenger-quote__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cftv-navy);
+    margin-bottom: 5px;
+}
+
+.challenger-quote__title {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .challenger-quote__content {
+        padding: 30px 0 0;
     }
 }
 
@@ -5561,10 +5656,10 @@ a:hover {
     margin-top: 20px;
 }
 
-/* Support Your Community Section - White background */
+/* Support Your Community Section */
 .challengers-page .about-three.about-three--alt.support-community-section {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+    background-color: var(--cftv-cream) !important;
+    background: var(--cftv-cream) !important;
 }
 
 .challengers-page .support-community-section .container,
@@ -5824,16 +5919,12 @@ a:hover {
 .challengers-page .challengers-faq-section {
     position: relative;
     padding: 60px 0;
-    background-color: var(--oxpins-extra);
+    background-color: var(--cftv-cream);
     z-index: 1;
 }
 
 .challengers-page .challengers-faq-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: none;
     bottom: 0;
     background-image: url(/assets/images/shapes/events-two-shape-1.png);
     background-repeat: repeat;
@@ -5861,7 +5952,7 @@ a:hover {
 
 /* Accordion styles - matches theme FAQ page design */
 .challengers-page .challengers-faq-section .faq-one-accrodion .accrodion {
-    border-radius: 35px;
+    border-radius: 30px;
     margin-bottom: 0;
 }
 
