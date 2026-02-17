@@ -34,6 +34,14 @@
 }
 
 /* ========================================
+   Global Letter-Spacing Override
+   Reset all tight kerning from theme to normal
+   ======================================== */
+* {
+    letter-spacing: normal !important;
+}
+
+/* ========================================
    Skip Link - Accessibility
    ======================================== */
 .skip-link {
@@ -792,7 +800,7 @@ a:hover {
 
 /* Event Day Page - Slim Countdown Bar */
 .event-countdown-bar {
-    background-color: #ffffff;
+    background-color: var(--cftv-cream);
     padding: 0;
 }
 
@@ -4418,6 +4426,11 @@ a:hover {
    ---------------------------------------- */
 .event-day-page .feature-four {
     padding: 30px 0 !important;
+    background-color: var(--cftv-cream) !important;
+}
+
+.event-day-page .feature-four .feature-four-shape {
+    display: none !important;
 }
 
 .event-day-page .feature-four__row {
@@ -4491,17 +4504,15 @@ a:hover {
     text-decoration: none;
 }
 
-/* Event Day Info Box - Textured background */
+/* Event Day Info Box */
 .event-day-page .event-details__info {
     position: relative;
-    background-color: var(--oxpins-extra);
+    background-color: var(--cftv-cream);
     border-top: 4px solid var(--cftv-blue);
 }
 
 .event-day-page .event-details__info::before {
-    content: '';
-    position: absolute;
-    top: 0;
+    display: none;
     left: 0;
     right: 0;
     bottom: 0;
@@ -4533,7 +4544,7 @@ a:hover {
 .event-day-page .faq-page {
     position: relative;
     padding: 70px 0 !important;
-    /* background-color: var(--oxpins-extra); */
+    background-color: var(--cftv-cream);
 }
 
 /* .event-day-page .faq-page::before {
@@ -4552,6 +4563,14 @@ a:hover {
 
 .event-day-page .faq-page .section-title {
     margin-bottom: 30px !important;
+}
+
+.event-day-page .faq-page .faq-one-accrodion .accrodion {
+    border-radius: 30px;
+}
+
+.event-day-page .faq-page .faq-one-accrodion .accrodion-title {
+    border-radius: 30px;
 }
 
 /* ----------------------------------------
@@ -4623,15 +4642,13 @@ a:hover {
    ---------------------------------------- */
 .nonprofit-awards-and-help-section {
     position: relative;
-    background-color: var(--oxpins-extra);
+    background-color: var(--cftv-cream);
     z-index: 1;
     padding: 80px 0;
 }
 
 .nonprofit-awards-and-help-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
+    display: none;
     left: 0;
     right: 0;
     bottom: 0;
@@ -4696,6 +4713,7 @@ a:hover {
 .tin-cup-awards .row {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 40px;
 }
 
 .tin-cup-awards .row > [class*="col-"] {
@@ -4835,14 +4853,14 @@ a:hover {
 /* ----------------------------------------
    Event Day Urgent Cause Video Section
    ---------------------------------------- */
-/* .event-day-page .urgent-cause {
-    margin-bottom: 60px !important;
-} */
+.event-day-page .urgent-cause {
+    margin-bottom: 100px !important;
+}
 
 .event-day-page .urgent-cause__inner {
     position: relative;
     background: transparent !important;
-    padding: 0 !important;
+    padding: 0 40px !important;
 }
 
 /* Video Container */
@@ -4954,7 +4972,7 @@ a:hover {
 .event-day-page .nonprofit-awards-and-help-section .help {
     border-radius: 20px;
     padding: 40px 0 170px;
-    margin: 0 15px;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -4996,7 +5014,36 @@ a:hover {
 .event-day-page .feature-four__single {
     margin-bottom: 0 !important;
     position: relative;
-    background-color: var(--cftv-burgundy);
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.event-day-page .feature-four__single:hover {
+    transform: translateY(-5px);
+}
+
+.event-day-page .feature-four__icon i {
+    font-size: 50px;
+    color: var(--cftv-gold);
+}
+
+.event-day-page .feature-four__title {
+    letter-spacing: normal !important;
+}
+
+/* Feature Four Boxes - Individual colors */
+.event-day-page .feature-four__inner .row > div:nth-child(1) .feature-four__single {
+    background-color: var(--cftv-blue);
+}
+
+.event-day-page .feature-four__inner .row > div:nth-child(2) .feature-four__single {
+    background-color: var(--cftv-navy);
+}
+
+.event-day-page .feature-four__inner .row > div:nth-child(3) .feature-four__single {
+    background-color: var(--cftv-teal);
 }
 
 @media (max-width: 991px) {
@@ -6224,34 +6271,27 @@ a:hover {
 }
 
 .past-events-gallery__header {
-    background-color: #5E847F;
+    background-color: #fff;
     text-align: center;
-    padding: 50px 0 60px;
+    padding: 20px 0 10px;
     position: relative;
 }
 
 .past-events-gallery__header::after {
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 15px solid #5E847F;
+    display: none;
 }
 
 .past-events-gallery__title {
     font-size: 40px;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--cftv-navy);
     margin: 0;
     font-family: var(--oxpins-font-two);
     letter-spacing: -0.04em;
 }
 
 .past-events-gallery__carousel-wrapper {
-    padding: 40px 15px 30px;
+    padding: 15px 15px 30px;
     background-color: #fff;
     position: relative;
 }
