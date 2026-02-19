@@ -4784,11 +4784,11 @@ a:hover {
 
 .tin-cup-awards__winner {
     font-size: 32px;
-    font-weight: 800;
-    color: var(--cftv-purple);
+    font-weight: 600;
+    color: var(--cftv-navy);
     line-height: 1.2;
     margin: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: none !important;
     letter-spacing: normal !important;
 }
