@@ -29,7 +29,20 @@ description: Learn more about this nonprofit organization and how you can suppor
                 <div class="donation-details__left">
                     <div class="donation-details__top">
                         <div class="donation-details__img">
-                            <img src="/assets/images/tin-cup/nonprofit-parade.jpg" alt="Education Foundation of Teton Valley">
+                            <div class="nonprofit-detail-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/images/tin-cup/nonprofit-parade.jpg" alt="Education Foundation of Teton Valley">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/images/tin-cup/nonprofit-booths.jpg" alt="Education Foundation of Teton Valley">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/images/tin-cup/race-start.jpg" alt="Education Foundation of Teton Valley">
+                                    </div>
+                                </div>
+                                <div class="nonprofit-detail-slider__pagination swiper-pagination"></div>
+                            </div>
                             <div class="donation-details__date">
                                 <p>Education</p>
                             </div>
@@ -131,40 +144,29 @@ description: Learn more about this nonprofit organization and how you can suppor
                         </div>
                     </div>
                     <div class="donation-details__sidebar-donate-btn">
-                        <a href="#" class="thm-btn">Donate Now</a>
+                        <a href="#" class="thm-btn cta-banner__btn">Give Now</a>
                     </div>
                 </div>
             </div>
             <!--Sidebar Other Items (Right on desktop, bottom on mobile)-->
             <div class="col-xl-4 col-lg-5 donation-details__sidebar-other-col">
                 <div class="donation-details__sidebar-other">
-                    <div class="sidebar__nonprofit-logo">
-                        <div class="sidebar-shape-1"
-                            style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
-                        <div class="sidebar__nonprofit-logo-inner">
+                    <div class="sidebar__nonprofit-details">
+                        <div class="sidebar__nonprofit-logo-inner" style="margin-bottom: 15px; text-align: center;">
                             <img src="/assets/images/nonprofits/eftv_logo_color-1.jpg" alt="Education Foundation of Teton Valley Logo">
                         </div>
-                    </div>
-                    <div class="sidebar__nonprofit-details">
-                        <div class="sidebar-shape-1"
-                            style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
-                        <h2 class="sidebar__title editable">Nonprofit Details</h2>
+                        <div class="donation-details__sidebar-shaare-cause-social" style="margin-bottom: 20px; justify-content: center;">
+                            <a href="https://www.facebook.com/TetonValleyNonprofitHub" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/cftetonvalley/" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/company/community-foundation-of-teton-valley/" target="_blank" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@communityfoundationofteton4347" target="_blank" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </div>
                         <ul class="sidebar__nonprofit-details-list list-unstyled">
-                            <li>
-                                <div class="sidebar__nonprofit-details-icon">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                                <div class="sidebar__nonprofit-details-content">
-                                    <span class="editable">Contact</span>
-                                    <p class="editable">John Smith</p>
-                                </div>
-                            </li>
                             <li>
                                 <div class="sidebar__nonprofit-details-icon">
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="sidebar__nonprofit-details-content">
-                                    <span class="editable">Phone</span>
                                     <p class="editable"><a href="tel:+12085551234">(208) 555-1234</a></p>
                                 </div>
                             </li>
@@ -173,7 +175,6 @@ description: Learn more about this nonprofit organization and how you can suppor
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="sidebar__nonprofit-details-content">
-                                    <span class="editable">Email</span>
                                     <p class="editable"><a href="mailto:info@educationfoundation.org">info@educationfoundation.org</a></p>
                                 </div>
                             </li>
@@ -182,22 +183,10 @@ description: Learn more about this nonprofit organization and how you can suppor
                                     <i class="fas fa-globe"></i>
                                 </div>
                                 <div class="sidebar__nonprofit-details-content">
-                                    <span class="editable">Website</span>
                                     <p class="editable"><a href="https://www.educationfoundation.org" target="_blank">www.educationfoundation.org</a></p>
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    <div class="donation-details__sidebar-shaare-cause">
-                        <div class="sidebar-shape-1"
-                            style="background-image: url(/assets/images/shapes/sidebar-shape-1.png);"></div>
-                        <h2 class="donation-details__sidebar-shaare-cause-title editable">Share</h2>
-                        <div class="donation-details__sidebar-shaare-cause-social">
-                            <a href="https://www.facebook.com/TetonValleyNonprofitHub" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                            <a href="https://www.instagram.com/cftetonvalley/" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/company/community-foundation-of-teton-valley/" target="_blank" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/@communityfoundationofteton4347" target="_blank" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -205,3 +194,19 @@ description: Learn more about this nonprofit organization and how you can suppor
     </div>
 </section>
 <!--Donation Details End-->
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.nonprofit-detail-slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        pagination: {
+            el: '.nonprofit-detail-slider__pagination',
+            clickable: true
+        }
+    });
+});
+</script>
+{% endblock %}
