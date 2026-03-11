@@ -515,7 +515,7 @@ a:hover {
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    gap: 60px !important;
+    gap: 40px !important;
 }
 
 .main-menu__list li {
@@ -4620,10 +4620,12 @@ a:hover {
 .event-day-page .event-details__social a:hover {
     background-color: #ffffff !important;
     color: var(--cftv-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .event-day-page .event-details__social a:after {
-    background-color: #ffffff !important;
+    display: none !important;
 }
 
 /* ----------------------------------------
