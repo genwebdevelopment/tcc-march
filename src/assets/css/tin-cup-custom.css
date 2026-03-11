@@ -807,6 +807,7 @@ a:hover {
 .event-countdown-bar {
     background-color: var(--cftv-cream);
     padding: 0;
+    overflow: hidden;
 }
 
 .event-countdown-bar__inner {
@@ -859,6 +860,18 @@ a:hover {
     letter-spacing: 1px;
     line-height: 1;
     margin-top: 6px;
+}
+
+@media (max-width: 1400px) {
+    .event-countdown-bar__inner {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .event-countdown-bar__inner {
+        max-width: 85%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1096,8 +1109,8 @@ a:hover {
    ========================================================================== */
 
 .challengers-carousel {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     background-color: #ffffff;
     overflow: hidden;
 }
@@ -1135,8 +1148,8 @@ a:hover {
 }
 
 .challengers-carousel__logo img {
-    max-width: 150px;
-    max-height: 60px;
+    max-width: 224px;
+    max-height: 90px;
     object-fit: contain;
 }
 
@@ -1151,7 +1164,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .challengers-carousel {
-        padding: 40px 0;
+        padding: 36px 0;
     }
 
     .challengers-carousel__track {
@@ -1163,8 +1176,8 @@ a:hover {
     }
 
     .challengers-carousel__logo img {
-        max-width: 120px;
-        max-height: 50px;
+        max-width: 179px;
+        max-height: 75px;
     }
 }
 
@@ -3163,6 +3176,8 @@ a:hover {
 
 .donation-details__date {
     background-color: var(--cftv-blue) !important;
+    left: auto !important;
+    right: 30px !important;
 }
 
 .donation-details__date p {
@@ -5605,11 +5620,11 @@ a:hover {
 
 .challengers-page .lead-the-way-alt-section .about-three__img {
     border: none !important;
-    box-shadow: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
 
 .challengers-page .lead-the-way-alt-section .about-three__img img {
-    border: 4px solid var(--cftv-navy) !important;
+    border: 4px solid #ffffff !important;
 }
 
 .challengers-page .lead-the-way-alt-section .about-three__border {
@@ -7134,6 +7149,8 @@ a:hover {
 .give-now-section {
     padding: 30px 0;
     background-color: var(--cftv-gold);
+    position: relative;
+    z-index: 2;
 }
 
 .give-now-section__content {
@@ -7252,7 +7269,7 @@ a:hover {
 }
 
 .why-tin-cup .about-three__img img {
-    border-color: var(--cftv-blue) !important;
+    border-color: #ffffff !important;
 }
 
 .why-tin-cup .powered-by {
