@@ -41,7 +41,7 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
     <div class="container">
 
         <!--Category Filter Start-->
-        <div class="nonprofit-filter" id="nonprofit-filter">
+        <div class="nonprofit-filter" id="nonprofit-filter" style="display: none;">
             <div class="nonprofit-filter__wrapper">
                 <button class="nonprofit-filter__btn active" data-category="all" data-category-id="0" aria-pressed="true">
                     All
@@ -76,51 +76,13 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
         </div>
         <!--Category Filter End-->
 
-        <!-- Search and Filter Bar -->
-        <div class="nonprofit-search-filter" id="nonprofit-search-filter">
-            <div class="nonprofit-search-filter__row">
-                <!-- Search Input -->
-                <div class="nonprofit-search-filter__search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="nonprofit-search" placeholder="Search nonprofits..." aria-label="Search nonprofits">
-                </div>
-
-                <!-- Category Dropdown -->
-                <div class="nonprofit-search-filter__dropdown">
-                    <select id="category-filter" aria-label="Filter by category">
-                        <option value="all">All Categories</option>
-                        <option value="animal-rescue">Animal Rescue</option>
-                        <option value="arts">Arts & Culture</option>
-                        <option value="civic">Civic & Service</option>
-                        <option value="conservation">Conservation & Environment</option>
-                        <option value="education">Education</option>
-                        <option value="health">Health & Human Services</option>
-                        <option value="sports">Sports & Recreation</option>
-                    </select>
-                </div>
-
-                <!-- Sort Dropdown -->
-                <div class="nonprofit-search-filter__dropdown">
-                    <select id="sort-filter" aria-label="Sort by">
-                        <option value="alphabetical">Sort: A-Z</option>
-                        <option value="reverse-alphabetical">Sort: Z-A</option>
-                        <option value="recent">Sort: Most Recent</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <!-- Search and Filter Bar End -->
-
-        <!-- No Results Message -->
-        <div class="nonprofit-no-results" id="no-results" style="display: none;">
-            <div class="nonprofit-no-results__content">
-                <i class="fas fa-search"></i>
-                <h3 class="editable">No nonprofits found</h3>
-                <p class="editable">No nonprofits match the selected category. Please try a different filter.</p>
-            </div>
+        <!-- Check Back Soon Message -->
+        <div class="text-center" style="padding: 40px 20px;">
+            <img src="/assets/images/tinny.png" alt="Tinny" style="max-width: 200px; margin-bottom: 30px;">
+            <h3 class="editable" style="font-family: 'Oswald', sans-serif; font-size: 28px; color: var(--cftv-navy);">Check back soon for participating nonprofits.</h3>
         </div>
 
-        <div class="row" id="nonprofits-grid">
+        <div class="row" id="nonprofits-grid" style="display: none;">
             <!--Arts Culture Teton-->
             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp nonprofit-card-item" data-wow-delay="100ms" data-category="arts" data-nonprofit-id="16">
                 <a href="/nonprofits/nonprofit-details/" class="causes-one__single causes-one__single--clickable">
@@ -523,8 +485,8 @@ description: Support 64+ local nonprofits in Teton Valley through the Tin Cup Ch
             </div>
         </div>
 
-        <!-- Show All / Show Less Button -->
-        <div class="nonprofits-show-more text-center" id="show-more-wrapper">
+        <!-- Show All / Show Less Button (hidden while nonprofits are hidden) -->
+        <div class="nonprofits-show-more text-center" id="show-more-wrapper" style="display: none;">
             <button id="toggle-nonprofits" class="thm-btn nonprofits-show-more__btn" aria-expanded="false" aria-controls="nonprofits-grid">
                 <span class="btn-text">Show All</span>
             </button>
