@@ -2246,7 +2246,7 @@ a:hover {
 @media (min-width: 768px) {
     .main-slider-single .container,
     .main-slider-single .hero-container {
-        padding-top: 200px !important;
+        padding-top: 120px !important;
     }
 }
 
@@ -2452,7 +2452,7 @@ a:hover {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .main-slider .image-layer {
         border-bottom-left-radius: 25%;
         width: 48% !important;
@@ -2498,7 +2498,7 @@ a:hover {
 /* ----------------------------------------
    Tablet Mode Adjustments (768px - 991px)
    ---------------------------------------- */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 991px) {
     /* Constrain hero text to left side so it doesn't overlap the image */
     .hero-container .col-lg-7 {
         width: 48% !important;
