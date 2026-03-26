@@ -2496,6 +2496,33 @@ a:hover {
 }
 
 /* ----------------------------------------
+   Small Desktop Adjustments (992px - 1199px)
+   ---------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Constrain hero text column so it doesn't overlap the background image */
+    .hero-container .col-lg-7 {
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+    }
+
+    .main-slider__sub-title {
+        font-size: 48px !important;
+        line-height: 1.1 !important;
+    }
+
+    .main-slider__title {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+    }
+
+    .main-slider__btn {
+        padding: 10px 22px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* ----------------------------------------
    Tablet Mode Adjustments (768px - 991px)
    ---------------------------------------- */
 @media (min-width: 768px) and (max-width: 991px) {
