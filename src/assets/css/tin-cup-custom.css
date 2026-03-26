@@ -3175,6 +3175,19 @@ a:hover {
     color: var(--cftv-navy) !important;
 }
 
+/* Links in burgundy hero sections across all subpages */
+.page-intro .nonprofit-info-box a,
+.page-intro a {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.page-intro .nonprofit-info-box a:hover,
+.page-intro a:hover {
+    color: #ffffff !important;
+}
+
 /* Nonprofit intro section - white links */
 /* Reduce height of burgundy intro sections on all secondary pages */
 .page-intro,
@@ -4664,6 +4677,7 @@ a:hover {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid #eee;
+        padding-right: 0 !important;
     }
 
     .main-menu__right {
@@ -4711,20 +4725,24 @@ a:hover {
 
     .main-menu__right-top-right {
         width: 100%;
+        padding-right: 0 !important;
     }
 
     .main-menu__top-buttons {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 20px;
         width: 100%;
+        padding-right: 0 !important;
     }
 
     .main-menu__volunteers {
         display: flex;
         align-items: center;
         gap: 8px;
+        margin-left: auto !important;
+        margin-right: 0 !important;
     }
 
     .main-menu__volunteers-icon img {
@@ -7393,19 +7411,20 @@ a:hover {
         width: 100% !important;
     }
 
-    /* Top buttons row - Become a Challenger on left, Search/Cart on right */
+    /* Top buttons row - Become a Challenger on right */
     .main-menu__top-buttons {
         display: flex !important;
-        justify-content: flex-start !important;
+        justify-content: flex-end !important;
         align-items: center !important;
         width: 100% !important;
         gap: 0 !important;
     }
 
-    /* Volunteers (Become a Challenger) - stays on left */
+    /* Volunteers (Become a Challenger) - push to right */
     .main-menu__volunteers {
         order: 1 !important;
-        margin-right: auto !important;
+        margin-left: auto !important;
+        margin-right: 15px !important;
     }
 
     /* Search and Cart - grouped together on right */
