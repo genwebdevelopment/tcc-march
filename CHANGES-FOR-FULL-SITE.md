@@ -60,7 +60,11 @@ These were applied via CSS sync on 2026-03-25:
   - Landganics → https://www.landganics.com/
   - Wells Fargo → https://www.wellsfargo.com/locator/bank/185__S__MAIN__ST_DRIGGS_ID_83422/
   - With The Grain → https://www.buildwiththegrain.com/
-- **Still need links for:** Pirate Ship, Teton Aviation Center, Harmony Design Engineering, Teton Valley Foundation, Teton Ridge Ranch Foundation
+- Added missing links:
+  - Pirate Ship → https://www.pirateship.com/
+  - Teton Aviation Center → https://tetonaviation.com/
+  - Harmony Design Engineering → https://www.harmonydesigninc.com/
+- **Still need links for:** Teton Valley Foundation, Teton Ridge Ranch Foundation (confirmed no links available)
 
 ### How to Give Page (`how-to-give.njk`)
 - Replaced text under "Why Both Matter" boxes with: "These two ways of giving work together to strengthen our nonprofit community with more funds, more confidence, and greater stability. Keep the momentum growing and Teton Valley thriving - give today!"
@@ -78,12 +82,17 @@ These were applied via CSS sync on 2026-03-25:
 - Changed "2025 Tin Cup Challengers" heading to "2026 Tin Cup Challengers"
 - Sorted challenger names alphabetically by last name within each tier (Anonymous entries first, businesses at end)
 - Linked all challenger logos to their websites across all tiers
+- **Complete rebuild of challenger tiers from 2026 spreadsheet data** — removed all names/businesses not in the current list, added new ones, removed Tin tier entirely, added Friend tier. Source files: `Marketing List - Business Challenger 3-25-2026` and `Marketing List - Individual Challenger 3-25-2026`
 - **Logos still needing links:** Teton Ridge Ranch Foundation, Pirate Ship, Teton Aviation Center, Harmony Design Engineering, Teton Valley Foundation, CISCO Group, Jonnie Natco Holmes, Jackson Hole Sotheby's, Talbotts Electric
 
 ### Event Day Page (`event-day.njk`)
 - Updated hero text to: "Event Day features timed 10K and 5K races, an untimed Fun Run/Walk, and a highly competitive Diaper Derby. Winners of each race receive prize money to donate to their favorite nonprofits."
 - Updated Event Day card text with new copy about Giving Period (June 12 - July 24, 2026) and Event Day description
 - Fixed event date badge from "19 Jul, 2025" to "18 Jul, 2026"
+
+### Sitewide - Give/Donate Links
+- **All Give Now, Give, Make a Donation, Become a Challenger, and Support Good Causes buttons/links** updated from old `cfjh.iphiview.com` URLs to: `https://godonate.akoyago.com/cftetonvalley`
+- Affected files: `header.njk`, `footer.njk`, `cta-banner.njk`, `mobile-nav.njk`, `index.njk`, `event-day.njk`, `how-to-give.njk`, `how-it-works.njk`, `challengers.njk`
 
 ### Global CSS (`tin-cup-custom.css`)
 - Links in burgundy hero `.page-intro` sections across all subpages: white with slight transparency (`rgba(255,255,255,0.85)`), underlined, brightens to full white on hover. This overrides the default blue link color in `.nonprofit-info-box a`.
