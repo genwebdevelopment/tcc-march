@@ -90,6 +90,10 @@ These were applied via CSS sync on 2026-03-25:
 - Updated Event Day card text with new copy about Giving Period (June 12 - July 24, 2026) and Event Day description
 - Fixed event date badge from "19 Jul, 2025" to "18 Jul, 2026"
 
+### Sitewide - Nonprofit Banner & Footer Link
+- **"Are You a Nonprofit?" Visit buttons** and footer **"Participate as a Nonprofit"** link updated from `cftetonvalley.org/tin-cup-challenge/` to `https://cftetonvalley.org/grants-scholarships/tin-cup-challenge/`
+- Affected files: all page `.njk` files + `footer.njk`
+
 ### Sitewide - Give/Donate Links
 - **All Give Now, Give, Make a Donation, Become a Challenger, and Support Good Causes buttons/links** updated from old `cfjh.iphiview.com` URLs to: `https://godonate.akoyago.com/cftetonvalley`
 - Affected files: `header.njk`, `footer.njk`, `cta-banner.njk`, `mobile-nav.njk`, `index.njk`, `event-day.njk`, `how-to-give.njk`, `how-it-works.njk`, `challengers.njk`
