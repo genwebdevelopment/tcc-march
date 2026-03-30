@@ -2,6 +2,9 @@ module.exports = function(eleventyConfig) {
   // Pass through the assets folder
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // Pass through _redirects file for hosting platform
+  eleventyConfig.addPassthroughCopy("src/_redirects");
+
   // Watch for changes in assets
   eleventyConfig.addWatchTarget("src/assets/");
 

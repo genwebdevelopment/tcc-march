@@ -1,0 +1,19 @@
+# =============================================
+# Tin Cup Challenge — 301 Redirects
+# Created for site relaunch on tincupchallenge.org
+# =============================================
+
+# Main content page from old site → new homepage
+/tin-cup-challenge/  /  301
+
+# Old donate path (previously redirected to cftetonvalley.org) → new giving page
+/donate/  /how-to-give/  301
+
+# Old about page → closest match on new site
+/about/  /why-it-works/  301
+
+# Old programs page → participating nonprofits
+/programs/  /nonprofits/  301
+
+# Old contact page → get involved (contains contact info)
+/contact/  /get-involved/  301
