@@ -45,6 +45,17 @@
     <link rel="stylesheet" href="/assets/css/oxpins.css?v={{ build.timestamp }}" />
     <link rel="stylesheet" href="/assets/css/tin-cup-custom.css?v={{ build.timestamp }}" />
 
+    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPLQCMYREV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('set', 'linker', {'domains': ['cftetonvalley.org']});
+      gtag('config', 'G-RPLQCMYREV');
+      gtag('config', 'AW-10800163766');
+    </script>
+
     {% block head %}{% endblock %}
 </head>
 
