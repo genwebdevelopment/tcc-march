@@ -7972,8 +7972,8 @@ a:hover {
 }
 
 .nonprofit-banner__btn:hover {
-    background-color: #ffffff !important;
-    color: var(--cftv-navy) !important;
+    background-color: var(--cftv-blue) !important;
+    color: #ffffff !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
